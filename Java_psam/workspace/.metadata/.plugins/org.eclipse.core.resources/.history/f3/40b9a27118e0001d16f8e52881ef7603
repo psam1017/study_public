@@ -1,0 +1,21 @@
+package encryption;
+
+public class Test02 {
+	public static void main(String[] args) throws Exception {
+		
+		// String만을 이용한 암호화 및 인증
+		// password와 salt를 전달하는 객체인 DTO가 제공됩니다.
+		
+		String password = "password";
+		
+		Enctyptor encryptor = new Enctyptor();
+		
+		String randomSalt = encryptor.generateSalt();
+		String encryptedPassword = encryptor.encryptPassword(password, randomSalt);
+		boolean comparision = encryptor.compare("password", encryptedPassword, randomSalt);
+		
+		System.out.println("encrypted password : " + encryptedPassword);
+		System.out.println("random salt : " + randomSalt);
+		System.out.println("comparision result : " + comparision);
+	}
+}

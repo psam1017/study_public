@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>dblclick()</title>
+	<script src="jquery-1.7.2.min.js"></script>
+</head>
+<body>
+	<ul>
+		<li><a href="flower.jpg">꽃</a></li>
+		<li><a href="sea.jpg">바다</a></li>
+		<li><a href="Jellyfish.jpg">해파리</a></li>
+		<li><a href="Building.jpg">건물</a></li>
+	</ul>
+
+	<p><img src="flower.jpg" alt="꽃" /></p>
+</body>
+<!---------- jQuery code Start ---------->
+<script>
+	// 리스트(a 태그)를 클릭시 해당 이미지로 변경하시오
+	// on에 체이닝을 이용하여 클릭과 더블클릭 이벤트를 같이 제어
+	$("ul li a")
+	.on("click", function(e){
+		e.preventDefault();
+	})
+	.on("dblclick", function(e){
+		e.preventDefault();
+		$("p img").attr({
+			src: $(this).attr("href"),
+			alt: $(this).text()
+		});
+	});
+</script>
+</html>

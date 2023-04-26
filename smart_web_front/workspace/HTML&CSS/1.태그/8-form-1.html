@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입력 양식 태그, form</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="">
+        <input name="id" type="text" disabled readonly value="기본값">
+        <!--
+            disabled : 사용 불가능
+            readonly : 읽기 전용
+        -->
+        <hr>
+        <input name="이름" type="text" placeholder="아이디" minlength="3" maxlength="20"><br> <!--value와 placeholder가 같이 있다면 value가 적용된다.-->
+        <input name="비밀번호" type="password" placeholder="비밀번호" minlength="8"><br><br>
+        <input type="button" value="버튼 값">
+        <input type="submit">
+        <input type="reset">
+        <button>버튼 태그</button>
+        <hr>
+        <input type="image" src="./images/login.jpg" alt="login">
+        <hr>
+        <input name="hobby" type="checkbox" value="swimming">수영
+        <input name="hobby" type="checkbox" value="bowling">볼링
+        <input name="hobby" type="checkbox" value="walking">산책
+        <hr>
+        <input name="is_agree" type="radio" value="agree">동의 <!--라디오는 여러 개의 채널이 있지만 그 중에서 하나만 들을 수 있다.-->
+        <input name="is_agree" type="radio" checked value="disagree">거부
+        <!--
+            check : 기본으로 체크되어 있음.
+        -->
+        <hr>
+        <input name="file" type="file">
+        <br><hr><br>
+        <textarea name="question" autofocus cols="30" rows="10" placeholder="문의내용을 입력하시오"></textarea><br>
+        <select name="langdropdown">
+            <option value="HTML" selected>HTML</option>
+            <option value="CSS">CSS</option>
+            <optgroup label="JS">
+                <option value="JavaScript">JavaScript</option>
+                <option value="jQuery">jQuery</option>
+            </optgroup>
+        </select>
+    </form>
+</body>
+</html>

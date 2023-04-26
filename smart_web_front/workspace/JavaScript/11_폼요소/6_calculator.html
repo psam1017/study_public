@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>계산기</title>
+</head>
+<body>
+    <form name="calc">
+        <label> 계산식 : <input type="text" name="expression"/> </label><br>
+        <label> 결과 : <input type="text" name="result"/> </label><br>
+        <input type="button" value="계산하기" name="btn"/>
+    </form>
+    <script>
+        const expression = document.calc.expression;
+        const result = document.calc.result;
+        const btn = document.calc.btn;
+
+        btn.addEventListener("click", function(){
+            // eval은 보안상 취약하여 권장하지 않음.
+            result.value = eval(expression.value);
+        });
+    </script>
+</body>
+</html>

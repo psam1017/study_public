@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가위 바위 보</title>
+    <style>
+        #comWrap{
+            margin: 0 auto;
+            width: 300px;
+            border: 1px solid black;
+        }
+        h1, h2{
+            text-align: center;
+        }
+        #comChoice{
+            margin: 0 auto;
+            width: 100px;
+            height: 100px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        #userWrap{
+            margin-top: 100px;
+            display: flex;
+            justify-content: center;
+        }
+        .userChoice{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            margin: 0px 20px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .userChoice:nth-child(1){
+            background-image: url(./play/math_img_1.jpg);
+        }
+        .userChoice:nth-child(2){
+            background-image: url(./play/math_img_2.jpg);
+        }
+        .userChoice:nth-child(3){
+            background-image: url(./play/math_img_3.jpg);
+        }
+    </style>
+</head>
+<body>
+    <h1>컴퓨터와 가위바위보!</h1>
+    <div id="comWrap">
+        <h2>컴퓨터의 선택</h2>
+        <div id="comChoice"></div>
+    </div>
+    <div id="userWrap">
+        <div class="userChoice"></div>
+        <div class="userChoice"></div>
+        <div class="userChoice"></div>
+    </div>
+    <h2>결과 : <span></span></h2>
+</body>
+<script>
+    let comNum;
+    let userNum;
+    const comChoice = document.getElementById("comChoice");
+    const userChoice = document.querySelectorAll(".userChoice");
+    const span = document.querySelector("span");
+
+    function rps(e, i){
+        comNum = Math.ceil(Math.random() * 3);
+        comChoice.style.backgroundImage = `url(./play/math_img_${comNum}.jpg)`;
+        userNum = i + 1;
+        console.log(comNum, userNum);
+
+        let diff = userNum - comNum;
+        if(diff === -2 || diff === 1){
+            span.innerText = "당신이 이겼습니다.";
+        }
+        else if(diff === 2 || diff === -1){
+            span.innerText = "당신이 졌습니다.";
+        }
+        else{
+            span.innerText = "무승부입니다.";
+        }
+    }
+
+    userChoice.forEach((e, i) => {
+        e.addEventListener("click", function(){
+            rps(e, i);
+        })
+    });
+
+</script>
+</html>

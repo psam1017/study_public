@@ -1,0 +1,7 @@
+Alt + Shilft + Y : 에디터 창에서 화면 넘어가는 글자를 자동 줄 바꿈
+
+Alt + Shift + A : 블록 선택 모드(여러 줄의 특정 지점을 선택)
+
+Alt + Shift + Z : 감싸기(Surround With) -> try - catch 구문 만들기에 유용함.
+
+Ctrl + Shift + / : 주석 처리

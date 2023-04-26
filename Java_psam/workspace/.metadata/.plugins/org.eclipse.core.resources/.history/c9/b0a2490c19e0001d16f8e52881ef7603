@@ -1,0 +1,24 @@
+package test;
+
+import encryption.EncrptionDTO;
+import encryption.Enctyptor;
+
+public class Test01 {
+	public static void main(String[] args) throws Exception {
+		
+		// dto를 이용한 암호화 및 인증
+		// password와 salt를 전달하는 객체인 DTO가 기본으로 제공됩니다.
+		// password와 salt는 
+		
+		String password = "password";
+		
+		Enctyptor encryptor = new Enctyptor();
+		
+		EncrptionDTO dto = encryptor.encrypt(password);
+		boolean comparision = encryptor.compare("password", dto);
+		
+		System.out.println("encrypted password : " + dto.getPassword());
+		System.out.println("random salt : " + dto.getSalt());
+		System.out.println("comparision result : " + comparision);
+	}
+}

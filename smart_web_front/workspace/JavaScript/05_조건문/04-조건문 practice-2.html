@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문 practice 2</title>
+    <style>
+        img{
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <figure>
+        <img src="../images/images/pic_1.jpg" alt="rotateImage">
+    </figure>
+    <button>이전</button>
+    <button>다음</button>
+</body>
+<script>
+    const img = document.querySelector("img");
+    const button = document.querySelectorAll("button");
+    let state = true;
+    let srcNum = 1;
+    console.log(img, button[0], button[1]);
+
+    function changeImage(state){
+        if(state){
+            if(srcNum < 9){
+                srcNum++;
+                img.src = `../images/images/pic_${srcNum}.jpg`;
+                console.log(img.src);
+            }
+        }
+        else{
+            if(srcNum > 1){
+                srcNum--;
+                img.src = `../images/images/pic_${srcNum}.jpg`;
+                console.log(img.src);
+            }
+        }
+    }
+
+    // 이벤트 핸들러에서 실행할 이벤트에 함수를 바로 호출하지 말 것.
+    button[0].addEventListener("click", function(){
+        changeImage(!state);
+    });
+    button[1].addEventListener("click", function(){
+        changeImage(state);
+    });
+</script>
+</html>

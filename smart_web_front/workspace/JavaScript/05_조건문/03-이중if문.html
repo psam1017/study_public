@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+    <meta charset="utf-8" />
+    <title>이중 if문</title>
+    <script>
+        // location.href = "이동할 주소";
+
+        const id = "admin";
+        const pw = "1234";
+        let idName = prompt("아이디를 입력하시오.");
+        if (id === idName) {
+            let pwName = prompt("비밀번호를 입력하시오.");
+            if (pw === pwName) {
+                location.href = "03-loginSuccess.html";
+            } else {
+                location.href = "03-loginError.html";
+            }
+        } else {
+            location.href = "03-loginError.html";
+        }
+    </script>
+</head>
+<body></body>
+</html>

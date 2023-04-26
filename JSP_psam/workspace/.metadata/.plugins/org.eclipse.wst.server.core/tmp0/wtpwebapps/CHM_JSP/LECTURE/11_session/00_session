@@ -1,0 +1,104 @@
+세션 : 브라우저를 식별하기 위해 서버에서 생성되는 기본 객체 중 하나
+
+세션은 쿠키에 담아 브라우저로 보내지고, 로컬에 저장된다.
+이후 브라우저가 요청을 할 때마다 쿠키와 함께 요청된다.
+
+웹 서버에서 요청을 보낸 웹 클라이언트를 식별하기 위해 사용
+JSP에서는 최초 요청 시 내장객체로 세션이 생성됨
+1. 생성된 세션에 setAttrubute(), getAttribute()를 이용하여 값을 저장하고 사용(key에 value를 담고, 필요할 때 key를 조건으로 value를 get())
+2. 세션객체는 웹 서버에 생성된 객체이므로 중요한 정보를 저장하기 용이
+3. 웹 클라이언트에서 종료하거나 서버에서 session.invalidate() 시 세션객체 제거
+
+====================================================================================================================
+
+세션 생성하기
+
+<%@
+session="true"
+import="java.util.Data"
+import="java.text.SimpleDateFormat"
+%>
+
+<!--
+session="true"가 default로 되어 있으므로, 디렉티브 태그에서 별도의 선언이 없으면 세션이 자동으로 만들어진다.
+-->
+
+<%
+	SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+	Date creationTime = new Date();
+	creationTime.setTime(session.getCreationTime()); // 세션이 최초로 생성된 시간
+
+	Date lastAccessedTime = new Date();
+	lastAccessedTime.setTime(session.getLastAccessedTime()); // 마지막으로 접근한 시간
+%>
+
+세션 ID : <%= session.getId() %><br>
+최초 세션 생성 시간 : <%= formatter.format(creationTime) %><br>
+마지막 접근 시간 : <%= formatter.format(lastAccessedTime) %><br>
+
+====================================================================================================================
+
+세션 종료하기
+
+<!-- 세션을 종료하는 메소드 -->
+<%
+	session.invalidate(); // 관련된 세션을 종료
+
+	session.removeAttribute(String name); // 세션의 단일 속성 삭제
+	session.removeAttribute("id");
+%>
+
+<!-- 세션의 유효 기간을 설정하는 메소드 -->
+<%
+	// 세션에 아무 값을 설정하지 않으면 기본값인 30분 동안 세션을 유지한다.
+	
+	session.setMaxInactiveInterval(60 * 60); // 1시간 동안 세션을 유지
+
+	SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+	Date creationTime = new Date();
+	creationTime.setTime(session.getCreationTime()); // 세션이 최초로 생성된 시간
+
+	Date lastAccessedTime = new Date();
+	lastAccessedTime.setTime(session.getLastAccessedTime()); // 마지막으로 접근한 시간
+%>
+
+★
+<!-- web.xml에서 세션의 유효기간 설정하기 -->
+<web-app>
+	<session-config>
+		<!-- 분 단위로 세션 유효시간을 설정. 설정 변경 시 서버를 재시작해야 함. -->
+		<session-timeout>60</session-timeout>
+	</session-config>
+</web-app>
+
+<!--
+	세션 유효기간을 0 또는 음수로 하면 세션의 유효시간이 없어진다.
+	따라서 invalidate()를 호출하지 않는 이상 서버의 메모리에 계속해서 남아 있으니 문제가 될 수 있다.
+
+	web.xml에서 적용한 세션 유효기간은 기본으로 적용하는 것이고,
+	setMaxInactiveInterval()은 해당 페이지에서 다시 적용하는 것이므로 메소드가 우선 적용된다.
+-->
+
+====================================================================================================================
+
+세션 데이터 저장하기
+
+<form action="sessionSave.jsp">
+	<input type="text" name="data">
+	<input type="submit" value="전송">
+</form>
+
+↓
+
+<%
+	String data = request.getParameter("data");
+	session.setAttribute("savaData", data); // 세션에 요청 정보를 저장. 서버에서만 볼 수 있다.
+
+	response.sendRedirect("sessionInfo.jsp");
+%>
+
+↓
+
+세션에 저장된 데이터 : <%= session.getAttribute("savaData") %>

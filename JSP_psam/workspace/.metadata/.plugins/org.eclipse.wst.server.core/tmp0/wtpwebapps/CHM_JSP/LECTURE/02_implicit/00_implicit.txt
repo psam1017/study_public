@@ -1,0 +1,32 @@
+★★★내장 객체의 종류★★★
+
+request
+
+파라미터 관련 메소드
+: getParameter, getParameterValues, getParameterNames, getParameterMap
+
+요청 HTTP 헤더 관련 메소드
+: getHeader, getHeaders, getHeaderNames, getIntHeader, getDateHeader, getCookies
+
+웹 브라우저 및 서버 정보 관련 메소드(IP 주소 가져오는 메소드 포함)
+: 04_request3.jsp 참고
+
+
+
+response
+
+페이지 이동 관련 메소드(redirect vs forward)
+: sendRedirect
+: <jsp:forward page="이동할 페이지"/>
+
+응답 HTTP 헤더 관련 메소드
+: addCookie, addDateHeader, addHeader, addIntHeader, setDateHeader, setIntHeader, containsHeader, getHeader
+
+오류 관련 메소드
+: sendError
+
+
+
+out
+
+: print, println

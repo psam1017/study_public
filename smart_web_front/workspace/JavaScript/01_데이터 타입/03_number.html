@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>number</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let a = 100; // 정수
+    let b = 3.14; // 실수
+    let c = 1e-3; // 지수. 모두 type은 number이다.
+    console.log(a, typeof(a));
+    console.log(b, typeof(b));
+    console.log(c, typeof(c));
+
+    // 따옴표로 묶은 숫자는 1이라는 문자열로 취급한다.
+    console.log(1, typeof('1'));
+
+    // 사용자에게 입력 받은 숫자는 문자열로 취급한다.
+    let iAmNotNum = prompt("숫자만 입력해보세요.");
+    console.log(iAmNotNum, typeof(iAmNotNum));
+
+    // 문자열을 숫자로 바꾸려면 형변환 또는 파싱을 사용하면 된다.
+    iAmNotNum = parseInt(iAmNotNum);
+    document.write(iAmNotNum + 2);
+    
+    let iAmNum = Number(prompt("숫자를 입력해보세요."));
+    document.write(iAmNum);
+
+
+
+    // 형변환은 숫자로만 이루어진 문자열 등을 number로 만든다.
+    // 파싱은 '숫자로 시작하는 문자열'(190cm)에서 숫자(190)만 추출해서 number로 만든다.
+
+    // 숫자와 문자열의 연산 시, + 연산자를 사용하면 문자열 연산자가 먼저 적용이 되기 때문에 연산이 되지 않는다. 하지만 다른 연산자를 사용하면 문자열을 숫자로 자동 형변환하여 연산한다.
+    let num1 = Number(prompt("좋아하는 숫자를 입력", "숫자만 입력"));
+    console.log(num1, typeof(num1));
+    let num2 = prompt("좋아하는 숫자를 입력", "숫자만 입력");
+    console.log(num2, typeof(num2));
+    let total = num1 - num2;
+    document.write(`num, num2의 차이는 ${total}입니다`);
+
+
+    
+    let height1 = prompt("키를 입력하시오", "cm단위");
+    let height2 = prompt("키를 입력하시오", "cm단위");
+    console.log(height1, height2)
+
+    let height3 = parseInt(height1) - parseInt(height2);
+    document.write(`두명의 키차이는 ${height3}입니다`)
+
+    // parseInt는 숫자와 문자가 결합된 경우, 문자를 버리고 숫자(정수)만 숫자타입으로 변환
+    // parseFloat는 소수점까지 변환
+</script>
+</html>

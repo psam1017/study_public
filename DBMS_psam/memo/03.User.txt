@@ -1,0 +1,43 @@
+
+`(백틱) 사용 구분에 주의하자.
+
+사용자
+1. 만들기(Create)
+CREATE USER `사용자 이름`@`호스트` IDENTIFIED BY '비밀번호';
+CREATE USER `study`@`localhost` IDENTIFIED BY 'test1234';
+-만들어진 사용자는 기본적으로 아무런 권한이 없고, 접속만 가능하다.
+-usage, 즉 로그인만 가능
+
+2. 수정하기(Update) : 비밀번호 바꾸기
+ALTER USER `사용자 이름`@`호스트` IDENTIFIED BY '새로운 비밀번호';
+ALTER USER `study`@`localhost` IDENTIFIED BY 'newPassword!@';
+-이는 반드시 존재하는 사용자를 대상으로 해야 한다.
+
+3. 삭제하기(Delete)
+DROP USER `사용자 이름`@`호스트`;
+DROP USER `study`@`localhost`;
+-이는 반드시 존재하는 사용자를 대상으로 해야 한다.
+-삭제 후 되돌릴 수 없음에 주의한다.
+
+4. 권한 부여하기(Grant)
+GRANT 권한, ... ON `스키마`.`테이블` TO `사용자 이름`@`호스트`;
+GRANT CREATE, ALTER ON *.* TO `study`@`localhost`;
+GRANT ALL ON *.* TO `study`@`localhost`;
+-권한은 콤마로 구분하여 여러 개를 명시할 수 있다.
+-모든 권한은 ALL이라고 적으면 된다.
+-모든 스키마의 모든 테이블은 *.*로 표시한다.
+
+5. 권한 취소하기(Revoke)
+REVOKE 권한, ... ON `스키마`.`테이블` FROM `사용자 이름`@`호스트`;
+REVOKE DROP, DELETE ON *.* FROM `study`@`localhost`;
+
+6. 권한 확인하기
+SHOW GRANTS FOR `사용자 이름`@`호스트`;
+SHOW GRANTS FOR `study`@`localhost`;
+SHOW GRANTS;
+-대상이 생략되면 현재 로그인한 사용자의 권한을 확인한다.
+
+7. 권한 적용하기
+FLUSH PRIVILEGES;
+-권한상의 변경사항을 즉시 적용한다.
+-GRANT 혹은 REVOKE 이후에 반드시 실행시켜야 한다.

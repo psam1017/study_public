@@ -1,0 +1,41 @@
+ID : root
+PW : test1234
+ServiceName : MariaDB220803
+TCP port : 12602
+
+MariaDB 켜고 끄기
+-> Win + R -> services.msc -> Maria Instance 상태를 시작/중지하면 됨.
+
+
+
+Windows PowerShell(관리자)에서
+
+PS C:\Users\HP> cd \
+PS C:\> cd .\202208031400dbms\
+PS C:\202208031400dbms> cd bin
+
+
+PS C:\202208031400dbms\bin> .\mysql.exe -u root -p -P 12602
+
+// -u x : 접속할 사용자 계정 이름을 x로 한다.
+// -p : 비밀번호를 사용하여 접속하겠다.
+// -P : 포트 번호로 x를 사용하겠다. (미기재 시 3306)
+
+Enter password: ******** // test1234
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 3
+Server version: 10.8.3-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> select 1;
++---+
+| 1 |
++---+
+| 1 |
++---+
+1 row in set (0.001 sec)
+
+// 여기까지 하면 MariaDB 설치 완료!

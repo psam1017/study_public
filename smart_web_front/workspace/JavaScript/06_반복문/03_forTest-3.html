@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>for 테스트 문제 2</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <button class="myBtn">100</button>
+    <button class="myBtn">200</button>
+    <button class="myBtn">300</button>
+    <div>1</div>
+</body>
+<script>
+    const myBtn = document.getElementsByClassName("myBtn");
+    const div = document.querySelector("div");
+
+    // let i로 선언해야 작동한다. let을 생략하거나 var로 선언하면 작동하지 않는다.
+    // for 문은 컴파일과 함께 실행이 끝났는데, 이벤트 리스너가 계속 작동하는 게 이상해보일 수 있다.
+    // 잘 생각해보면 for는 각 버튼에 이벤트 리스너를 추가만 했을 뿐이다. 이벤트 리스너를 발생했을 때 함수를 호출한다.
+    for(let i = 0; i < myBtn.length; i++){
+        myBtn[i].addEventListener("click", function () {
+            console.log(i);
+            div.innerText = myBtn[i].innerText;
+        });
+    }
+</script>
+</html>

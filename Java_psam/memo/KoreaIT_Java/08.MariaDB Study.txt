@@ -1,0 +1,15 @@
+핵심적인 자료형 종류
+
+CHAR : 고정길이 자료형. 따라서 속도가 비교적 빠름.
+VARCHAR : 가변길이 자료형. 단, 무제한으로 사용할 수 없음.
+
+TEXT
+MEDIUMTEXT
+
+DATE
+DATETIME
+
+TINYINT
+INT
+DECIMAL(m, d)
+

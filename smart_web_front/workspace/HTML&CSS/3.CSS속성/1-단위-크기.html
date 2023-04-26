@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS에서 사용하는 크기들</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-size: 20px; /* h1은 기본적으로 body의 폰트 크기의 2배(2em)이다. */
+        }
+        div{
+            height: 100vh;
+            background-color: pink;
+        }
+        h1{
+            font-size: 2em; /* em = 배수 , 1em은 16px에 해당한다.*/
+        }
+        p:first-of-type{
+            font-size: 100%;
+        }
+        p:nth-of-type(2){
+            font-size: 1rem;/* 반응형에 맞는 배수. 루트 요소인 html의 글꼴 크기를 1rem으로 사용한다. */
+        }
+        p:nth-of-type(3){
+            font-size: 4vw;/* 화면의 크기에 반응하는 단위 뷰포트의 1% */
+        }
+        p:last-of-type{
+            font-size: 5vh;
+        }
+        /* px, %, em, rem,vw, vh 등 */
+    </style>
+</head>
+<body>
+    <div>
+        <h1>메밀꽃 필 무렵</h1>
+        <p>여름 장이란 애시당초에 글러서, 해는 아직 중천에 있건만 장판은 벌써 쓸쓸하고 더운 햇발이 벌여놓은 전 휘장 밑으로 등줄기를 훅훅 볶는다.</p>
+        <p>마을 사람들은 거의 돌아간 뒤요, 팔리지 못한 나무꾼패가 길거리에 궁깃거리고들 있으나, 석유병이나 받고 고깃마리나 사면 족할 이 축들을 바라고 언제까지든지 버티고 있을 법은 없다.</p>
+        <p>칩칩스럽게 날아드는 파리떼도 장난꾼 각다귀들도 귀찮다. 얽음뱅이요 왼손잡이인 드팀전의 허생원은 기어이 동업의 조선달을 나꾸어보았다.</p>
+        <p>"그만 거둘까?"<br>
+            "잘 생각했네. 봉평장에서 한 번이나 흐뭇하게 사본 일이 있었을까? 내일 대화장에서나 한몫 벌어야겠네. "</p>
+    </div>
+</body>
+</html>

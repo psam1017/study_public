@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll 1</title>
+    <style>
+        body{
+            height: 300vh;
+            background: linear-gradient(to bottom, white, skyblue, hotpink);
+        }
+        div{
+            position: fixed;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button>상단에서 300px 아래로(절댓값)</button>
+        <button>현재 위치에서 100만큼 아래로</button>
+        <button>현재 위치에서 100만큼 위로</button>
+    </div>
+</body>
+<script>
+    const button = document.querySelectorAll("button");
+
+
+    // scrollTo(x, y) : 절댓값으로 x, y만큼 이동
+    // scrollBy(x, y) : 현재 위치에서 x, y만큼 이동
+    button[0].addEventListener("click", function(){
+        scrollTo(0, 300);
+        console.log(scrollX, scrollY);
+    });
+    button[1].addEventListener("click", function(){
+        scrollBy(0, 100);
+        console.log(scrollY);
+    });
+    button[2].addEventListener("click", function(){
+        scrollBy(0, -100);
+        console.log(scrollY);
+    });
+
+    function changeBg(){
+        if(scrollY >= 500){
+            document.body.style.background = "white";
+        }
+        else{
+            // CSS에서 background를 사용하여 배경을 지정했으므로 그것의 적용 상태가 backgroundColor보다 우선된다. 즉, 현재의 경우 아래 명령어가 실제로는 계속 실행이 되지만 적용이 안 되는 상태이다.
+            // if문을 통해 background가 단일 색상이 된 이후에야 아래 명령어가 적용된다.
+            document.body.style.backgroundColor = "skyblue";
+        }
+    }
+
+    // scroll : 페이지가 스크롤되었을 때. scroll을 수행하는 document이다.
+    document.addEventListener("scroll", function(){
+        changeBg();
+    });
+</script>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스크롤이벤트 - 메뉴</title>
+    <style>
+        /* 초기화  */
+        body {
+            height: 300vh;
+        }
+        body, ul {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        /* 네비게이션 */
+        nav {
+            transition: 0.5s;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70px;
+        }
+        nav ul li {
+            width: 100px;
+            text-align: center;
+        }
+        nav ul li a {
+            color: #000;
+        }
+        /* 스크롤발생시 css */
+        nav.active {
+            position: fixed;
+            background: #000;
+        }
+        nav.active ul li a {
+            color: #fff;
+        }
+        /* 섹션 */
+        section {
+            height: 500px;
+            background: #0099c9;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">메뉴</a></li>
+            <li><a href="#">메뉴</a></li>
+            <li><a href="#">메뉴</a></li>
+            <li><a href="#">메뉴</a></li>
+            <li><a href="#">메뉴</a></li>
+        </ul>
+    </nav>
+    <section></section>
+</body>
+<script>
+    const nav = document.querySelector("nav");
+
+    function activeNav(){
+        if(scrollY >= 500){
+            nav.classList.add("active");
+            nav.style.top = "0px";
+        }
+        else if(scrollY > 0 &&scrollY < 500){
+            nav.style.top = "-100px";
+        }
+        else{
+            nav.classList.remove("active");
+            nav.style.top = "0px";
+        }
+    }
+
+    document.addEventListener("scroll", function(){
+        activeNav();
+    });
+</script>
+</html>

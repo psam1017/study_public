@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Files">
+	<insert id="insertFiles" parameterType="files">
+		INSERT INTO HR.TBL_FILES(fileName, boardNum, fileNameOriginal)
+		VALUES(#{fileName}, #{boardNum}, #{fileNameOriginal})
+	</insert>
+	<select id="getFiles" parameterType="_int" resultType="files">
+		SELECT fileName, boardNum, fileNameOriginal
+		FROM TBL_FILES
+		WHERE boardNum = #{boardNum}
+	</select>
+	<delete id="deleteFiles" parameterType="_int">
+		DELETE FROM TBL_FILES
+		WHERE boardNum = #{boardNum}
+	</delete>
+</mapper>

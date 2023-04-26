@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wheel</title>
+</head>
+<body>
+</body>
+<script>
+    // wheel 이벤트를 사용하려면 휠 방향을 인식할 매개변수가 하나 필요하다.
+    // wheel을 아래로 내리면 0보다 작고
+    // wheel을 위로 올리면 0보다 커진다.
+    addEventListener("wheel", function(e){
+        console.log(e.wheelDelta); // 150 또는 -150
+    });
+</script>
+</html>

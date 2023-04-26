@@ -1,0 +1,39 @@
+1. src/main/java에서 controller 생성. home.jsp에 디렉티브 태그 추가
+
+1. + "log4j" 관련 info 경고가 항상 발생 -> 경고가 발생하는 코드를 아래의 코드로 대체하여 코드를 완성시키기
+
+<!DOCTYPE log4j:configuration SYSTEM "https://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/doc-files/log4j.dtd">
+
+2. pom.xml 복제
+-> 오류가 발생한다면 삭제 후 다시 저장
+-> 사용자(user) 아래(/**/)에서 .m2 밑의 repository를 삭제하고 다시 반복
+
+3.1. src/main/resources의 log4j.xml, log4jdbc.log4j2.properties, config.xml 복제
+3.2. src/test/resources의 log4j.xml 복제
+
+4.1. TimeMapper(테스트용) 복제
+4.2. src/main/java에서 mapper(package) 안에 TimeMapper(interface) 생성
+-> @Mapper로 등록하면 interface의 추상메소드와 일치하는 id를 가진 sql 태그가 서로 연결된다.
+
+5. root-context 복제, Namespaces에서 beans, context, mybatis-spring 선택
+-> Beans Graph에서 TimeMapper가 bean으로 제대로 등록되었는지 확인
+
+6. exception controller 복제 -> bean으로 등록(servlet-context와 root-context에 등록)
+
+7. web.xml 복제
+
+8. 서버 모듈에 프로젝트 등록(이때, Path는 루트('/')로만 등록)
+
+9. views에서 error폴더와 error페이지 생성
+
+10. WEB-INF에 lib 추가(JSTL 등), build path 진행(jdbc), Deployment Assembly - Java Build Path Entries - jdbc 등록
+
+11. Maven 업데이트
+
+12. src/test/java에서 단위 테스트 진행(mapper와 persistence 패키지를 활용)
+
+★★★가져온 파일이 있으면 프로젝트 이름 변경을 반드시 제대로 확인해야 한다.★★★
+================================================================
+
+root-context.xml과 root-context.xml에 등록해야 하는 패키지는 무슨 차이가 있는가?
+두 xml 파일의 차이가 무엇인가?

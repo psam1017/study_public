@@ -1,0 +1,16 @@
+package java.wiki.dto;
+
+public class WikiInfoDTO {
+	
+	private String subject;
+	private int rvs;
+	
+	public WikiInfoDTO() { ; }
+	
+	public String getSubject() {
+		return subject;
+	}
+	public void setSubject(String subject) {
+		this.subject = subject;
+	}
+}

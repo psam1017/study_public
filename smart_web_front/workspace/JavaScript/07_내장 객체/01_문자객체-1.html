@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자 객체</title>
+</head>
+<body>
+</body>
+<script>
+    let str = "Hello, Thank you good luck to you";
+    
+    function print(str){
+        document.write(str);
+        document.write("<br>");
+    }
+
+    print(str.length);
+    print(str.charAt(7));
+    print(str[7]);
+    print(str.indexOf("you")); // index 0부터 you를 검색
+    print(str.indexOf("you", 16)); // index 16부터 you를 검색
+    print(str.indexOf("You")); // 대소문자를 구분한다.
+    print(str.lastIndexOf("you")); // 뒤에서부터 you를 검색
+    print(str.includes("you")); // you가 있으면 true
+    print(str.search("you")); // you의 index 위치를 반환. 정규 표현식을 사용할 수 있다.
+    print(str.match("luck")); // luck이 있으면 luck을 반환, 없다면 null 반환
+    print(str.substr(7, 5)); // 문자 추출(길이)
+    print(str.substring(7, 12)); // 문자 추출(end_index)
+    print(str.replace("you", "me")); // 문자 변환(하나만)
+    print(str.replaceAll("you", "me")); // 문자 변환(모두)
+    print(str.replace(/you/g, "me")); // 정규표현식을 사용한 사례
+    print(str.toLowerCase());
+    print(str.toUpperCase());
+
+    print(str.indexOf("you", 0)); // 13
+    print(str.indexOf("you", 14)); // 30
+    print(str.indexOf("you", 31)); // -1
+
+
+
+    function countWord(sentence, word){
+        let wordNext = 0, count = 0;
+        let wordIndex = sentence.indexOf(word, wordNext);
+
+        while(wordIndex != -1){
+            document.write(`${sentence.match(word)}가 있습니다. index는 ${wordIndex}입니다.<br>`);
+            count++;
+
+            wordNext = Number(wordIndex);
+            if(wordNext != -1){
+                wordNext++;
+                wordIndex = sentence.indexOf(word, wordNext);
+            }
+        }
+        document.write(`이 문장 안에 ${word}는 총 ${count}개 있습니다.`);
+    }
+    countWord(str, "you");
+
+</script>
+</html>

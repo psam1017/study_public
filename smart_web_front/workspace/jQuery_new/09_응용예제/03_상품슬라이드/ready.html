@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>상품 슬라이드</title>
+	<meta charset="utf-8"/>
+	<style>
+		/* 초기화 */
+		body, ul {
+			margin: 0;
+			padding: 0;
+		}
+		li {
+			list-style: none;
+		}
+		/* 상품슬라이드 */
+		#scroll_wrap {
+			width: 400px;
+			padding: 50px;
+			margin: 50px 0 0 50px;
+			border: 1px solid #f00;
+			position: relative;
+		}
+		#scroll_wrap span {
+			position: absolute;
+			top: calc(50% - 10px);
+		}
+		#scroll_wrap span.left {
+			left: 20px;
+		}
+		#scroll_wrap span.right {
+			right: 20px;
+		}
+		.scroll {
+			width: 400px;
+			background: #c9c9c9;
+			/* overflow-x: scroll; */
+			overflow-x: hidden;
+		}
+		.scroll ul {
+			width: 1000px;
+			display: flex;
+		}
+		.scroll ul li {
+			width: 90px;
+			margin: 0 5px;
+		}
+	</style>
+	<script src="./jquery-1.7.2.min.js"></script>
+</head>
+<body>
+	<div id="scroll_wrap">
+		<span class="left"><img src="btn_left.gif" alt=""/></span>
+		<span class="right"><img src="btn_right.gif" alt=""/></span>
+		<div class="scroll">
+			<ul>
+				<li><img src="01.jpg" alt=""/></li>
+				<li><img src="02.jpg" alt=""/></li>
+				<li><img src="03.jpg" alt=""/></li>
+				<li><img src="04.jpg" alt=""/></li>
+				<li><img src="05.jpg" alt=""/></li>
+				<li><img src="01.jpg" alt=""/></li>
+				<li><img src="02.jpg" alt=""/></li>
+				<li><img src="03.jpg" alt=""/></li>
+				<li><img src="04.jpg" alt=""/></li>
+				<li><img src="05.jpg" alt=""/></li>
+			</ul>
+		</div>
+	</div>
+	<script>
+		// 슬라이드를 보기 위해 margin이나 transform이 아니라 scrollLeft를 사용하면 안정적이다.
+		$(".right").on("click", function(){
+			$(".scroll:not(:animated)").animate({
+				scrollLeft: "+=100"
+			}, 100);
+		});
+		$(".left").on("click", function(){
+			$(".scroll:not(:animated)").animate({
+				scrollLeft: "-=100"
+			}, 100);
+		});
+	</script>
+</body>
+</html>

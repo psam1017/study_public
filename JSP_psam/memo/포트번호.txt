@@ -1,0 +1,2 @@
+OracleXE112 - 8080
+Tomcat - 8085

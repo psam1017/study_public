@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>조건문 기본 문법</title>
+</head>
+<body></body>
+<script>
+    // 조건문은 특정 조건에 대해서 반응하고 그것을 처리
+    // if문은 특정 조건이 성립할 경우 해당결과를 실행
+
+    // 0이 아닌 모든 숫자는 true
+    if (true) {
+        console.log("참입니다");
+    }
+    
+    // 0, 빈문자열 "", null, undefined, NaN -> false
+    if (false) {
+        console.log("거짓입니다");
+    }
+
+    let walkNum = prompt("오늘 얼마나 걸으셨나요?", "0");
+    if (walkNum >= 1000) {
+        document.write("<h1>매우 좋은 습관입니다</h1>");
+    } else if (walkNum < 1000 && walkNum >= 500) {
+        document.write("<h1>계속 유지하세요</h1>");
+    } else {
+        document.write("<h1>건강을 위해 좀더 걸으세요</h1>");
+    }
+</script>
+</html>

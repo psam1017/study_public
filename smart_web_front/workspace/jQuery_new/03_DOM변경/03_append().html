@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>append()</title>
+	<!-- jQuery library -->
+	<script src="jquery-1.7.2.min.js"></script>
+</head>
+
+<body>
+	<div id="container">
+		<p>안녕하세요</p>
+	</div>
+</body>
+
+<!---------- jQuery code Start ---------->
+<script>
+	// append()는 지정한 태그내의 텍스트 뒷부분에 HTML 추가
+	// div#container 내 <p>안녕하세요</p> 뒤에 <p>반갑습니다</p>를 추가하시오
+
+	// append() 요소를 맨 뒤에 추가한다. 요소를 지정하면 맨 뒤로 이동한다.
+	$("#container").append("<p>반갑습니다</p>");
+	$("#container").append($("#container p:first"));
+
+	// 요소를 이동한다.
+</script>
+<!---------- vs JS ---------->
+<script>
+	// 방법1 : innerHTML
+	// document.querySelector("#container").innerHTML += "<p>반갑습니다</p>";
+
+	// 방법2 : cloneNode와 append
+	// const div = document.getElementById("container");
+	// const p = document.querySelector('p');
+
+	// const p2 = p.cloneNode();
+	// p2.innerText = "반갑습니다.";
+	// div.append(p2);
+</script>
+</html>

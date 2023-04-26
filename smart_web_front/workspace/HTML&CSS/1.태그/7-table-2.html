@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표 태그, table - 합병과 열 그룹</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        th, td{
+            border: 1px solid black;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>A와 B의 중화요리 가격 비교</caption>
+        <thead>
+            <tr>
+                <th></th>
+                <th scope="col" id="storeA">A</th>
+                <th scope="col" id="storeB">B</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="col" id="menu1">짜장면</th>
+                <td headers="storeA menu1">4,000원</td>
+                <td headers="storeB menu1">5,000원</td>
+            </tr>
+            <tr>
+                <th scope="col" id="menu2">짬뽕</th>
+                <td headers="storeA menu2">4,500원</td>
+                <td headers="storeB menu2">5,500원</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="col" id="total">합계</th>
+                <td headers="storeA menu1 menu2 total">8,500원</td>
+                <td headers="storeB menu1 menu2 total">10,500원</td>
+            </tr>
+        </tfoot>
+    </table>
+    <br><hr><br>
+    <table>
+        <caption style="padding: 5px;">colspan, rowspan으로 열과 행 합치기</caption>
+        <tbody>
+            <tr>
+                <td rowspan="2">1행 1열</td>
+                <td colspan="2">1행 2열</td>
+            </tr>
+            <tr>
+                <td>2행 2열</td>
+                <td rowspan="2">2행 3열</td>
+            </tr>
+            <tr>
+                <td colspan="2">3행 1열</td>
+            </tr>
+        </tbody>
+    </table>
+    <table>
+        <caption style="padding: 5px;">colspan, rowspan 연습</caption>
+        <tbody>
+            <tr>
+                <td colspan="3">1행 1열</td>
+                <td rowspan="3">1행 4열</td>
+            </tr>
+            <tr>
+                <td>2행 1열</td>
+                <td rowspan="2">2행 2열</td>
+                <td>2행 3열</td>
+            </tr>
+            <tr>
+                <td>3행 1열</td>
+                <td>3행 2열</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

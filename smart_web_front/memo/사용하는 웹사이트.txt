@@ -1,0 +1,38 @@
+강사 개인 네트워크 주소
+\\192.168.2.254
+
+웹디자인 평가 우수 사이트 모음
+https://www.dbcut.com/
+
+다양한 프로그래밍 언어별 정보 수록
+http://www.tcpschool.com/
+
+문법 검사 사이트
+https://validator.w3.org/
+
+문법 학습 사이트
+https://www.w3schools.com/
+
+구조 개요를 확인하는 사이트
+https://gsnedders.html5.org/outliner/
+
+프론트엔드와 백엔드의 개념
+https://kamang-it.tistory.com/42
+
+HTML5 특수기호 문자 사전
+https://entitycode.com/
+
+무료 배경 이미지
+https://pixabay.com/ko/
+
+선택자 연습
+https://flukeout.github.io/
+
+flex 속성 연습
+https://flexboxfroggy.com/#ko
+
+grid 속성 연습
+https://cssgridgarden.com/#ko
+
+다양한 CSS 연습
+https://codepip.com/games/

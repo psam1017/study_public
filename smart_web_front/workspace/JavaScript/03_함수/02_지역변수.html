@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지역변수</title>
+</head>
+<body>
+</body>
+<script>
+    // var, let, const 차이 정리
+    // https://curryyou.tistory.com/192
+
+    // 함수 내부에서 선언된 var는 지역변수로 한정한다.
+    // 하지만 if문, for문 등의 코드 블록{...}에서 선언된 var는 전역변수로 취급한다.
+    // 반면에, let, const는 함수와 블록에서 선언해도 모두 지역변수로 취급한다.
+
+
+
+    // 변수 선언자를 생략하면, 함수를 호출했을 때 그 변수는 전역변수가 된다.
+    // 함수를 호출하지 않으면, 변수도 생성되지 않으므로 그 변수는 사용할 수 없다.
+    function grade(){
+        kor = 90;
+    }
+    grade();
+    console.log(kor); // 90
+
+
+
+    var count = 0;
+    function helloF(){
+        var count = 1;
+        document.write(`Hello, ${count}<br>`); // 1
+        count++;
+    }
+    function byeF(){
+        document.write(`Bye, ${count}<br>`); // 0
+        count++;
+    }
+    helloF();
+    helloF();
+    helloF();
+    byeF();
+    byeF();
+    byeF();
+</script>
+</html>

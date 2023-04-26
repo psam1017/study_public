@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탭 메뉴</title>
+    <script src="./jquery-1.7.2.min.js"></script>
+    <style>
+        /* 공통 */
+        #wrap{
+            width: 700px;
+            position: relative;
+        }
+        section.on{
+            color: red;
+        }
+        section h2{
+            margin-left: 50px;
+            float: left;
+        }
+        section ul{
+            width: 700px;
+            box-sizing: border-box;
+            padding: 50px;
+            background-color: white;
+            border: 1px solid black;
+            position: absolute;
+            top: 50px;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <section id="notice" class="on">
+            <h2>공지사항</h2>
+            <ul class="list">
+                <li>공지사항입니다.</li>
+                <li>공지사항입니다!</li>
+                <li>공지사항입니다~</li>
+            </ul>
+        </section>
+        <section id="news">
+            <h2>보도자료</h2>
+            <ul class="list">
+                <li>보도자료입니다.</li>
+                <li>보도자료입니다!</li>
+                <li>보도자료입니다~</li>
+                <li>보도자료입니다?</li>
+            </ul>
+        </section>
+    </div>
+    <script>
+        $(function(){
+            $("#wrap section ul").not(":first").hide();
+            $("#wrap h2").on("click", function(){
+                $("#wrap section").removeClass("on");
+                $(this).parent().addClass("on")
+                $("#wrap ul").hide();
+                $(this).next().show();
+            });
+        });
+    </script>
+</body>
+</html>

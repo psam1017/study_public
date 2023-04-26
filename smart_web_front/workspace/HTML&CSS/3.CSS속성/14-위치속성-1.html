@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>위치 속성1</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            font-size: 24px;
+            color: white;
+        }
+        div:nth-child(1){
+            background-color: lightcoral;
+            position: relative;
+            left: 100px;
+            top: 100px;
+            z-index: 1;
+        }
+        div:nth-child(2){
+            background-color: blueviolet;
+            position: relative;
+            bottom: 100px;
+            left: 0px;
+        }
+        div:nth-child(3){
+            background-color: darkgoldenrod;
+            position: absolute;
+            bottom: 100px;
+            right: 0px;
+        }
+        /* 박스3은 position이 absolute이므로 자기 영역이 없어졌다. 따라서 박스4는 박스2의 아래 위치에 배치된다. */
+        div:nth-child(4){
+            background-color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <div>박스1</div>
+    <div>박스2</div>
+    <div>박스3</div>
+    <div>박스4</div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>slideToggle()</title>
+	<style type="text/css">
+		dl {
+			width: 300px;
+			margin: 30px auto 0px;
+		}
+		dl dt {
+			padding: 10px;
+			background: #b677ff;
+			cursor: pointer;
+		}
+		dl dd {
+			border: 1px solid #b677ff;
+			height: 100px;
+			margin: 0;
+			padding: 10px;
+
+			display: none;
+		}
+	</style>
+	<!-- jQuery library -->
+	<script src="jquery-1.7.2.min.js"></script>
+</head>
+<body>
+	<dl>
+		<dt>슬라이딩 효과로 표시상태를 변경한다</dt>
+		<dd>
+			slideDown()/slideUp()는 show()/hide() 와는 다른 슬라이딩
+			애니메이션 효과로 표시/비표시를 변경하는 명령입니다.
+		</dd>
+		<dt>슬라이딩 효과로 표시상태를 변경한다</dt>
+		<dd>
+			slideDown()/slideUp()는 show()/hide() 와는 다른 슬라이딩
+			애니메이션 효과로 표시/비표시를 변경하는 명령입니다.
+		</dd>
+		<dt>슬라이딩 효과로 표시상태를 변경한다</dt>
+		<dd>
+			slideDown()/slideUp()는 show()/hide() 와는 다른 슬라이딩
+			애니메이션 효과로 표시/비표시를 변경하는 명령입니다.
+		</dd>
+	</dl>
+</body>
+
+<!---------- jQuery code Start ---------->
+<script>
+	// dt 클릭시 dd가 슬라이드 업/다운을 순차적으로 실행하도록
+	$("dl dt").on("click", function(){
+		$("dl dd").not($(this).next()).slideUp(500);
+		$(this).next().not(":animated").slideToggle(500);
+	});
+	
+	
+	
+	// const dt = document.querySelectorAll("dt");
+	// const dd = document.querySelectorAll("dd");
+	// dd[index] 말고 dt.nextSibling.nextSibling으로 해도 된다.
+	
+	// dt.forEach((element, index) => {
+	// 	dd[index].style.display = "none";
+	// 	element.addEventListener("click", function(){
+	// 		if(dd[index].style.display === "none"){
+	// 			dd.forEach(e => {
+	// 				e.style.display = "none";
+	// 			});
+	// 			dd[index].style.display = "block";
+	// 		}
+	// 		else{
+	// 			dd[index].style.display = "none";
+	// 		}
+	// 	});
+	// });
+</script>
+</html>

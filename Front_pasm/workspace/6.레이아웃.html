@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃</title>
+    <style>
+        #firstb{
+            border: 3px dashed black;
+        }
+        #firstb >p{
+            border: 1px solid black;
+            background-color: bisque;
+            margin: 10px 30px 0px 100px;
+            padding: 10px;
+        }
+        #secondb{
+            width: 150px;
+            height: 150px;
+            background-color: chartreuse;
+            display: inline;
+            float: left;
+        }
+        #thirdb{
+            width: 150px;
+            height: 150px;
+            background-color: blueviolet;
+            clear: left;
+            margin: 10px auto;
+        }
+        #forthb{
+            width: 150px;
+            height: 150px;
+            background-color: burlywood;
+            position: relative;
+            left: 400px;
+            top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="firstb">
+        <p>
+            아무 내용
+        </p>
+    </div>
+    <div id="secondb"></div>
+    <div id="thirdb"></div>
+    <div id="forthb"></div>
+</body>
+</html>

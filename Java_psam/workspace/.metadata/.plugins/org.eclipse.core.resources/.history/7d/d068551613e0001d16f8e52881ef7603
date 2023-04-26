@@ -1,0 +1,7 @@
+package encryption;
+
+public class PBKDF2DTO {
+
+	private String password = "";
+	private String salt = "";
+}

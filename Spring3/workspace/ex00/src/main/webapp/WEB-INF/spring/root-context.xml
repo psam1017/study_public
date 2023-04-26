@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	<!-- 
+		빈으로 등록될 준비를 마친 클래스들을 스캔하여, 빈으로 등록해준다.
+		@Component를 선언한 클래스들을 bask-package에서 찾는다. base-package는 여러 경로를 선언할 수도 있다.
+		@Controller나 @Service 등은 @Component를 포함하고 있기에 인식이 가능하다. 
+	 -->
+	<context:component-scan base-package="com.example.ex00.dependency"/>
+	<context:component-scan base-package="com.example.ex00.practice"/>
+</beans>

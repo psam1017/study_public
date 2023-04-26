@@ -1,0 +1,3 @@
+content-types/org.eclipse.core.runtime.text/charset=MS949
+content-types/org.eclipse.core.runtime.text/file-names=.java,.js,.jsp,.xml
+eclipse.preferences.version=1

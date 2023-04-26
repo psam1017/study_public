@@ -1,0 +1,12 @@
+Action Tags
+
+1. forward
+2. include
+3. useBean
+4. setProperty
+5. param
+6. plugin
+7. element
+8. attribute
+9. body
+10. text

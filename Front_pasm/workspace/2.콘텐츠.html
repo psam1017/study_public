@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>콘텐츠를 표현하는 방법</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        caption, th, td{
+            border: 1px solid black;
+        }
+        tfoot{
+            text-align: center;
+        }
+        img{
+            display: block;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--택스트 태그-->
+    <h1>h1, h2 ... h6 : 제목을 나타내는 head 태그. h1의 글씨 크기가 제일 크다.</h1>
+    <p>
+        p(paragraph) : 단락을 구분 짓는 태그<br>
+        br : 줄바꿈을 나타내는 단독 태그
+    </p>
+    <blockquote>blockqoute : 인용문을 쓸 때 사용하는 태그. 기본적으로 들여쓰기를 한다.</blockquote>
+    <br>
+    <q>q : 내용을 인용할 때 사용하는 태그. 들여쓰기 없이 큰 따옴표가 표시된다.</q>
+    <br>
+    <b> b : 진하게 표시할 구문</b>
+    <br>
+    <strong> string : 진하게 강조할 구문</strong>
+    <br>
+    <i> i : 이탤릭체로 표시할 구문</i>
+    <br>
+    <em> em : 이탤릭체로 강조할 구문</em>
+    <br>
+    <mark> mark : 형광펜 효과</mark>
+    <br>
+    <span> span : 글자를 꾸밀 때 주로 사용한다. inline 요소를 가지고 있다.</span>
+    <br>
+    <ins> ins : 밑줄을 표현한다.</ins>
+    <br>
+    <del> del : 취소선을 표현한다.</del>
+    <br>
+    <span> sup : 위 첨자를 나타낸다.<sup>1</sup></span>
+    <br>
+    <span> sub : 아래 첨자를 나타낸다.<sub>2</sub></span>
+
+    <br><br><br><br><br>
+
+    <!--목록 태그-->
+    <ol start="3" type="1">
+        ol(ordered list) : 순서가 있는 목록<br>
+        <li> li : list3</li>
+        <li> list 시작 값이 3</li>
+        <li> list 종류가 숫자</li>
+    </ol>
+
+    <ul>
+        ul(unordered list) : 순서가 없는 목록
+        <li> li : list1</li>
+        <li> li : list2</li>
+        <li> li : list3</li>
+    </ul>
+
+    <dl>
+        dl(description list) : 설명이 있는 목록. title과 value 쌍을 사용한 목록이다.
+        <dt> dt : 하나의 제목 태그를 넣는다.</dt>
+        <dd> dd : 하나의 제목 아래 여러 개의 설명을 넣을 수 있다.</dd>
+        <dd> *하나의 dl 안에는 하나의 dt와 여러 개의 dd를 넣을 수 있다.</dd>
+    </dl>
+
+    <br><br><br><br><br>
+
+    <!--표 태그-->
+    <table>
+        <caption> caption : 표의 제목</caption>
+        <thead>
+            <tr>
+                <th> th : 1열 제목</th>
+                <th> th : 2열 제목</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td> td : 1행 1열 내용 </td>
+                <td> td : 1행 2열 내용 </td>
+            </tr>
+            <tr>
+                <td> td : 2행 1열 내용 </td>
+                <td> td : 2행 2열 내용 </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">foot에 해당하는 내용</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <br><br><br><br><br>
+
+    <!--이미지 삽입 태그-->
+    <img src="image/계란프라이.png" alt="계란프라이 %로 비율 조절" width="30%">
+    <img src="image/계란프라이.png" alt="계란프라이 px로 크기 고정" width="150px">
+    
+    <br><br><br><br><br>
+
+    <!--하이퍼링크 삽입 태그-->
+    <a href="https://www.naver.com/" target="_blank">네이버로 이동</a>
+
+    <br><br><br><br><br>
+
+    <!--멀티미디어 삽입 태그-->
+    <audio src="audio/01. A Day With Coffee.mp3" controls loop></audio>
+    <br><br>
+    <video src="video/korea_video.mp4" controls width="50%" poster="image/bg.PNG"></video>
+    <br><br>
+    <object data="file/Documentation.pdf" width="900" height="800"></object>
+    <br><br>
+    <embed src="audio/01. A Day With Coffee.mp3">
+
+    <br><br><br><br><br>
+
+    <!--iframe 태그-->
+    <iframe src="#" width="50%" height="540px"></iframe>
+</body>
+</html>

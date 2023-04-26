@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <title>switch case</title>
+        <script>
+            // 비교해야할 경우의 수가 다양한 경우 주로 사용
+            // 표현식이 Boolean 보다는 문자열 또는 숫자값이 많음
+
+            // switch (변수명) {
+            //   case A : 명령문;
+            //   break;
+            //   case B : 명령문;
+            //   break;
+            //   default :
+            //       모든 case가 아닌 경우 실행될 명령문;
+            // }
+
+            var x = 3;
+            switch (x) {
+                case 1:
+                    console.log("x = 8");
+                case 2:
+                    console.log("x = 9");
+                case 3:
+                    console.log("x = 10");
+                case 4:
+                    console.log("x = 11");
+            }
+        </script>
+    </head>
+    <body>
+        <h1>좋아하는 과일 출력</h1>
+        <script>
+            let heading = document.querySelector("h1");
+            let fruit = prompt("좋아하는 과일을 입력하시오");
+
+            switch (fruit) {
+                case "사과":
+                    heading.innerText = fruit;
+                    break;
+                case "자몽":
+                    heading.innerText = fruit;
+                    break;
+                case "딸기":
+                    heading.innerText = fruit;
+                    break;
+                case "수박":
+                    heading.innerText = fruit;
+                    break;
+                case "메론":
+                    heading.innerText = fruit;
+                    break;
+                default:
+                    heading.innerText = "입력한 과일은 없습니다";
+            }
+        </script>
+    </body>
+</html>

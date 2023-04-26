@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>CSS default</title>
+	<!-- jQuery library -->
+	<script src="jquery-1.7.2.min.js"></script>
+</head>
+<body>
+	<div>test</div>
+</body>
+
+<!---------- jQuery code Start ---------->
+<script>
+	// $( "selector" ).css( "properties", "value" );
+	
+	// css를 여러개 적용시
+	// $( "selector" ).css( "properties", "value" ).css( "properties", "value" )...;
+	// $( "selector" ).css( { "properties" : "value" , "properties" : "value" , "properties" : "value" } );
+	
+	// 카멜표기법을 사용하면 따옴표로 묶어주지 않아도 된다.
+	// 단, 이후 css 속성을 조건으로 사용하는 특정 구문에서는 카멜 표기법을 인식하지 못 한다.
+	// 따라서 사용 용도에 따라 적절하게 사용할 수 있어야 한다.
+
+	// $("div").css( "background-color", "#ddd" ).css("color", "#f00");
+	
+	$("div").css({
+		"width": "200px",
+		"height": "200px",
+		"background-color": "skyblue",
+		"border": "1px solid black",
+		"font-size": "20px",
+		"line-height": "200px", // 생략 시 배수 단위로 인식. 나머지는 생략 가능.
+		"text-align": "center",
+
+		"margin": "10px",
+		"padding": "10px"
+	});
+
+	console.log($("div").css("width")); // 200px. string
+
+	console.log($("div").width()); // 200. content만
+	console.log($("div").innerWidth()); // 220. content + padding
+	console.log($("div").outerWidth()); // 222. content + padding + border
+	console.log($("div").outerWidth(true)); // 242. content + padding + border + margin
+
+	// $("div").css({
+	// 	width: "200px",
+	// 	height: "200px",
+	// 	backgroundColor: "skyblue",
+	// 	border: "1px solid black",
+	// 	fontSize: "20px",
+	// });
+
+</script>
+</html>

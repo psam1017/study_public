@@ -1,0 +1,13 @@
+MariaDB를 설치한 상태에서, mariadb-java-client-3.n.n 다운로드
+https://mariadb.com/downloads/connectors/
+
+
+jar 파일을 압축해제하지 않고, 프로젝트 경로 내에 설치
+
+-> KoreaIT_Java/jar/mariadb-java-client-3.0.7.jar
+
+
+
+이후 프로젝트 properties에서 java build path - library - modulepath에 설치한 jar 파일을 추가.
+
+나머지는 ch34_db package 참고.

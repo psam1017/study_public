@@ -1,0 +1,3 @@
+mapper - xml과 class를 이어준다. @Mapper
+dao - sql에 맞게 쓴 메소드 이름을 예쁜 이름으로 바꿔준다. @repository
+service - dao에 하나씩 만든 메소드들을 기능(service) 구현을 위해 필요한 만큼 묶어준다. @Service

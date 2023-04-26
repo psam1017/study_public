@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG_path 곡선2</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        div{
+            position: absolute;
+            top: 100px;
+            left: 0px;
+            display: flex;
+            transform: translateX(-1000px);
+            animation: lineMove 5s linear infinite;
+        }
+        svg{
+            width: 1000px;
+            height: 300px;
+            /* border: 1px solid black; */
+        }
+        path{
+            fill: none;
+            stroke: black;
+            stroke-width: 3px;
+        }
+        @keyframes lineMove {
+            to{
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <svg>
+            <path d="M0     150 Q125 0 250 150,
+                     T500   150
+                     T750   150
+                     T1000  150"></path>
+        </svg>
+    </div>
+</body>
+<script>
+    const div = document.querySelector('div');
+    const svg = document.querySelector('svg');
+    const svg1 = svg.cloneNode(true);
+    const svg2 = svg.cloneNode(true);
+
+    div.append(svg1);
+    div.append(svg2);
+</script>
+</html>

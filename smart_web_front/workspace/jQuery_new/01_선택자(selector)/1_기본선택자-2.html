@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본 선택자 2</title>
+    <script src="./jquery-3.6.1.min.js"></script>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>1 $("ul li:first-child") $("ul li:first")</li>
+            <li>2 $("ul li:nth-child(2)")</li>
+            <li>3 $("ul li:eq(2)")</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+        <ul>
+            <li>6 $("ul:eq(1) li:eq(0)")</li>
+            <li>7 $("ul li:nth-child(2)")</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10 $("ul li:last")</li>
+        </ul>
+    </div>
+</body>
+<script>
+    $("ul li:first-child").css("background-color", "hotpink");
+    $("ul li:nth-child(2)").css("background-color", "hotpink"); // 2번째 요소
+    $("ul li:eq(2)").css("background-color", "skyblue"); // index = 2. 즉, 3번째 요소
+    $("ul:eq(1) li:eq(0)").css("background-color", "skyblue"); // 2번째 ul의 1번째 li
+
+    $("ul li:first").css("font-size", "24px"); // 모든 ul의 첫번째
+    $("ul li:last").css("font-size", "24px"); // 모든 ul의 마지막
+</script>
+</html>

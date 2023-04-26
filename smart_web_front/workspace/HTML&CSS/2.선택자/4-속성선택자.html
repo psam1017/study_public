@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>속성선택자</title>
+    <style>
+        input[type] { background: rgb(0, 191, 255);}
+        input[type="text"] { background: rgb(0, 255, 98); color: rgb(255, 112, 112);}
+        img[src="./images/node.jpg"] { border: 5px solid red; }
+        img[src^="images/"] { border: 5px solid blue; }
+        img[src$="g"] { padding: 5px; }
+        img[src*="images"] { background-color: bisque; }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="text">
+        <input type= "password">
+        <input>
+    </form>
+    <div>
+        <img src="./images/node.jpg" alt="노드" width="200">
+        <img src="images/ux.gif" alt="ux" width="200">
+        <img src="images/jajq.png" alt="jajq" width="200">
+        <img src="hanbit.jpg" alt="잘못된 경로" height="250">
+    </div>
+</body>
+</html>

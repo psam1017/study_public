@@ -1,0 +1,20 @@
+package encryption;
+
+public class EncrptionDTO {
+
+	private String password = "";
+	private String salt = "";
+	
+	public String getPassword() {
+		return password;
+	}
+	void setPassword(String password) {
+		this.password = password;
+	}
+	public String getSalt() {
+		return salt;
+	}
+	void setSalt(String salt) {
+		this.salt = salt;
+	}
+}

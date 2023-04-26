@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리스트 속성</title>
+    <style>
+        body, ul, ol{
+            margin: 0;
+            padding: 0;
+        }
+        #unorderedWrap{
+            background-color: rgb(199, 139, 255);
+        }
+        #unordered{
+            margin-left: 50px;
+            background-color: blanchedalmond;
+        }
+        ul li{
+            margin: 10px 0px;
+            background: #dabc90 url(./images/bullet.png) no-repeat;
+            background-position: center left 10px;
+            padding-left: 25px;
+            list-style: none;
+            /* list-style-type: square;
+            list-style-image: url(./images/bullet.png);
+            list-style-position: inside; */
+        }
+        #ordered{
+            background-color: blanchedalmond;
+        }
+        ol li{
+            margin-left: 20px;
+            list-style-type: upper-alpha;
+            list-style-position: outside; /* default */
+        }
+    </style>
+</head>
+<body>
+    <div id="unorderedWrap">
+        <div id="unordered">
+            <h1>순서 없는 리스트</h1>
+            <ul>
+                <li>리스트</li>
+                <li>리스트</li>
+                <li>리스트</li>
+            </ul>
+        </div>
+    </div>
+    <div id="ordered">
+        <h1>순서 있는 리스트</h1>
+        <ol>
+            <li>리스트</li>
+            <li>리스트</li>
+            <li>리스트</li>
+        </ol>
+    </div>
+</body>
+</html>

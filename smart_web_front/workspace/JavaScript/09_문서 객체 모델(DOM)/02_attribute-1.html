@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setAttribute</title>
+    <style>
+        .goLink{
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <div id="target" class="active">
+        <a>네이버</a>
+    </div>    
+</body>
+<script>
+    // HTML 태그의 속성을 확인할 때는 console.log 말고 개발자 모드 - 요소 탭에서 확인해야 한다.
+
+    const div = document.getElementById("target");
+    // let idName = div.getAttribute("id");
+    // let className = div.getAttribute("class");
+    let idName = div.id;
+    let className = div.className;
+    console.log(idName, className);
+    
+    div.setAttribute("id", "target2");
+    div.setAttribute("class", "active2");
+    // 바뀐 부분은 개발자 모드 - 요소 탭에서 확인 가능
+
+    const anchor = document.querySelector("a");
+    anchor.setAttribute("href", "https://www.naver.com");
+    anchor.setAttribute("target", "_blank");
+    anchor.className = "goLink";
+
+    anchor.addEventListener("click", function(){
+        this.style.backgroundColor = "hotpink";
+    });
+
+</script>
+</html>

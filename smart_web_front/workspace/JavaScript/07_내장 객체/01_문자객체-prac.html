@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자 객체 실습</title>
+</head>
+<body>
+</body>
+<script>
+    let name = prompt("What is your name?", "English only");
+    let ph = prompt("What is your phone number?");
+
+    document.write(name.toUpperCase() + "<br>");
+    document.write(ph.replace(ph.substr(ph.length - 4, 4), "****") + "<br>");
+
+    ph = ph.match(/\d{3}-\d{4}-\d{4}/);
+    phStr = ph.join();
+    document.write(phStr.replace(phStr.substr(phStr.length - 4, 4),"****"));
+</script>
+</html>

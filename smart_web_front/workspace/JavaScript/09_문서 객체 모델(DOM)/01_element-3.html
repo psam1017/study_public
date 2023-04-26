@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>부모, 자식, 형제요소 접근하기</title>
+</head>
+<body>
+    <div id="food">
+        <h2>한식</h2>
+        <ul>
+            <li class="kimchiRice">김치볶음밥</li>
+            <li>전주비빔밥</li>
+            <li>석쇠불고기</li>
+        </ul>
+    </div>
+    <a href="#">anchor</a>
+</body>
+<script>
+    const food = document.getElementById("food");
+    // 자식요소 : children[], childNodes[]
+    // 자식요소에 접근할 때는 children이 더 낫다. 요소들을 사용자에게 맞게 접근하기 때문.
+
+    console.log(food.children[0]); // h2
+    console.log(food.firstElementChild); // h2
+    console.log(food.lastElementChild); // ul
+    food.children[0].style.color = "hotpink";
+
+    console.log(food.childNodes[0]); // enter쳐서 생긴 공백문자
+    console.log(food.childNodes[1]); // h2
+    console.log(food.firstChild);
+    console.log(food.lastChild);
+    food.childNodes[1].style.color = "skyblue";
+
+
+
+    const kimchiRice = document.querySelector(".kimchiRice");
+    // 부모요소 : parentElement, parentNode
+    // 부모요소는 어차피 하나이므로 두 메소드 사이에 별 차이가 없다.
+
+    console.log(kimchiRice);
+    console.log(kimchiRice.parentElement);
+    console.log(kimchiRice.parentNode);
+    kimchiRice.parentElement.style.border = "1px solid #000";
+
+
+
+    // 형제요소 nextSibling, prevSibling
+
+    console.log(kimchiRice.nextSibling); // 공백 문자
+    console.log(kimchiRice.nextSibling.nextSibling); // 전주비밤밥
+
+</script>
+<script>
+    for (let name in Node) {
+        console.log(name, Node[name]);
+    }
+
+    const anchor = document.querySelector("a");
+    if(anchor.getAttributeNode("href").nodeType == 2){
+        console.log("true");
+    }
+    else{
+        console.log("false");
+    }
+</script>
+</html>

@@ -1,0 +1,41 @@
+REST : REpresentational State Transfer
+	"데이터를 전송하기 위해 작성하는 URL이 리소스의 상태를 대표하는 것"
+
+	1. 화면의 페이지 이동 없이 부분 수정 또는 부분 데이터가 필요할 때
+		-> 페이지가 응답하는 게 아니라 데이터가 응답
+		-> ajax를 통해 REST로 작성한 URL로 전달하고 통신!
+
+	2. URL을 요청할 수 있는 환경(즉, 인터넷 ok)이라면 어디서든지 요청이 가능하다.
+		-> 타 서버, 타 언어 간의 데이터 교환이 가능하다.
+		-> json으로 통신
+
+
+
+ex) "/board/3"
+	-> 3번 게시글의 정보를 요청하는 REST 방식 URL.
+	-> '3'은 3번 게시글을 대표하는 정보이다.
+
+
+
+
+
+// REST 구현을 위해 필요한 library
+
+<!-- JSON -->
+<dependency>
+	<groupId>com.fasterxml.jackson.core</groupId>
+	<artifactId>jackson-databind</artifactId>
+	<version>2.9.6</version>
+</dependency>
+
+<dependency>
+	<groupId>com.fasterxml.jackson.dataformat</groupId>
+	<artifactId>jackson-dataformat-xml</artifactId>
+	<version>2.9.6</version>
+</dependency>
+
+<dependency>
+	<groupId>com.google.code.gson</groupId>
+	<artifactId>gson</artifactId>
+	<version>2.8.2</version>
+</dependency>

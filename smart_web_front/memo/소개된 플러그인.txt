@@ -1,0 +1,23 @@
+bxSlider
+https://bxslider.com/
+https://github.com/stevenwanderski/bxslider-4
+
+
+스와이퍼
+https://swiperjs.com/demos
+
+
+슬릭(슬라이드)
+https://kenwheeler.github.io/slick/
+
+
+zoom
+https://jaukia.github.io/zoomooz/
+
+
+라이트 박스(사진 자세히 보기)
+https://lokeshdhakar.com/projects/lightbox2/
+
+
+쓰로틀, 디바운스(이벤트 제어)
+https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.5.0/lodash.min.js

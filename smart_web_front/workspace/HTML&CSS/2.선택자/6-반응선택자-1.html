@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응선택자</title>
+    <style>
+        /* a태그에만 적용할 수 있는 반응선택자 */
+        h1 a:link{
+            color: black;
+            text-decoration: none;
+        }
+        h1 a:visited{
+            color: indianred;
+            text-decoration: none;
+        }
+        h1 a:hover{
+            color: blue;
+            text-decoration: underline;
+        }
+        h1 a:active{
+            color: green;
+        }
+        div{
+            margin: 20px;
+            width: 150px;
+            height: 150px;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 150px;
+            transition-duration: 1s;
+        }
+        div:hover{
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            background-color: green;
+            color: white;
+            transform: rotateZ(720deg);
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        <a href="https://namu.wiki/w/%EB%A9%94%EB%B0%80%EA%BD%83%20%ED%95%84%20%EB%AC%B4%EB%A0%B5#s-3" target="_blank">메밀꽃 필 무렵</a>
+    </h1>
+    <div>박스크기 변경</div>
+</body>
+</html>

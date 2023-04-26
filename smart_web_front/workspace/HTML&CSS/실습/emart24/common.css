@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+body {
+    min-width: 1000px;
+    position: relative;
+}
+body, h1, h2, ul {
+    margin: 0;
+    padding: 0;
+}
+* {
+    box-sizing: border-box;
+}
+ul li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+/* 메뉴 설명 숨기기 */
+.hidden {
+    position: absolute;
+    top: -9999px;
+}
+#headerWrap {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 130px;
+    border-bottom: 1px solid white;
+    overflow: hidden;
+    transition: 0.5s;
+    z-index: 99;
+}
+#headerWrap:hover{
+    height: 280px;
+    overflow: none;
+    border-bottom: 1px solid black;
+}
+#headerWrap::after{
+    content: "";
+    position: absolute;
+    top: 129px;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid white;
+}
+#headerWrap::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: burlywood;
+}
+#header {
+    display: flex;
+    justify-content: space-between;
+
+    position: relative;
+
+    width: 1000px;
+    height: 130px;
+    margin: 0 auto;
+    padding-top: 40px;
+
+    /* box-sizing: content-box; */
+}
+#header h1 {
+    margin-top: 30px;
+    width: 154px;
+}
+#header h1 a {
+    display: block;
+    height: 43px;
+    background: url("./logo.png") no-repeat;
+    text-indent: -5000px;
+    /* color: rgba(0, 0, 0, 0); */
+}
+#gnb {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#gnb ul {
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+#gnb ul li {
+    position: relative;
+    padding: 0 10px;
+    font-size: 13px;
+}
+#gnb ul li:not(:first-child):after {
+    content: "";
+    height: 10px;
+    border-left: 1px solid black;
+
+    position: absolute;
+    top: 4px;
+    left: 0;
+}
+#lnb > ul {
+    display: flex;
+    justify-content: space-evenly;
+    width: 780px;
+}
+#lnb > ul > li {
+    position: relative;
+}
+#lnb > ul > li > a {
+    display: block;
+    line-height: 90px;
+    color: black;
+}
+#lnb .snb {
+    position: absolute;
+    top: 90px;
+    left: 0px;
+}
+#lnb .snb li {
+    white-space: nowrap;
+    line-height: 50px;
+}
+#lnb .snb li a {
+    color: black;
+}
+section{
+    position: absolute;
+    left: calc(50% - 500px);
+    margin-top: 130px;
+    width: 1000px;
+    height: 500px;
+    background-color: deepskyblue;
+}

@@ -1,0 +1,12 @@
+package wiki;
+
+import wiki.main.service.Wikifier;
+
+public class Test {
+	public static void main(String[] args) {
+		
+		Wikifier wikifier = new Wikifier();
+		String text1 = "hello";
+		wikifier.seperate("test", 1, text1);
+	}
+}

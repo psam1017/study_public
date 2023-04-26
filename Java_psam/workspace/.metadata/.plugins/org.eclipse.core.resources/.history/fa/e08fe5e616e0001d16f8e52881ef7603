@@ -1,0 +1,18 @@
+package encryption;
+
+public class Test01 {
+
+	public static void main(String[] args) {
+		
+		String password = "password";
+		
+		Enctyptor encryptor = new Enctyptor();
+		
+		try {
+			EncrptionDTO dto = encryptor.encrypt(password);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

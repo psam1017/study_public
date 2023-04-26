@@ -1,0 +1,3 @@
+DBeaver 기본 workspace 변경하기
+
+https://gubok.tistory.com/507

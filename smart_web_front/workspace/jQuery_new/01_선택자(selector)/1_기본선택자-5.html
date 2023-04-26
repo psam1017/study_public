@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본 선택자 5</title>
+    <script src="./jquery-3.6.1.min.js"></script>
+</head>
+<body>
+    <ul>
+        <li style="display: none;">apple</li>
+        <li>banana</li>
+        <li>orange</li>
+    </ul>
+</body>
+<script>
+    $("ul li:hidden").show(1000); // 1초 동안 보여짐. -> visible이 되어서 다시 아래 명령에 의해 사라짐.
+    $("ul li:visible").hide(1000); // 1초 동안 사라짐.
+
+    $(document).on("click", function(){
+        $("ul li").show(1000);
+        $("ul li").hide(1000);
+    });
+</script>
+</html>

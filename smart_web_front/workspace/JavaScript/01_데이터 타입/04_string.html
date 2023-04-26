@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let str1 = "Hello";
+    let str2 = "World!";
+
+    let str3 = str1.concat(", ").concat(str2);
+    console.log(str3);
+    
+    let str4 = str1 + ", " + str2;
+    console.log(str4);
+    
+    let str5 = `${str1}, ${str2}`;
+    console.log(str5);
+
+
+
+    // 문자 한 글자 가져오기
+    let alpha = "ABCDEFGhijklmnA";
+    console.log(alpha.length);
+    console.log(alpha.charAt(0));
+    console.log(alpha[0]);
+    console.log(alpha.charAt(alpha.length - 1)); // "뒤에서 첫 번째"
+    console.log(alpha[alpha.length]); // index를 벗어난 값은 undefined이다.
+    
+
+    console.log(alpha.charCodeAt(0)); // ascii code 값으로 반환
+    
+    // 인덱스 메소드에 없는 값을 검색하면 -1을 반환한다.
+    console.log(alpha.indexOf("A")); // A 문자의 첫 위치를 반환
+    console.log(alpha.lastIndexOf("A")); // A 문자의 마지막 위치를 반환
+
+
+
+    let slogan = "We have to study Javascript!";
+    // substr, substring으로 문자열 가져오기
+
+    // substr(from: number, length?: number)
+    let have = slogan.substr(slogan.indexOf("have"), 4);
+    console.log(have);
+
+    // substring(start: number, end?: number)
+    let study = slogan.substring(slogan.indexOf("study"), (slogan.indexOf("study") + 5));
+    console.log(study);
+
+    // substr(-1), substring(-1)
+    console.log(slogan.substr(-1)); // 뒤에서 첫 번째 글자만 반환한다.
+    console.log(slogan.substring(-1)); // 앞에서 -1번째 글자부터 반환한다. substring(0)과 차이가 없다.
+
+
+
+    // 문자 형변환
+    let num = 123;
+    let str6 = String(num);
+    console.log(str6, typeof str6);
+    let str7 = num.toString();
+    console.log(str7, typeof str7);
+</script> v
+</html>

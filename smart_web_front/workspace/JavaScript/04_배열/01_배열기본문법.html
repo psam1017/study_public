@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열기본문법</title>
+</head>
+<body>
+</body>
+<script>
+    // 배열의 길이를 정하지 않아도 되고, 배열에 값을 하나씩 추가할 수 있다. 즉, js의 배열은 길이가 가변적이다.
+    let fruit = new Array();
+    fruit[0] = "수박";
+    fruit[2] = "메론"; // 배열의 중간에 값을 비워도 된다.
+    console.log(fruit, typeof fruit);
+
+    // let Fruit = new Array("수박", "메론", "사과");
+    // let Fruit = ["수박", "메론", "사과"];
+    
+
+    fruit[3] = "포도"; // 값 추가
+    fruit[0] = "망고"; // 값 변경
+    console.log(fruit, typeof fruit);
+
+
+</script>
+</html>

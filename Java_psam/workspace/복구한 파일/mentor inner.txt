@@ -1,0 +1,101 @@
+package day28;
+
+public class InnerClass {
+
+	// 내부 클래스 : 클래스 내부에서 생성된 클래스(<-> 외부 클래스)
+	// 클래스 간의 관계가 긴밀할 때 사용하여 코드를 간결하게 만들 수 있음.
+	// 내부 클래스에도 접근 제어자를 사용할 수 있다.
+	
+	// 인스턴스 클래스 : 멤버 변수 위치에 선언된 클래스.
+	// -> 다른 멤버 변수들과 상호작용 가능. static 메소드가 접근 불가능.
+	// 스태틱 클래스 : 멤버 변수 위치에 static으로 선언된 클래스.
+	// -> 다른 static 멤버 변수들과 상호작용 가능.
+	// 지역 클래스 : 메소드 내부 지역 변수 위치에 선언된 클래스.
+	// -> 스택(stack) 영역에서 존재하며, 메소드 내부에서 사용.
+
+	public static void main(String[] args) {
+		
+		// static 멤버 변수는 특성상 인스턴스 없이도 호출이 가능하다.
+		System.out.println("---Outer Class에 접근하기---");
+		OuterClass oc = new OuterClass();
+		System.out.println("OuterClass의 a 값 : " + oc.a);
+		System.out.println("OuterClass의 b 값 : " + OuterClass.b);
+		
+		// 내부 - 인스턴스 클래스 객체 선언 방법
+		// -> 외부클래스.내부클래스 변수명 = new 외부클래스() . new 내부클래스();
+		// -> 외부클래스.내부클래스 변수명 = 외부클래스인스턴스. new 내부클래스();
+		System.out.println("---Inner Class에 접근하기---");
+		OuterClass.Inner oci = oc. new Inner();
+		System.out.println("OuterClass.Inner의 c 값 : " + oci.c);
+		oci.instanceMethod();
+		
+		// 내부 = 스태틱 클래스 객체 선언 방법
+		// -> 외부클래스.내부클래스 변수명 = new 외부클래스.내부클래스();
+		// 스태틱 메소드는 인스턴스가 아니라 클래스를 통해 호출하는 게 더 정확하다.
+		System.out.println("---Static Inner Class에 접근하기---");
+		OuterClass.StaticInner ocsi = new OuterClass.StaticInner();
+		System.out.println("OuterClass.StaticInner의 c 값 : " + ocsi.c);
+		OuterClass.StaticInner.staticMethod();
+		
+		
+		
+	}
+	
+}
+
+class A{
+	
+	static class StaticInner{} // 스태틱 클래스
+	
+	class InstanceInner{} // 인스턴스 클래스
+	
+	StaticInner si = new StaticInner();
+	InstanceInner ii = new InstanceInner();
+	
+	@SuppressWarnings("unused")
+	static void staticMethond() {
+		StaticInner si2 = new StaticInner();
+		// 스태틱 메소드는 인스턴스 클래스 멤버변수에 접근할 수 없음. 아래는 실행 불가능.
+		// InstanceInner ii2 = new InstanceInner();
+	}
+	
+	@SuppressWarnings("unused")
+	void instanceMethod() {
+		StaticInner si3 = new StaticInner();
+		InstanceInner ii3 = new InstanceInner();
+	}
+	
+}
+
+class OuterClass{
+	
+	int a;
+	static int b = 4;
+	
+	class Inner{
+		
+		int c = 5;
+		
+		public void instanceMethod() {
+			System.out.println("인스턴스 클래스 메소드 실행!");
+		}
+	}
+	
+	static class StaticInner{
+		
+		int c = 6;
+		
+		public static void staticMethod() {
+			System.out.println("스태틱 클래스 메소드 실행!");
+		}
+		
+	}
+	
+}
+
+
+
+
+
+
+

@@ -1,0 +1,20 @@
+1. Dynamic Web Project 생성한다.
+프로젝트 이름 작성 & Target runtime에서 WAS(tomcat) 설정
+
+2. Web Module에서 web.xml을 생성하기로 설정한다.
+*project를 생성하는 창에서 next를 2번 클릭하면 바로 web module에 갈 수 있다.
+
+3. 빌드 패스 설정
+라이브러리에서
+Modulepath - ojdbc6.jar, mybatis-3.5.11.jar, json-simple-1.1.1.jar추가(jdk-11.0.16는 기본 설정)
+Classpath - jstl.jar, standard.jar 추가(Apache Tomcat v9.0, Web App Libraries, EAR Libraries는 기본 설정)
+
+*jstl, standard는 jstl 1.1v를 사용함.
+*이후에 잊지 말고
+Libraries에서 Apply
+Order and Export에서 모든 파일을 Apply.
+
+4. Web Content - WEB-INF의 lib에 추가했던 jar를 똑같이 넣는다.
+*복사하여 붙여넣으면 된다.
+
+5. 이후에 mybatis, xml, db 등 프로젝트를 진행하면 된다.

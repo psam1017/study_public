@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="NewWizardAction">
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.NewClassCreationWizard"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.jdt.ui.java"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.internal.QuickAccess">
+		<item key="org.eclipse.ui.internal.quickaccess.QuickAccessDialogDIALOG_WIDTH" value="901"/>
+		<item key="org.eclipse.ui.internal.quickaccess.QuickAccessDialogDIALOG_HEIGHT" value="675"/>
+		<item key="org.eclipse.ui.internal.quickaccess.QuickAccessDialogDIALOG_USE_PERSISTED_SIZE" value="true"/>
+		<item key="org.eclipse.ui.internal.quickaccess.QuickAccessDialogDIALOG_USE_PERSISTED_LOCATION" value="false"/>
+		<list key="orderedElements">
+			<item value="org.eclipse.ui.views.AllMarkersView"/>
+			<item value="org.eclipse.ui.navigator.ProjectExplorer"/>
+			<item value="org.eclipse.jdt.ui.preferences.BuildPathPreferencePage"/>
+			<item value="org.eclipse.ui.editors.preferencePages.Spelling"/>
+			<item value="org.eclipse.jdt.ui.wizards.NewAnnotationCreationWizard"/>
+			<item value="org.eclipse.debug.ui.DebugPreferencePage"/>
+			<item value="org.eclipse.debug.ui.ConsolePreferencePage"/>
+			<item value="org.eclipse.jdt.ui.preferences.CodeFormatterPreferencePage"/>
+			<item value="org.eclipse.ui.preferencePages.FileStates"/>
+			<item value="org.eclipse.wildwebdeveloper.xml.internal.ui.preferences.XMLPreferencePage"/>
+			<item value="org.eclipse.ui.browser.preferencePage"/>
+			<item value="org.eclipse.ui.editors.preferencePages.Accessibility"/>
+			<item value="org.eclipse.oomph.setup.SynchronizerPreferencePage"/>
+			<item value="org.eclipse.jdt.ui.navigate.open.type"/>
+			<item value="org.eclipse.compare.compareWithOther"/>
+			<item value="org.eclipse.jdt.ui.ProjectsView"/>
+			<item value="org.eclipse.ui.preferencePages.ColorsAndFonts"/>
+			<item value="org.eclipse.oomph.setup.RecorderPreferencePage"/>
+		</list>
+		<list key="orderedProviders">
+			<item value="org.eclipse.e4.ui.parts"/>
+			<item value="org.eclipse.e4.ui.parts"/>
+			<item value="org.eclipse.ui.preferences"/>
+			<item value="org.eclipse.ui.preferences"/>
+			<item value="org.eclipse.ui.wizards"/>
+			<item value="org.eclipse.ui.preferences"/>
+			<item value="org.eclipse.ui.preferences"/>
+			<item value="org.eclipse.ui.preferences"/>
+			<item value="org.eclipse.ui.preferences"/>
+			<item value="org.eclipse.ui.preferences"/>
+			<item value="org.eclipse.ui.preferences"/>
+			<item value="org.eclipse.ui.preferences"/>
+			<item value="org.eclipse.ui.preferences"/>
+			<item value="org.eclipse.ui.commands"/>
+			<item value="org.eclipse.ui.commands"/>
+			<item value="org.eclipse.e4.ui.parts"/>
+			<item value="org.eclipse.ui.preferences"/>
+			<item value="org.eclipse.ui.preferences"/>
+		</list>
+		<list key="textEntries">
+			<item value="1"/>
+			<item value="1"/>
+			<item value="2"/>
+			<item value="1"/>
+			<item value="1"/>
+			<item value="1"/>
+			<item value="1"/>
+			<item value="1"/>
+			<item value="3"/>
+			<item value="1"/>
+			<item value="1"/>
+			<item value="1"/>
+			<item value="1"/>
+			<item value="1"/>
+			<item value="1"/>
+			<item value="1"/>
+			<item value="1"/>
+			<item value="1"/>
+		</list>
+		<list key="textArray">
+			<item value="mark"/>
+			<item value="project expl"/>
+			<item value="build path"/>
+			<item value="java build "/>
+			<item value="checking"/>
+			<item value="annota"/>
+			<item value="run/d"/>
+			<item value="debug"/>
+			<item value="indent"/>
+			<item value="local his"/>
+			<item value="local "/>
+			<item value="general"/>
+			<item value="xml"/>
+			<item value="web"/>
+			<item value="pre"/>
+			<item value="pref"/>
+			<item value="java editor"/>
+			<item value="compare wi"/>
+			<item value="proje"/>
+			<item value="color"/>
+			<item value="prefer"/>
+		</list>
+	</section>
+	<section name="ContentTypeFilenameAssociationDialog">
+		<item key="DIALOG_X_ORIGIN" value="16"/>
+		<item key="DIALOG_Y_ORIGIN" value="118"/>
+		<item key="DIALOG_WIDTH" value="613"/>
+		<item key="DIALOG_HEIGHT" value="375"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	</section>
+	<section name="ImportExportAction">
+		<item key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID" value="org.eclipse.e4.ui.importer.wizard"/>
+		<item key="ImportExportPage.STORE_SELECTED_EXPORT_WIZARD_ID" value="org.eclipse.jdt.internal.ui.jarpackager.JarPackageWizard"/>
+		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
+			<item value="org.eclipse.ui.Basic"/>
+		</list>
+		<list key="ImportExportPage.STORE_EXPANDED_EXPORT_CATEGORIES">
+			<item value="org.eclipse.jst.ejb.ui"/>
+			<item value="org.eclipse.jdt.ui.Java"/>
+			<item value="org.eclipse.jst.j2ee.internal"/>
+		</list>
+	</section>
+	<section name="PreferencesImportWizard">
+	</section>
+</section>

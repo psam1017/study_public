@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도미토리 객실 소개</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        th, td{
+            border: 1px solid black;
+            width: 150px;
+        }
+        #col1{
+            background-color: cornsilk;
+        }
+        #col2{
+            background-color: pink;
+        }
+        #col4{
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+
+<!--
+    접근성 측면을 고려하여
+    th에는 scope와 id를 넣고
+    td에는 headers를 넣어야 한다.
+-->
+
+<body>
+    <h1>객실소개</h1>
+    <h3>도미토리</h3>
+    <table>
+        <caption>요안도라 객실</caption>
+        <colgroup>
+            <col id="col1">
+            <col id="col2" span="2">
+            <col id="col4">
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col" id="name">방이름</th>
+                <th scope="col" id="guest">대상</th>
+                <th scope="col" id="size">크기</th>
+                <th scope="col" id="price">가격</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="col" id="rapesee">유채방</th>
+                <td headers="rapeseed guest">여성 도미토리</td>
+                <td rowspan="3" headers="rapeseed camellia size">4인실</td>
+                <td rowspan="4" headers="price">1인 20,000원</td>
+            </tr>
+            <tr>
+                <th scope="col" id="camellia" rowspan="2">동백방</th>
+                <td headers="camellia guest1">동성 도미토리</td>
+            </tr>
+            <tr>
+                <td headers="camellia guest2">가족1팀</td>
+            </tr>
+            <tr>
+                <th scope="col" id="skyscent">천혜향방</th>
+                <td headers="skyscent guest">-</td>
+                <td headers="skyscent size">2인실</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4" headers="special rent">바깥채 전체를 렌트합니다</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

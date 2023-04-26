@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폰트 크기 조절</title>
+    <style>
+        div{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button>크기+</button>
+    <button>크기-</button>
+    <div>텍스트 크기를 조절해보세요.</div>
+</body>
+<script>
+    // querySelectorAll("element") : 모든 요소들을 배열 형태로 저장한다.
+    const button = document.querySelectorAll("button");
+    const div = document.querySelector("div");
+    let fontSize = 20;
+    let state = true;
+    console.log(button[0].tagName, button[1].tagName, fontSize, div.tagName);
+
+    function sizeChange(state){
+        if(state){
+            if(fontSize < 100){
+                fontSize += 10;
+                div.style.fontSize = `${fontSize}px`;
+                console.log(div.style.fontSize);
+            }
+        }
+        else{
+            if(fontSize > 20){
+                fontSize -= 10;
+                div.style.fontSize = `${fontSize}px`;
+                console.log(div.style.fontSize);
+            }
+        }
+    }
+
+    button[0].addEventListener("click", function(){
+        sizeChange(state);
+    });
+    button[1].addEventListener("click", function(){
+        sizeChange(!state);
+    });
+</script>
+</html>

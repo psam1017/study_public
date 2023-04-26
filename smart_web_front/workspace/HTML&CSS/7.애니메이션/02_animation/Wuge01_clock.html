@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .img{
+            width: 3vw;
+            height: 25vw; 
+            position: absolute;
+            left: 50%;
+            margin-left: -1.5vw;
+        }
+        h3{
+            text-align: center;
+           font-size: 2vw;
+        }
+        body{
+            margin: 0;
+            height: 100vh;
+            background-color: #ccc;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .circle{
+            width: 25vw;
+            height: 25vw;
+            background-color: white;
+            border-radius: 50%;
+            margin: 20px;
+            position: relative;
+        }
+        .hr, .hr0{
+            width: 0.8vw;
+            height: 30%;
+            background-color: blue;
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            margin-left: -0.4vw;
+        }
+        .min, .min0{
+            width: 0.6vw;
+            height: 40%;
+            background-color: green;
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            margin-left: -0.3vw;
+        }
+        .sec, .sec0{
+            width: 0.4vw;
+            height: 50%;
+            background-color: red;
+            position: absolute;
+            top: 5%;           
+            left: 50%;
+            margin-left: -0.2vw;
+        }
+        .hr{           
+            animation: rote-h calc(12s*60*60) infinite  linear;
+        }
+        .min{           
+            animation: rote-m calc(60s*60) infinite linear;
+        }
+        .sec{
+            animation: rote-s 60s infinite linear;
+        }
+        .ddiv{
+            width: 100%;        
+            height: 100%;  
+            position: absolute;  
+
+        }
+        .dhr0{       
+            animation: rote-h0 calc(12s*60*60) infinite  linear;
+        }
+        .dmin0{           
+            animation: rote-m0 calc(60s*60) infinite linear;
+        }
+        .dsec0{
+            animation: rote-s0 60s infinite linear;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let time =new Date();
+        let sec=time.getSeconds();
+        let min=time.getMinutes();
+        let hour=time.getHours();
+        let x=sec*6;
+        let y=(min*60+sec)*0.1;
+        let z=(hour*60+min)*0.5;
+        let tableStyle=document.getElementsByTagName('head')[0].getElementsByTagName('style')[0];
+        let inputStyle=`        
+            @keyframes rote-s{
+            0%{
+                transform: rotate(${x}deg);
+                transform-origin: 0.2vw 11.25vw;
+            }
+            100%{
+                transform: rotate(${x+360}deg);
+                transform-origin: 0.2vw 11.25vw;
+            }
+        }  
+            @keyframes rote-m{
+            0%{
+                transform: rotate(${y}deg);
+                transform-origin: 0.3vw 8.75vw;
+            }
+            100%{
+                transform: rotate(${y+360}deg);
+                transform-origin: 0.3vw 8.75vw;
+            }
+        }  
+        @keyframes rote-h{
+            0%{
+                transform: rotate(${z}deg);
+                transform-origin: 0.4vw 6.125vw;
+            }
+            100%{
+                transform: rotate(${z+360}deg);
+                transform-origin: 0.4vw 6.125vw;
+            }
+        }`;    
+        let inputStyle2=`        
+            @keyframes rote-s0{
+            0%{
+                transform: rotate(${x}deg);
+            }
+            100%{
+                transform: rotate(${x+360}deg);
+            }
+        }  
+            @keyframes rote-m0{
+            0%{
+                transform: rotate(${y}deg);
+            }
+            100%{
+                transform: rotate(${y+360}deg);
+            }
+        }  
+        @keyframes rote-h0{
+            0%{
+                transform: rotate(${z}deg);
+            }
+            100%{
+                transform: rotate(${z+360}deg);
+            }
+        }`;    
+        tableStyle.innerText=tableStyle.textContent + inputStyle + inputStyle2;
+    </script>
+    <div class="circle">
+        <h3>transform-origin+CSS Animation</h3>
+        <div class="min"></div>
+        <div class="hr"></div>
+        <div class="sec"></div>
+    </div>
+    <div class="circle">
+        <div class="dmin0 ddiv"><div class="min0"></div></div>
+        <div class="dhr0 ddiv"><div class="hr0"></div></div>
+        <div class="dsec0 ddiv"><div class="sec0"></div></div>
+        <h3>雙DIV+CSS Animation</h3>
+    </div>
+    <div class="circle">
+        <img  class="img dmin0" src="./img/02.png">
+        <img  class="img dhr0" src="./img/01.png">
+        <img  class="img dsec0" src="./img/03.png">
+        <h3>圖片+CSS Animation</h3>
+    </div>
+    <div class="circle">
+        <div class="min0" id="min"></div>
+        <div class="hr0" id="hr"></div>
+        <div class="sec0" id="sec"></div>
+        <h3>setInterval+中心偏移表示法</h3>
+    </div>
+    <script>
+        document.querySelector("#min").style.transformOrigin="0.3vw 8.75vw";
+        document.querySelector("#hr").style.transformOrigin="0.4vw 6.125vw";
+        document.querySelector("#sec").style.transformOrigin="0.2vw 11.25vw";
+        setTime()
+        function setTime() {           
+            let time =new Date();
+            let sec=time.getSeconds();
+            let min=time.getMinutes();
+            let hour=time.getHours();
+            let x=sec*6;
+            let y=(min*60+sec)*0.1;
+            let z=(hour*60+min)*0.5;
+            document.querySelector("#min").style.transform=`rotate(${y}deg)`
+            document.querySelector("#hr").style.transform=`rotate(${z}deg)`
+            document.querySelector("#sec").style.transform=`rotate(${x}deg)`
+        }
+        setInterval(setTime,1000);
+    </script>
+</body>
+</html>

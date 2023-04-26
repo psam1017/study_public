@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계산기</title>
+    <style>
+        #calInterface{
+            font-size: 40px;
+            width: 320px;
+            background: #333;
+            padding: 0 0 2px 2px;
+
+            display: grid;
+            gap: 1px 0;
+            grid-template-areas: 
+                "result result  result  result"
+                ".      .       .       add"
+                ".      .       .       sub"
+                ".      .       .       multi"
+                "reset  num0    oper    divide";
+        }
+        button{
+            height: 75px;
+            width: 77px;
+            text-align: center;
+            font-size: 28px;
+            transition: 0.1s;
+        }
+        .numBtn{
+            background-color: #ccc;
+        }
+        .operBtn{
+            background-color: #888;
+            color: white;
+        }
+        #num0{
+            grid-area: num0;
+        }
+        #result{
+            color: yellow;
+            text-align: right;
+            height: 80px;
+            width: 306px;
+            line-height: 80px;
+            padding-right: 10px;
+
+            grid-area: result;
+        }
+        #add{ grid-area: add; }
+        #sub{ grid-area: sub; }
+        #multi{ grid-area: multi; }
+        #divide{ grid-area: divide; }
+        #reset{ grid-area: reset; }
+        #oper{ grid-area: oper; }
+    </style>
+</head>
+<body>
+    <!-- 
+        1. 숫자 입력 버튼을 만들고, 클릭하여 입력을 판별한다.
+        2. 초기화 버튼을 만들어 현재 입력된 내용을 지운다.
+        3. 사칙 연산 버튼을 만들고 입력되도록 한다.
+        4. 결과 버튼을 만들고 계산을 완료한다.
+        5. 결과 창을 만들어 버튼에서 입력한 내용을 실시간으로 표시하거나 연산 결과를 보여준다.
+     -->
+    
+    <div id="calInterface">
+        <div id="result">0</div>
+        <button class="numBtn" id="num0" value="0">0</button>
+        <button class="numBtn" value="1">1</button>
+        <button class="numBtn" value="2">2</button>
+        <button class="numBtn" value="3">3</button>
+        <button class="numBtn" value="4">4</button>
+        <button class="numBtn" value="5">5</button>
+        <button class="numBtn" value="6">6</button>
+        <button class="numBtn" value="7">7</button>
+        <button class="numBtn" value="8">8</button>
+        <button class="numBtn" value="9">9</button>
+        <button class="operBtn arithBtn" id="add" value="+">+</button>
+        <button class="operBtn arithBtn" id="sub" value="-">-</button>
+        <button class="operBtn arithBtn" id="multi" value="*">x</button>
+        <button class="operBtn arithBtn" id="divide" value="/">/</button>
+        <button class="operBtn" id="reset">reset</button>
+        <button class="operBtn" id="oper">=</button>
+    </div>
+</body>
+<script>
+    // ToDo
+    // 현재 계산은 eval 함수를 사용하므로 모든 입력값을 받아 한번에 수행을 한다.
+    // 사용자가 사칙연산을 추가로 입력하면 바로 연산을 수행하고,
+    // 그 결과를 어딘가에 보여주게 해야 한다.
+    const result = document.getElementById("result");
+    const numBtn = document.querySelectorAll(".numBtn");
+    const arithBtn = document.querySelectorAll(".arithBtn");
+    const reset = document.getElementById("reset");
+    const oper = document.getElementById("oper");
+    let lastChar = "";
+    let enteredValue = "";
+
+    // 함수 실행
+    btnAni();
+    insertNum();
+    insertSign();
+    divideZeroCheck();
+
+    // 함수 정의
+
+    // UI 부분
+    function btnAni(){
+        const btns = document.querySelectorAll("button");
+
+        for(let i = 0; i < btns.length; i++){
+            btns[i].addEventListener("mousedown", function(){
+                this.style.transform = "scale(0.9)";
+            });
+            btns[i].addEventListener("mouseup", function(){
+                this.style.transform = "scale(1)";
+            });
+            btns[i].addEventListener("mouseenter", function(){
+                this.style.transform = "scale(0.95)";
+            });
+            btns[i].addEventListener("mouseleave", function(){
+                this.style.transform = "scale(1)";
+            });
+        }
+    }
+
+    // 입력 및 표시
+    function insertNum(){
+        for(let i = 0; i < numBtn.length; i++){
+            numBtn[i].addEventListener("click", function(){
+                if(result.innerText.length < 14){
+                    if(result.innerText === "0"){
+                        result.innerText = "";
+                    }
+                    result.innerText += numBtn[i].getAttribute("value");
+                }
+                else{
+                    alert("입력 가능한 길이를 초과했습니다.");
+                }
+            });
+        }
+
+        reset.addEventListener("click", function(){
+            result.innerText = "0";
+            enteredValue = "";
+        });
+
+        oper.addEventListener("click", function(){
+            try{
+                doOper();
+            }
+            catch(e){
+                enteredValue = "";
+                result.innerText = "0";
+                alert("예기치 못한 오류가 발생했습니다.");
+            }
+        });
+    }
+
+    function insertSign(){
+        for(let i = 0; i < arithBtn.length; i++){
+            arithBtn[i].addEventListener("click", function(){
+                lastChar = Number(result.innerText.charAt(result.innerText.length - 1));
+                if(!isNaN(lastChar) && result.innerText !== "0"){
+                    enteredValue += result.innerText;
+                    result.innerText = arithBtn[i].getAttribute("value");
+                    // console.log(enteredValue);
+                }
+            });
+        }
+    }
+    
+    // 0으로 나누기 금지
+    function divideZeroCheck(){
+        numBtn[0].addEventListener("click", function(){
+            if(result.innerText === "/0"){
+                result.innerText = "/";
+            }
+        });
+    }
+    
+    // 연산 수행 및 결과 표시
+    // eval(x: string) 사용. x 값을 그대로 명령어로 처리한다.
+    function doOper(){
+        lastChar = Number(result.innerText.charAt(result.innerText.length - 1));
+        if(!isNaN(lastChar)){
+            enteredValue += result.innerText;
+
+            let operResult = eval(enteredValue);
+            enteredValue = "";
+
+            result.innerText = operResult;
+        }
+    }
+
+</script>
+</html>

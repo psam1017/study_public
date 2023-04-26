@@ -1,0 +1,15 @@
+MySQL Workbench 설치
+
+앞으로 MySQL Workbench로 공부.
+
+Connection으로 새로운 연결 생성.
+
+
+
+실행 영역을 범위 지정 후 실행 단축키 Ctrl + Enter
+
+Syntax error가 발생하면 near 'syntax' 구문에 주목하기
+
+
+
+-> 8/12부터 MySQL Workbench에서 DataGrip으로 프로그램을 변경하여 사용함.

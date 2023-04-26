@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resize</title>
+</head>
+<body>
+    <h1>카운팅</h1>
+</body>
+<script>
+    const h1 = document.querySelector("h1");
+    
+    function resizing(){
+        if(innerWidth > 1000){
+            document.body.style.backgroundColor = "pink";
+        }
+        else{
+            document.body.style.backgroundColor = "white";
+        }
+    }
+
+    // resize 이벤트는 말 그대로 "resize"이기 때문에 첫 화면에서는 적용이 되지 않는다.
+    // 따라서 필요한 경우 resize 이벤트에서 실행할 내용을 함수로 만들고, 이를 js 로딩 후 한 번 실행해야 한다.
+    resizing();
+    window.addEventListener("resize", function(){
+        h1.innerText = window.innerWidth + ', ' + window.innerHeight;
+        resizing();
+    });
+</script>
+</html>

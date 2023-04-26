@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>scroll 2</title>
+    <style>
+        body {
+            height: 300vh;
+            background: linear-gradient(to bottom, white, skyblue, white);
+        }
+    </style>
+</head>
+<body></body>
+<script>
+    // 스크롤 이벤트를 한 번만 발생시키기
+    // let state = 1;
+
+    // window.addEventListener("scroll", function () {
+    //     if (scrollY >= 300 && state == 1) {
+    //         state = 0;
+    //         scrollBy(0, 200);
+    //     }
+    // });
+
+    // 스크롤 이벤트를 한 번씩만 발생시키기
+    let scrollNow = 0;
+
+    window.addEventListener("scroll", function () {
+        scrollNow = scrollY;
+
+        if (scrollNow <= 300) {
+            scrollNow = 300;
+            scrollTo(0, 301);
+        } else if (scrollNow > 300 && scrollNow < scrollY) {
+            scrollNow = 600;
+            scrollTo(0, 601);
+        }
+    });
+</script>
+</html>

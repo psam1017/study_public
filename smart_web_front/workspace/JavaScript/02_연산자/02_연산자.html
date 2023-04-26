@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>숫자 세기</h1>
+    <button>숫자 증가</button>
+    <script>
+        const h1 = document.querySelector("h1");
+        const button = document.querySelector("button");
+        let num = 0;
+        // 함수는 아래와 같이 생성할 수도 있다.
+        let count = function(){
+            num++;
+            h1.innerText = num;
+        }
+
+        button.addEventListener("click", function(){
+            count();
+        });
+    </script>
+</body>
+<script>
+    // 최단산쉬 관리삼대 + 문자열 연산자
+
+    // 문자열 연산자 : 문자열을 서로 이어 붙인다.
+    // 산술 연산자보다 우선하여 적용된다.
+    // 따라서 숫자로 이루어진 문자열은 덧셈을 할 때 자동 형변환이 되지 않는다.
+    let a = 20;
+    let b = String(10);
+    console.log(a + b); // 2010
+    console.log(a * b); // 200
+
+	// 1. 최우선 연산자 : 괄호'()' 안을 먼저 계산함.
+
+	// 2. 단항 연산자 : ++, --, +, -, ~, !
+	// 	var++(후위형) : 해당하는 줄의 명령어를 모두 수행한 이후 var에 1을 더함.
+	// 	++var(전위형) : 해당하는 줄의 명령어를 수행하기 이전에 var에 1을 더함.
+	// 	+, -는 산술 연산자가 아니라 변수 앞에 붙는 단항 연산자이다. -1. +1 등.
+
+	// 3. 산술 연산자 : +, -, *, /, %
+    //  나눗셈(/)은 몫만 반환하지 않고, 필요 시 소수점까지 반환한다.
+    //  %는 나머지를 반환한다.
+
+	// 4. 시프트 연산자 : >>, <<, >>>
+	// 	비트 연산(이진 연산)에 사용한다.
+	
+	// 5. 관계 연산자 : ==, !=, <, <=, >, >=, instanceof, typeof, ===, !==
+	// 	child instanceof parnet
+	// 	child가 parent의 하위 클래스, 즉 상속받은 객체라면 true를 반환한다.
+    //  typeof는 연산자도 되고, 함수도 된다. 관계 연산자는 아니지만 유사하므로 여기에 서술한다.
+    console.log(new String("문자열") instanceof String); // true
+    console.log(typeof "문자열"); // string
+    console.log(typeof("문자열")); // string
+
+    //  === : 값과 타입 모두 같은지를 비교한다.
+    //  !== : 값과 타입 모두 다른지를 비교한다.
+    let c = 10;
+    let d = String(10);
+    console.log(c == d); // true -> 타입이 달라도 값이 같으므로 같다고 반환
+    console.log(c != d); // false
+    console.log(c === d); // false
+    console.log(c !== d); // true -> 값이 같아도 타입이 다르므로 다르다고 반환
+
+
+	// 6. 논리 연산자 : &, ^, |, &&, ||, !
+	// 	&&, ||, !를 사용한 연산의 결과는 boolean 값이다.
+	
+	// 7. 삼항 연산자 : condition ? value_if_true : value_if_false
+	
+	// 8. 대입 연산자 : =, +=, -=, *=, /=, %=, >>=, <<=, &=, ^=, |=
+	
+	
+	
+	// 비트 연산자 : &, |, ^, ~, <<, >>, >>>
+	// |(OR연산자) : 피연산자 중 한 쪽의 값이 1이면 1을 결과로 얻는다.
+	// &(AND연산자) : 피연산자 양 쪽 모두 값이 1이면 1을 결과로 얻는다.
+	// ^(XOR연산자) : 피연산자의 값이 서로 다를 때만 1을 얻는다. 한 쪽이 1이면 다른 한 쪽은 0이어야 한다.
+	// 	Exclusive OR 연산자라고 읽는다.
+	// ~(NOT연산자) : 2진수로 표현했을 때의 피연산자 부호를 바꾼다. 1의 보수 연산자라고도 한다.
+	// 	~p = -p - 1
+	// 		-> (ex) ~p + p + 1 = 0이므로 위 내용이 증명된다. 이때 "-p는 p의 '1의 보수'"라고 표현한다. 
+	// 		-> 11110101(2) + 00001010(2) + 00000001(2) = 00000000(2)
+	// <<, >>(시프트 연산자) : 10진수 정수의 2진수 비트값을 왼쪽 또는 오른쪽으로 주어진 숫자만큼 이동시킨다.
+    /// >>>(시프트 연산자) : 지정한 수만큼 비트를 전부 오른쪽으로 이동시키며, 새로운 비트는 전부 0이 된다.
+
+</script>
+</html>

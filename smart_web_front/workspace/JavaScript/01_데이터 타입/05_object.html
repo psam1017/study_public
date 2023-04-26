@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+</head>
+<body>
+</body>
+<script>
+    // object : key와 value쌍을 가지는 집합. 복잡한 자료의 집합을 표현할 수 있다.
+    // let people = new Object(); -> 현재 쓰이지 않는 선언 방식.
+    let people = {};
+    console.log(people, typeof(people));
+
+    people.name = "홍길동";
+    console.log(people);
+    console.log(people.name); // 필드명을 사용할 수 있다.
+
+    people.age = 20;
+    people.job = "의적";
+    console.log(people);
+    // console.log(people.length); -> object는 length 메소드가 없다.
+
+
+
+    let people2 = {
+        name: "홍길동2",
+        age: 20,
+        job: "의적2"
+    };
+    console.log(people2);
+
+    people2['name'] = "이순신"; // key를 배열로 사용할 수 있다.
+    people2['age'] = 40;
+    people2['job'] = "장군";
+    console.log(people2);
+
+    // Object.keys와 Object.values로 key와 value만 배열로 반환하기
+    console.log(Object.keys(people2));
+    console.log(Object.values(people2));
+</script>
+</html>

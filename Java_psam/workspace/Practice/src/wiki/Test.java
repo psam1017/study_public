@@ -1,0 +1,18 @@
+package wiki;
+
+import java.util.List;
+
+import wiki.main.dto.WikiContentDTO;
+import wiki.main.service.Wikifier;
+
+public class Test {
+	public static void main(String[] args) {
+		
+		Wikifier wikifier = new Wikifier();
+		String text1 = "hello";
+		List<WikiContentDTO> list1 = wikifier.seperate("test", 1, text1);
+		for(WikiContentDTO c : list1) {
+			System.out.println(c.getContent());
+		}
+	}
+}

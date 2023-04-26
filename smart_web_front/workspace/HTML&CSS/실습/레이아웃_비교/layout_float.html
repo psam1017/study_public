@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout - float</title>
+    <style>
+        /* 초기화 */
+        body, h1, h2{
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 헤더 */
+        header{
+            width: 100%;
+            height: 100px;
+            background: #ddd;
+            color: black;
+        }
+
+        /* 본문 */
+        main{
+            background-color: #f3f9b2;
+            color: white;
+        }
+        /* 가상요소를 적용해서 float을 해제해주는 기법을 잘 활용하자 */
+        main::after{
+            content: "";
+            display: block;
+            clear: left;
+        }
+        
+        /* 섹션 */
+        section{
+            width: 33.333%;
+            height: 400px;
+            float: left;
+        }
+        #content1{
+            background-color: #56cf00;
+        }
+        #content2{
+            background-color: #004388;
+        }
+        #content3{
+            background-color: #400088;
+        }
+
+        /* 푸터 */
+        footer{
+            width: 100%;
+            height: 100px;
+            background: #4f4f4f;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">Header</header>
+    <main>
+        <section id="content1">Contents1</section>
+        <section id="content2">Contents2</section>
+        <section id="content3">Contents3</section>
+    </main>
+    <footer id="footer">Footer</footer>
+</body>
+</html>

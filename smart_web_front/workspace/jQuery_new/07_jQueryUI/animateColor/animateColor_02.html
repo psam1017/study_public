@@ -1,0 +1,55 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> animateColor </title>
+<!-- jQuery library -->
+<script src="../../jquery-3.6.1.min.js"></script>
+<script src="../../jquery-ui.min.js"></script>
+
+<style>
+ul { min-width:800px; }
+li {list-style:none; float:left;width:200px; height:60px;}
+li a{
+    background:#9AB92E;
+	width:200px;
+	height:60px;
+	display:block;
+	text-align:center;
+	color:black;
+	padding:40px 0px 10px;
+	font:bold 25px Verdana, Geneva, sans-serif;
+	text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+<ul>
+    <li><a href="#" data-bg="#EF4018">Home</a></li>
+    <li><a href="#" data-bg="#00C8C3">About</a></li>
+    <li><a href="#" data-bg="#AA184D">portfolio</a></li>
+    <li><a href="#" data-bg="#05184D">Contact</a></li>
+</ul>
+<!---------- jQuery code Start ---------->
+<script>
+
+	// 각 메뉴(li)에 롤오버시 data-bg의 값에 설정된 색상으로 변하는 애니메이션
+	// jQuery UI 임포트.
+	// background-color를 입력해야 한다. background는 인식하지 못 한다.
+	// 태그의 속성으로 data-string을 설정한 경우, 이를 attr 메소드만이 아니라 data("string")으로도 가져올 수 있다.
+	$("li").hover(
+		function(){
+			$(this).children().animate({
+				"background-color": $(this).children().data("bg")
+			});
+		},
+		function(){
+			$(this).children().animate({
+				"background-color": "#9AB92E"
+			});
+		}
+	);
+</script>
+</body>
+</html>

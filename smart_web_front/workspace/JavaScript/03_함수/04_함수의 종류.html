@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수최신문법</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            text-align: center;
+        }
+        a{
+            display: block;
+            line-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div><a href="#">색상변경</a></div>
+    <script>
+        let div = document.querySelector("div");
+        div.addEventListener("click", function(){
+            console.log(this); // div
+            this.style.backgroundColor = "hotpink";
+        })
+        div.addEventListener("click", () => {
+            event.currentTarget.style.backgroundColor = "hotpink";
+            console.log(this); // window
+            console.log(event.currentTarget); // div
+            console.log(event.target); // a
+            console.log(this.tagName); // undefined
+            console.log(event.currentTarget.tagName); // div
+            console.log(event.target.tagName); // a
+        })
+    </script>
+</body>
+<script>
+    function f1(name){
+        console.log(name);
+    }
+    f1("선언함수");
+    
+    let f2 = function(name){
+        console.log(name);
+    }
+    f2("익명함수");
+    
+    // 즉시실행함수 IIFE(Immediately-invoked function expression)
+    // (function(parameter, ...){...})(argument, ...);
+    // 함수를 소괄호로 묶고, 함수 끝에서 다시 소괄호로 내부에 인자를 입력하고, 마지막에는 반드시 세미콜론으로 마쳐야 한다.
+    (function(name){
+        console.log(name);
+    })("즉시실행함수");
+
+
+
+    // 화살표 함수 AFE(arrow function expression)
+    let f3 = (name) => {
+        console.log(name);
+    }
+    f3("화살표함수");
+    
+    // 화살표 함수는 파라미터가 하나라면 소괄호를, 실행영역이 return 하나라면 중괄호를 생략할 수 있다.
+    let f4 = x => x * 2;
+    console.log(f4(50));
+    
+    // 화살표 함수의 유의사항
+    // 1. 화살표 함수로 메소드를 만들지 않는다.
+    // 2. 화살표 함수로 생성자를 만들지 않는다.
+    // 3. addEventListener와 같은 이벤트 핸들러의 콜백함수에서 화살표 함수를 쓸 때는 this를 쓰지 말아야 한다.
+    //     -> 이벤트 핸들러의 this는 이미 호출한 엘리먼트, 즉 HTML 요소를 참조하도록 정의되어 있다.
+    //     -> 만약 콜백함수로 화살표 함수를 쓴다면 this는 참조하는 HTML의 상위 스코프인 전역 객체를 참조하게 된다('05_this용법.html' 참조).
+</script>
+</html>

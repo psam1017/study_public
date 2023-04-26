@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>value 실습</title>
+</head>
+<body>
+    <!-- 
+        요소를 클릭하거나 선택해서 커서가 깜빡일 때 : focus
+        focus를 잃었을 때(잃은 순간 한 번) : blur
+    -->
+    <form name="people" method="get">
+        <label for="name">이름</label>
+        <input type="text" id="name" name="myName" value="임꺽정" autofocus>
+        <br>
+        <label for="classNum">학번</label>
+        <input type="text" id="classNum" name="myNum" value="001">
+        <br>
+        <input type="submit" value="값전달">
+    </form>
+    <script>
+        let myName = document.people.myName;
+        myName.addEventListener("blur", function(){
+            if(myName.value == ""){
+                alert("반드시 입력해야 합니다.");
+                setTimeout(() => {
+                    myName.focus();
+                }, 1);
+            }
+        });
+        console.log(myName);
+    </script>
+</body>
+</html>

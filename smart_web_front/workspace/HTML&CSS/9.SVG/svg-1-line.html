@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG_line</title>
+    <style>
+        svg{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+        }
+        line:nth-child(1){
+            stroke: black;
+            stroke-width: 5px;
+        }
+        line:nth-child(2){
+            stroke: black;
+            stroke-width: 5px;
+            stroke-dasharray: 10; /* 점선 효과를 준다. 값을 많이 줄 수록 간격이 넓어진다. */
+            stroke-dashoffset: 5; /* 점선 효과를 적용할 때, 점선의 시작 위치를 조절한다. 실선일 때는 시작 위치가 바뀌는 게 별 의미가 없다. */
+        }
+        line:nth-child(3){
+            stroke: black;
+            stroke-width: 5px;
+            stroke-dasharray: 100;
+            stroke-dashoffset: 50;
+        }
+        line:nth-child(4){
+            stroke: black;
+            stroke-width: 5px;
+            stroke-dasharray: 200;
+            stroke-dashoffset: 200;
+            animation: lineAni 2s linear infinite forwards;
+        }
+        @keyframes lineAni {
+            to{
+                stroke-dashoffset: -200;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Scalable Vector Graphics -->
+    <!-- 각 위치 값을 표시하는 벡터와 같은 방식의 2차원 그래픽용 XML 기반 형식이다.
+    어떤 디바이스 크기에서도 깨지지 않고, 마크업 언어로 이루어져 css와 js로 수정이 가능하다. -->
+    <svg>
+        <line x1="50" y1="50" x2="250" y2="50"></line>
+        <line x1="50" y1="150" x2="250" y2="150"></line>
+        <line x1="50" y1="200" x2="250" y2="200"></line>
+        <line x1="50" y1="250" x2="250" y2="250"></line>
+    </svg>
+</body>
+</html>

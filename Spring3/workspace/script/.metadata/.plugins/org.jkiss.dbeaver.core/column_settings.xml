@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items>
+	<item id="NodeList/DataSourceDescriptor">
+		<column name="Name" visible="true" order="0" width="103"/>
+		<column name="Description" visible="true" order="1" width="91"/>
+		<column name="Driver Type" visible="true" order="2" width="91"/>
+	</item>
+	<item id="NodeList/OracleTableConstraint/OracleTableConstraintColumn">
+		<column name="Name" visible="true" order="0" width="190"/>
+		<column name="Owner" visible="true" order="1" width="92"/>
+		<column name="Type" visible="true" order="2" width="102"/>
+		<column name="Condition" visible="true" order="3" width="183"/>
+		<column name="Status" visible="true" order="4" width="73"/>
+	</item>
+	<item id="NodeList/OracleTableConstraintColumn">
+		<column name="Column" visible="true" order="0" width="68"/>
+	</item>
+	<item id="projectExplorer">
+		<column name="Name" visible="true" order="0" width="200"/>
+		<column name="DataSource" visible="true" order="1" width="161"/>
+	</item>
+</items>

@@ -1,0 +1,34 @@
+package day30;
+
+public class UserDefinedException {
+
+	public static void main(String[] args) {
+		
+		int age = -19;
+		
+		try {
+			ticketing(age);
+		}
+		catch(AgeException ageEx) {
+			ageEx.printStackTrace();
+		}
+		
+	}
+	
+	public static void ticketing(int age) throws AgeException{
+		if(age < 0)
+			throw new AgeException("나이가 잘못되었습니다.");
+	}
+
+}
+
+class AgeException extends Exception {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	public AgeException() {}
+	public AgeException(String message) {
+		super(message);
+	}
+}

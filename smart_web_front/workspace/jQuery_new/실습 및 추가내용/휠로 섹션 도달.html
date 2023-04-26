@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>휠 이벤트로 섹션에 도달</title>
+    <script src="../jquery-3.6.1.min.js"></script>
+    <script src="../jquery-ui.min.js"></script>
+    <style>
+        /* 초기화 */
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        ul li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        /* 헤더 */
+        #header{
+            width: 200px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            border-right: 1px solid black;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+        #header h1{
+            padding: 50px 0;
+        }
+        #gnb ul li a{
+            display: block;
+            line-height: 100px;
+            font-size: 25px;
+        }
+        #gnb ul li a.on{
+            color: white;
+            background-color: black;
+        }
+        /* 섹션 */
+        section{
+            text-indent: 200px;
+            height: 100vh;
+            background: no-repeat center / cover fixed;
+            font-size: 150px;
+            color: white;
+        }
+        #content1{
+            background-image: url("./images/bg1.jpg");
+        }
+        #content2{
+            background-image: url("./images/bg2.jpg");
+        }
+        #content3{
+            background-image: url("./images/bg3.jpg");
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1>로고</h1>
+        <nav id="gnb">
+            <ul>
+                <li><a href="#content1" class="on">메뉴1</a></li>
+                <li><a href="#content2">메뉴2</a></li>
+                <li><a href="#content3">메뉴3</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="content1">섹션1</section>
+        <section id="content2">섹션2</section>
+        <section id="content3">섹션3</section>
+    </main>
+    <script>
+        // jQueryUI 라이브러리가 필요하고, 시간 효과를 줄 때는 시간과 정확한 시간 효과 이름을 명시해야 한다.
+        // jQueryUI에서 제공하는 효과는 아래에서 참고.
+        // http://www.codejs.co.kr/jquery-easing-enjoy-effect/
+
+        // document ready와 같은 뜻.
+        $(function(){
+            let n = 1;
+            let isActive = false;
+            // 내비게이션으로 이동
+            $("#gnb li").on("click", function(){
+                if(!isActive){
+                    isActive = true;
+                    $("#gnb li").children('a').removeClass("on");
+                    $(this).children('a').addClass("on");
+                    let idName = $(this).children('a').attr("href");
+                    let pagePos = $(idName).offset().top;
+                    $("html, body").stop().animate({ scrollTop: pagePos }, 1000, "easeOutBounce", function(){
+                        isActive = false;
+                    });
+                    n = $(this).index() + 1;
+                }
+            });
+            // 휠로 이동 함수
+            function wheeling(e){
+                if(!isActive){
+                    isActive = true;
+                    e.preventDefault();
+                    if(e.wheelDelta < 0){
+                        n++;
+                        if(n > 3){
+                            n = 3;
+                            isActive = false;
+                            return;
+                        }
+                    }
+                    else{
+                        n--;
+                        if(n < 1){
+                            n = 1;
+                            isActive = false;
+                            return;
+                        }
+                    }
+                    console.log(n);
+                    $("html, body").stop().animate({scrollTop: $("#content"+n).position().top}, 1000, function(){
+                        isActive = false;
+                    });
+                    $("#gnb li a").removeClass("on");
+                    $("#gnb li a:eq(" + (n - 1) + ")").addClass("on");
+                }
+            }
+            // 휠로 이동
+            document.addEventListener("wheel", function(e){
+                wheeling(e);
+            });
+
+            // 새로고침하면 맨 위로 이동
+            window.addEventListener("load", function(){
+                setTimeout(() => {
+                    scrollTo(0, 0);
+                }, 10);
+            });
+        });
+    </script>
+</body>
+</html>

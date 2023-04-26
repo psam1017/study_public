@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>live()</title>
+    <script src="jquery-1.7.2.min.js"></script>
+</head>
+<body>
+    <button>li 요소를 추가</button>
+    <button>스크립트 막기</button>
+
+    <ul>
+        <li><a href="flower.jpg"> 꽃</a></li>
+        <li><a href="sea.jpg"> 바다</a></li>
+        <li><a href="Jellyfish.jpg"> 해파리</a></li>
+    </ul>
+
+    <p><img src="flower.jpg" alt="꽃" /></p>
+</body>
+
+<!---------- jQuery code Start ---------->
+<script type="text/javascript">
+    // 이벤트 메소드 : on, off, one, live(->대체방법)
+
+
+
+
+
+    // 버튼 클릭시 건물이미지 리스트를 추가하고, a 이벤트가 적용되도록
+
+    // one() : 해당 이벤트를 최초의 한 번에 한해 실행
+    // $("button:eq(0)").one("click", function(e){
+    //     $("ul").append(`<li><a href="building.jpg"> 건물</a></li>`);
+    // });
+
+
+
+    // off() : Remove an event handler. 즉, on의 반대
+    $("button:eq(1)").on("click", function(e){
+        $("ul li a").off();
+    });
+
+
+
+    // live() : 
+    // 단, 이는 삭제된 문법이므로 아래와 같이 사용해야 한다.
+    // $("ul li a").live("click", function(e){
+    //     e.preventDefault();
+    //     $("p img").attr({
+    //         src: $(this).attr("href"),
+    //         alt: $(this).text()
+    //     })
+    // });
+    
+    // live 메소드를 대체하여 사용하는 방법
+    // $(document).on(event, element, function)
+    $(document).one("click", "li a", function(e){
+        e.preventDefault();
+        $("p img").attr({
+            src: $(this).attr("href"),
+            alt: $(this).text()
+        })
+    });
+
+
+</script>
+</html>

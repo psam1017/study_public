@@ -1,0 +1,17 @@
+https://github.com/
+
+계정생성(무료)
+1. New repository (or New) 클릭
+2. Repository name (영문) -> Public 체크 ->  Add a README file 체크
+    => Create repository
+3. Settings
+4. Pages 
+    None -> main 으로 변경 후 Save (저장 후 뜨는 주소가 홈페이지 주소)
+5. 상단 Code 클릭 후 Add file -> Upload files
+
+계정삭제
+- Setting 클릭 후 첫 화면에서 제일 하단의 
+  Delete this repository 클릭
+  Please type  _____________  to confirm.
+  박스에 위 밑줄의 계정명 입력 후
+  빨간 버튼 클릭

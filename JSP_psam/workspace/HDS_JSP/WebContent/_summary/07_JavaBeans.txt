@@ -1,0 +1,22 @@
+자바빈즈
+JSP 표준 태그를 통해 접근할 수 있는 자바 클래스.
+멤버변수, setter, getter 메소드로 이루어져 있다.
+객체의 생성, 변수의 set과 get 메소드를 HTML과 스크립트 태그를 사용하지 않고 실행하려는 데 의의를 둔다.
+
+<% MemberVO vo = new MemberVO(); %>
+<% vo.setName("박성민"); %>
+<% vo.getName(); %>
+
+위의 예시를 아래와 같이 바꿔쓸 수 있다.
+
+<jsp:useBean class="com.ex.beans.MemberVO" id="vo">
+<jsp:setProperty name="vo" property="name" value="박성민">
+<jsp:getProperty name="vo" property="name">
+
+
+
+자바빈즈를 아래와 같은 규칙을 두고 사용해야 한다.
+1. 패키지화 -> 디폴트 패키지를 만들지 말아야 한다.
+2. 필드 접근자는 private으로 설정해야 한다.
+3. getter, setter 메소드는 public으로 설정해야 한다.
+4. 기본 생성자를 선언해야 한다.

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checked 실습</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+
+        /* input[checked]와 input:checked는 다르다. -> 추가로 공부 */
+        /* input:checked는 check를 벗어난 상태를 인식하지 않으므로 아래 스타일은 1회만 실행된다. */
+        input:checked + div{
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="myCheck">
+    <div>테스트</div>
+</body>
+</html>

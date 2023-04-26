@@ -1,0 +1,25 @@
+redirect를 했을 때 값을 주고 받고 하는 방법(두 방식 사이의 차이를 인지해야 할 듯)
+1. session 이용 -> addFlashAttribute
+2. 쿼리스트링 사용(url에 데이터가 붙어있기 때문) -> addAttribute
+
+
+=======================================
+
+
+// ★ redirect를 하는 또 하나의 방법
+@PostMapping("/register")
+public String register(BoardVO boardVO, RedirectAttributes rttr) {
+	boardService.register(boardVO);
+	
+	// redirect를 하면 아래처럼 값을 model에 담아도 requestScope가 날아가버린다.
+	// model.addAttribute("bno", boardVO.getBno());
+	// 따라서 session 또는 QueryString을 사용해야 한다.
+	
+	// Session 중에서 Flash라고 하는 영역이 있다.
+	// redirect로 초기화되기 전에 Flash 영역에 데이터를 저장해놓고, 초기화 이후 Flash 영역에서 데이터를 가져온다.
+	// 데이터를 가져왔다면, Flash 영역의 데이터는 없어진다.
+	rttr.addFlashAttribute("bno", boardVO.getBno());
+	
+	// redirect로 전송할 때는 경로 앞에 "redirect:"를 붙여준다.
+	return "redirect:/board/list";
+}

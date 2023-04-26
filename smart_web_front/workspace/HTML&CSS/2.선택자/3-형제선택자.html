@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>형제선택자</title>
+    <style>
+        h1 + h2{ color: blue; }
+        h1 ~ h2{ background-color: darkkhaki;}
+        li + li{ background-color: violet;}
+        #box1 h1, #box2 h2{
+            color: aliceblue;
+            background-color: dodgerblue;
+        }
+    </style>
+</head>
+<body>
+    <h2>header-2</h2>
+    <h1>header-1</h1>
+    <h2>header-2</h2>
+    <h2>header-2</h2>
+    <h2>header-2</h2>
+    <h2>header-2</h2>
+    
+    <hr>
+    
+    <ul>
+        <li>별 헤는 밤</li>
+        <li>별 헤는 밤</li>
+    </ul>
+    
+    <hr>
+    
+    <div id="box1">
+        <h1>별 헤는 밤</h1>
+        <h2>별 헤는 밤</h2>
+    </div>
+    <div id="box2">
+        <h1>별 헤는 밤</h1>
+        <h2>별 헤는 밤</h2>
+    </div>
+</body>
+</html>

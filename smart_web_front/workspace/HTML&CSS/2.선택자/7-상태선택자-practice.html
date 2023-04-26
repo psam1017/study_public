@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상태선택자 연습</title>
+    <style>
+        #radio1:checked ~ #content1{
+            height: 300px;
+        }
+        #radio2:checked ~ #content2{
+            height: 300px;
+        }
+        div{
+            height: 150px;
+            border: 1px solid black;
+            overflow: hidden;
+            transition-duration: 1s;
+            transition-timing-function: cubic-bezier(0, 0, 0, 1);
+        }
+        label{
+            border: 1px solid black;
+        }
+        input{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <label for="radio1">메밀꽃 필 무렵</label>
+    <input type="radio" name="check" id="radio1" checked>
+    <label for="radio2">별 헤는 밤</label>
+    <input type="radio" name="check" id="radio2">
+    <div id="content1">
+        <h1>메밀꽃 필 무렵</h1>
+        <p>줄달음에 달아나는 각다귀에는 당하는 재주가 없었다. 왼손잡이는 아이 하나도 후릴 수 없다. 그만 채찍을 던졌다. 술기도 돌아 몸이 유난스럽게 화끈거렸다.
+        <br>"그만 떠나세. 녀석들과 어울리다가는 한이 없어. 장판의 각다귀들이란 어른보다도 더 무서운 것들인걸."
+        <br>조선달과 동이는 각각 제 나귀에 안장을 얹고 짐을 싣기 시작하였다. 해가 꽤 많이 기울어진 모양이었다.
+        <br>드팀전 장돌이을 시작한 지 이십년이나 되어도 허생원은 봉평장을 빼논 적은 드물었다. 충주 제천 등의 이웃 군에도 가고, 멀리 영남 지방도 헤매기는 하였으나 강릉쯤에 물건 하러 가는 외에는 처음부터 끝까지 군내를 돌아다녔다. 닷새만큼씩의 장날에는 달보다도 확실하게 면에서 면으로 건너간다. 고향이 청주라고 자랑삼아 말하였으나 고향에 돌보러 간 일도 있는 것 같지는 않았다.장에서 장으로 가는 길의 아름다운 강산이 그대로 그에게는 그리운 고향이었다.반날 동안이나 뚜벅뚜벅 걷고 장터 있는 마을에 거의 가까왔을 때, 거친 나귀가 한바탕 우렁차게 울면--더구나 그것이 저녁녘이어서 등불들이 어둠 속에 깜박거릴 무렵이면 늘 당하는 것이건만 허생원은 변치 않고 언제든지 가슴이 뛰놀았다.
+        </p>
+    </div>
+    <div id="content2">
+        <h1>별 헤는 밤</h1>
+        <p>별 하나에 추억과<br>
+            별 하나에 사랑과<br>
+            별 하나에 쓸쓸함과<br>
+            별 하나에 동경과<br>
+            별 하나에 시와<br>
+            별 하나에 어머니, 어머니,</p>
+    </div>
+</body>
+</html>

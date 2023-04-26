@@ -1,0 +1,9 @@
+xml에서 sql 작성
+
+interface를 java가 생성
+
+sql이 실행되면서 interface를 구현
+
+sql과 interface를 binding하면 interface를 실행해도 sql 문이 실행된다.
+
+interface를 mapper라고 부른다.

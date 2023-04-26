@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid-template-areas</title>
+    <style>
+        #wrap{
+            padding: 10px;
+            background-color: grey;
+
+            display: grid;
+            grid-template-areas:
+                "header header  header  header  header  header"
+                "nav    main    main    main    aside   aside"
+                "nav    footer  footer  footer  footer  footer";
+            gap: 10px;
+        }
+        .item{
+            padding: 20px;
+            border: 1px solid black;
+            background-color: khaki;
+            text-align: center;
+            font-size: 30px;
+        }
+        .item1{
+            grid-area: header;
+        }
+        .item2{
+            grid-area: nav;
+        }
+        .item3{
+            grid-area: main;
+        }
+        .item4{
+            grid-area: aside;
+        }
+        .item5{
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="item item1">Header</div>
+        <div class="item item2">Nav</div>
+        <div class="item item3">Main</div>
+        <div class="item item4">Aside</div>
+        <div class="item item5">Footer</div>
+    </div>
+</body>
+</html>

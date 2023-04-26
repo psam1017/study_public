@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>흐름제어문</title>
+</head>
+<body>
+</body>
+<script>
+    for(let i = 1; i <= 10; i++){
+        if(i === 6){
+            break;
+        }
+        document.write(`${i}<br>`);
+    }
+    
+    document.write("<hr>");
+
+    for(let i = 1; i <= 10; i+=2){
+        document.write(`${i}<br>`);
+    }
+    
+    document.write("<hr>");
+    
+    for(let i = 1; i <= 10; i++){
+        document.write(`${i}`);
+        if(i === 6){
+            document.write("&nbsp;&nbsp;&nbsp;I found 6!<br>");
+            continue;
+        }
+        document.write(`<br>`);
+    }
+</script>
+</html>

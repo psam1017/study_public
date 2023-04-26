@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selector 실습</title>
+</head>
+<body>
+    <!-- 태그에 name을 선언하면 js에서 사용할 수 있다(중요). 
+        이러한 특성 때문에 getComputedStyle이라는 메소드(중요)가 필요한 것이다. -->
+    <form name="people">
+        <legend>개인정보</legend>
+        <input type="text" id="idName" name="userName">
+    </form>
+    <form name="company">
+        <legend>회사정보</legend>
+        <input type="text" id="companyName" name="comName">
+        <input type="text" name="part">
+        <input type="text" name="part" value="영업부">
+        <input type="text" name="part">
+    </form>
+    <script>
+        // 아래의 변수는 name을 선언했기 때문에 querySelector 없이 사용이 가능한 것이다.
+        let poeple = document.people;
+        let userName = poeple.userName;
+        let companyPart = document.company.part;
+
+        console.log(poeple);
+        console.log(userName);
+        console.log(companyPart);
+        console.log(companyPart[1]);
+    </script>
+</body>
+</html>

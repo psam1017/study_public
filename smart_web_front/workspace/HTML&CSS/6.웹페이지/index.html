@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>반응형 웹</title>
+        <link rel="stylesheet" href="./index.css">
+    </head>
+    <body>
+        <header id="header">
+            <h1><a href="#">로고</a></h1>
+            <nav id="membership">
+                <h2 class="hidden">멤버십</h2>
+                <ul>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="gnbView"><span class="hidden">메뉴 펼치기</span></a>
+            <nav id="gnb">
+                <h2 class="hidden">주요이용메뉴</h2>
+                <ul>
+                    <li><a href="#">리스트1</a></li>
+                    <li><a href="#">리스트2</a></li>
+                    <li><a href="#">리스트3</a></li>
+                </ul>
+            </nav>
+        </header>
+        <hr>
+        <section id="event">
+            <h2>이벤트</h2>
+            <p>관련이벤트가 진행 중입니다.</p>
+            <a href="#">자세히 알아보기</a>
+        </section>
+        <hr>
+        <main>
+            <section id="content1">
+                <h2>컨텐츠1</h2>
+            </section>
+            <section id="content2">
+                <h2>컨텐츠2</h2>
+            </section>
+            <section id="content3">
+                <h2>컨텐츠3</h2>
+            </section>
+            <section id="content4">
+                <h2>컨텐츠4</h2>
+            </section>
+        </main>
+        <footer id="footer">
+            <address>대구 중구 코리아아이티</address>
+            <small>copyright &copy;</small>
+        </footer>
+    </body>
+    <script>
+        const gnbView = document.querySelector(".gnbView");
+        const gnb = document.getElementById("gnb");
+        console.log(gnbView);
+        console.log(gnb);
+        gnbView.addEventListener('click', () => {
+            gnb.style.left = "0px";
+        })
+        gnb.addEventListener('mouseleave', function(){
+            gnb.style.left = "-200px";
+        })
+    </script>
+</html>

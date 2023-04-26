@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG_rect</title>
+    <style>
+        svg{
+            width: 300px;
+            height: 550px;
+            border: 1px solid black;
+        }
+        rect:nth-child(1){
+            width: 200px;
+            height: 200px;
+            /* css에서 좌표를 설정하는 것도 가능하다.
+            단, 오류 표시를 계속 띄울 뿐... */
+            /* x: 50; y: 50; */
+
+            fill: none;
+            /* fill: hotpink; */
+            stroke: black;
+            stroke-width: 2;
+            stroke-dasharray: 10;
+            stroke-dashoffset: 5;
+        }
+        rect:nth-child(2){
+            width: 200px;
+            height: 200px;
+
+            fill: none;
+            stroke: black;
+            stroke-width: 2;
+            stroke-dasharray: 800;
+            stroke-dashoffset: 800;
+            transition: 1s;
+        }
+        svg:hover > rect:nth-child(2){
+            stroke-dashoffset: 0;
+        }
+        </style>
+</head>
+<body>
+    <svg>
+        <rect x="50" y="50"></rect>
+        <rect x="50" y="300"></rect>
+    </svg>
+</body>
+</html>

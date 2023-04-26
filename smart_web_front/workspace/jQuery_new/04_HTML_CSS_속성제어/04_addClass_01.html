@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>addClass()</title>
+	<script src="jquery-1.7.2.min.js"></script>
+	<style>
+		img {
+			padding: 5px;
+			background: #666;
+		}
+
+		img.type1 {
+			padding: 5px;
+			background: orange;
+		}
+		img.type2 {
+			padding: 5px;
+			background: blue;
+		}
+		img.type3 {
+			padding: 5px;
+			background: pink;
+		}
+	</style>
+</head>
+
+<body>
+	<img src="th1.jpg" alt="" />
+	<img src="th2.jpg" alt="" />
+	<img src="th3.jpg" alt="" />
+
+</body>
+
+<!---------- jQuery code Start ---------->
+<script>
+	// 클래스 제어방법 jQuery vs JS
+	// https://webstudynote.tistory.com/95
+
+
+
+
+
+	// 이미지 클릭시 클래스 type1을 추가하고,
+	// 이미지 한개씩 type1이 추가되도록 하시오
+	// $(this) 활용
+
+	// const img = document.querySelectorAll("img");
+
+	// img.forEach((element, index) => {
+	// 	element.addEventListener("mousedown", function(){
+	// 		img.forEach(e => {
+	// 			e.setAttribute("class", `type${index + 1}`);
+	// 		});
+	// 	});
+	// 	element.addEventListener("mouseup", function(){
+	// 		img.forEach(e => {
+	// 			e.removeAttribute("class");
+	// 		});
+	// 	});
+	// });
+
+	$("img").on("mousedown", function(){
+		$(this).addClass("type1");
+	});
+	$("img").on("mouseup", function(){
+		$(this).removeClass("type1");
+	});
+</script>
+</html>

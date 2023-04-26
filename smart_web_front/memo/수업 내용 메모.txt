@@ -1,0 +1,15 @@
+DTD문 : Document Type Definition
+
+
+
+*단독 태그
+
+hr 태그 horizontal rule / 구분선을 긋는다. -> CSS를 사용하는 요즈음은 사용빈도가 적다.
+
+br 태그 blank rule
+
+
+
+*list
+
+<ol reversed> ... / 순서가 있는 리스트(ol)를 역순으로 표시한다.

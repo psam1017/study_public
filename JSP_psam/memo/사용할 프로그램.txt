@@ -1,0 +1,4 @@
+WAS - Tomcat
+웹서버 - 아파치
+java - 이클립스
+DBMS - oracle, dbeaver

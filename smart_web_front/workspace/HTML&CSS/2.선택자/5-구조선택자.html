@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구조선택자</title>
+    <style>
+        p{
+            color: red;
+            font-weight:bold;
+        }
+        p:first-child { color: blueviolet; }
+        p:nth-child(2) { color: darkgray; }
+        p:nth-last-child(2) { color: hotpink; }
+        p:last-child { color: chartreuse; }
+
+        p:first-of-type { background-color: antiquewhite; }
+        p:nth-of-type(3) { background-color: gainsboro; }
+        p:last-of-type{ background-color: deeppink;}
+    </style>
+</head>
+<body>
+    <div>
+        <p>계절이 지나가는 하늘에는 가을로 가득 차 있습니다.</p>
+        <p>계절이 지나가는 하늘에는 가을로 가득 차 있습니다.</p>
+        <p>계절이 지나가는 하늘에는 가을로 가득 차 있습니다.</p>
+        <p>계절이 지나가는 하늘에는 가을로 가득 차 있습니다.</p>
+        <p>계절이 지나가는 하늘에는 가을로 가득 차 있습니다.</p>
+    </div>
+    <hr>
+    <div>
+        <h1>별 헤는 밤</h1>
+        <p>계절이 지나가는 하늘에는 가을로 가득 차 있습니다.</p>
+        <p>계절이 지나가는 하늘에는 가을로 가득 차 있습니다.</p>
+        <p>계절이 지나가는 하늘에는 가을로 가득 차 있습니다.</p>
+        <p>계절이 지나가는 하늘에는 가을로 가득 차 있습니다.</p>
+        <p>계절이 지나가는 하늘에는 가을로 가득 차 있습니다.</p>
+    </div>
+</body>
+</html>

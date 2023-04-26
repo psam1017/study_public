@@ -1,0 +1,6 @@
+127.0.0.1 - - [27/Oct/2022:23:48:11 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [27/Oct/2022:23:48:17 +0900] "GET /HDS_JSP/~day39_JSTL_EL/05_jstlTest_4.jsp HTTP/1.1" 200 305
+0:0:0:0:0:0:0:1 - - [27/Oct/2022:23:48:17 +0900] "GET /favicon.ico HTTP/1.1" 404 818
+0:0:0:0:0:0:0:1 - - [27/Oct/2022:23:48:49 +0900] "GET /HDS_JSP/~day39_JSTL_EL/05_jstlTest_4.jsp HTTP/1.1" 200 417
+0:0:0:0:0:0:0:1 - - [27/Oct/2022:23:49:03 +0900] "GET /HDS_JSP/~day39_JSTL_EL/05_jstlTest_4.jsp HTTP/1.1" 200 417
+0:0:0:0:0:0:0:1 - - [27/Oct/2022:23:52:45 +0900] "GET /HDS_JSP/~day39_JSTL_EL/05_jstlTest_4.jsp HTTP/1.1" 200 1790

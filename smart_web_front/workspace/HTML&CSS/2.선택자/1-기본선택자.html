@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본선택자</title>
+    <style>
+        #box1{
+            border: 1px solid black;
+        }
+        #box2{
+            background-color: chartreuse;
+        }
+        /* 아이디 선택자
+        1. 영문자 사용 및 시작, 한글 불가능 / 언더바, 하이픈 외 기호 불가능
+        2. 숫자는 사용할 수 있지만 첫 글자가 될 순 없음
+        3. 대소문자 구분
+        4. 아이디는 unique이다. */
+        .select{
+            padding: 10px;
+        }
+        .select1{
+            color: darkmagenta;
+        }
+        /* 클래스 선택자
+        1. 아이디 선택자와 달리 중복이 가능함. 즉, 여러 태그에 사용 가능
+        2. 다중클래스를 적용할 수 있다. 즉, 하나의 태그에 여러 클래스를 적용할 수 있다. */
+        div #heading.heading{ color: burlywood;}
+        #heading{ color: blue; }
+        .heading{ color: green; }
+        /* 우선순위
+        아이디 선택자가 클래스 선택자보다 우선한다. */
+    </style>
+</head>
+<body>
+    <div id="box1" class="select">
+        <h1>별 헤는 밤</h1>
+        <h2>별 헤는 밤</h2>
+        <p>차 지나고 잔디가 슬퍼하는 이름과, 나는 위에도 버리었습니다. 이웃 아직 언덕 위에 계집애들의 새워 너무나 내린 어머니 거외다.</p>
+    </div>
+    <div id="box2" class="select select1"><!--다중 클래스 적용-->
+        <h1>별 헤는 밤</h1>
+        <h2>별 헤는 밤</h2>
+        <p>차 지나고 잔디가 슬퍼하는 이름과, 나는 위에도 버리었습니다. 이웃 아직 언덕 위에 계집애들의 새워 너무나 내린 어머니 거외다.</p>
+    </div>
+    <div>
+        <h1 id="heading" class="heading">별 헤는 밤</h1>
+        <h2>별 헤는 밤</h2>
+        <p>차 지나고 잔디가 슬퍼하는 이름과, 나는 위에도 버리었습니다. 이웃 아직 언덕 위에 계집애들의 새워 너무나 내린 어머니 거외다.</p>
+    </div>
+</body>
+</html>

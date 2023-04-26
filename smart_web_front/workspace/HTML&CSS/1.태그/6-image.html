@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 태그, img</title>
+    <style>
+        img{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <!--상대 경로로 이미지 찾기-->
+    <a href="https://www.google.com/search?q=fennec+fox+close+up&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjAlNe97qn6AhVpm1YBHWRpDE0Q_AUoAXoECAEQAw&biw=412&bih=744&dpr=1.25" target="_blank">
+        <img src="./images/fox.jpg" alt="카메라를 정면으로 바라보고 있는 페넥여우" title="귀엽잖아!">
+    </a>
+    <br>
+    <img src="../2.선택자/images/hanbit.jpg" alt="한빛미디어 로고">
+    <br>
+    <!--
+        절대 경로로 이미지 찾기
+        '/'로 시작하면 최상위 경로, 데스크탑에서는 C드라이브를 의미한다.
+        Live Server 등을 사용하면 현재 위치가 최상위 경로가 된다.
+    -->
+    <img src="/1.태그/images/fish.jpg" alt="망둥어라는 이름의 물고기">
+</body>
+</html>

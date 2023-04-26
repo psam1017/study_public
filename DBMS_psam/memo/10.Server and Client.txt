@@ -1,0 +1,10 @@
+MariaDB Server
+C:\202208031400dbms\(서버 생생)
+
+
+
+MariaDB Client
+-mysql.exe -u root -p -P 12601(클라이언트 생성)
+-MySQL Workbench(주로 사용, 무료)
+-Heidi SQL
+...

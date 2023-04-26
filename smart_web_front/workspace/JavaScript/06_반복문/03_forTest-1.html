@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for 테스트 문제 1</title>
+</head>
+<body>
+    <button id="getAvgBtn">평균 점수 구하기</button>
+</body>
+<script>
+    const getAvgBtn = document.getElementById("getAvgBtn");
+    let list1 = ["국어", "수학", "영어"];
+    let list2 = ["한국사", "윤리와 사상", "경제"]
+
+    let getAvg = function(list){
+        let sum = 0;
+        for(let i = 0; i < list.length; i++){
+            list[i] = prompt(`${list[i]}의 점수를 입력하세요.`);
+            sum += Number(list[i]);
+        }
+        let avg = sum / list.length;
+        document.write(`세 과목의 평균 점수는 ${avg.toFixed(2)}입니다.<br>`);
+    }
+
+    getAvgBtn.addEventListener("click", function(){
+        getAvg(list1);
+        getAvg(list2);
+    })
+</script>
+</html>

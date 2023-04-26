@@ -1,0 +1,28 @@
+package wiki.test.usage;
+
+import java.util.List;
+
+import wiki.main.dto.WikiContentDTO;
+import wiki.main.dto.WikiInfoDTO;
+import wiki.main.service.Wikifier;
+
+public class Test01 {
+	public static void main(String[] args) {
+		
+		// seperate test 시작.
+		
+		Wikifier wikifier = new Wikifier();
+		TestDummy dummy = new TestDummy();
+		
+		WikiInfoDTO info = dummy.getInfo1();
+		String text1 = dummy.text1;
+		
+		List<WikiContentDTO> list = wikifier.seperate(info.getSubject(), info.getRvs(), text1);
+		
+		// info와, seperate 메소드를 통해 생성한 content를 DB에 저장하십시오.
+		System.out.println(info.getSubject() + " ver." + info.getRvs() + "\r\n");
+		for(WikiContentDTO dto : list) {
+			System.out.println(dto.getContent());
+		}
+	}
+}

@@ -1,0 +1,13 @@
+package encryption;
+
+public class Test02 {
+	public static void main(String[] args) {
+		
+		String password = "password";
+		
+		Enctyptor encryptor = new Enctyptor();
+		
+		String randomSalt = encryptor.generateSalt();
+		String encryptedPassword = encryptor.encryptPassword(password, randomSalt);
+	}
+}

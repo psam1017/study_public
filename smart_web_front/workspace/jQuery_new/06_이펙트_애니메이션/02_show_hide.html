@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>show()</title>
+	<style type="text/css">
+		div {
+			width: 200px;
+			height: 200px;
+			background: red;
+			display: none;
+		}
+	</style>
+	<!-- jQuery library -->
+	<script src="jquery-1.7.2.min.js"></script>
+</head>
+<body>
+	<button id="show">표시</button>
+	<button id="hide">비표시</button>
+	<div></div>
+</body>
+
+<!---------- jQuery code Start ---------->
+<script type="text/javascript">
+
+	// show() : display가 block이 된다.
+	// hide() : display가 none이 된다.
+
+	// 1st parameter : "fast", "normal", "slow", millisecond 단위의 정수 입력 가능
+	// 2nd parameter : swing(기본값), linear(등속도)
+
+
+
+	// 재생 중인 애니메이션은 실행하지 않도록.
+	// 만약 재생 중인 애니메이션에도 다른 이벤트가 발생한다면, 기존 이벤트 실행이 끝나고 바로 다음 이벤트가 실행된다.
+	$("#show").on("click", function(){
+		$("div:not(:animated)").show("normal", "linear"); // fast, normal, slow
+	});
+
+	$("#hide").on("click", function(){
+		$("div:not(:animated)").hide(3000, "swing"); // swing(기본값), linear(등속도)
+	});
+</script>
+</html>

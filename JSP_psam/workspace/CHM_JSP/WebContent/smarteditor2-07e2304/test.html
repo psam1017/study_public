@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>스마트에디터 테스트</title>
+<script type="text/javascript" src="./js/HuskyEZCreator.js" charset="utf-8"></script>
+</head>
+<body>
+
+	mobile 사이즈 이하에서는 스마트에디터 없이 텍스트 편집과 사진 업로드만 가능하도록 한다.
+	
+	
+	<form action="#" method="post" name="bo_form" id="bo_form">
+		<textarea name="content" id="content" rows="20" cols="120"></textarea>
+		<input type="submit" value="제출" name="submitBtn" id="submitBtn">
+	</form>
+</body>
+
+<script>
+
+	var oEditors = [];
+
+	nhn.husky.EZCreator.createInIFrame({
+		oAppRef : oEditors,
+		elPlaceHolder : "content",
+		sSkinURI : "SmartEditor2Skin.html",
+		fCreator : "createSEditor2"
+	});
+
+
+	let submitBtn = document.getElementById("submitBtn");
+	submitBtn.addEventListener("click", function(){
+		oEditors.getById["content"].exec("UPDATE_CONTENTS_FIELD", []);
+	})
+
+</script>
+
+</html>

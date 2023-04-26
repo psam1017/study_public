@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요일 알려주기</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let today = new Date().getDay();
+    let todayWeek;
+    console.log(today, todayWeek);
+
+    switch(today){
+        case 0:
+            todayWeek = "일요일";
+            break;
+        case 1:
+            todayWeek = "월요일";
+            break;
+        case 2:
+            todayWeek = "화요일";
+            break;
+        case 3:
+            todayWeek = "수요일";
+            break;
+        case 4:
+            todayWeek = "목요일";
+            break;
+        case 5:
+            todayWeek = "금요일";
+            break;
+        case 6:
+            todayWeek = "토요일";
+            break;
+    }
+    document.write(`오늘은 ${todayWeek}입니다.`);
+</script>
+</html>

@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>색상변화 애니메이션</title>
+	<script src="../../jquery-3.6.1.min.js"></script>
+	<script src="../../jquery-ui.min.js"></script>
+	<style>
+		div {
+			background: #6699ff;
+			width: 200px;
+			height: 200px;
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<button>색상바꾸기</button>
+	<div>제이쿼리 플러그인을 이용한 색상애니메이션</div>
+</body>
+<!---------- jQuery code Start ---------->
+<script>
+	// 버튼 클릭시 div가 지정된 색상으로 서서히 변하게 하기
+	// 추가로, jQuery UI 라이브러리를 임포트하여 기능을 구현한다.
+	$(document).ready(function () {
+		$("button").on("click", function(){
+			$("div").animate({ "background-color": "#e3274b", "color": "white" });
+		});
+		$("div").draggable();
+	});
+</script>
+</html>

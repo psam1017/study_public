@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice 2</title>
+</head>
+<body>
+    <form name="shopping">
+        <label><input type="checkbox" name="item" value="10000">모자 1만원</label>
+        <label><input type="checkbox" name="item" value="30000">구두 3만원</label>
+        <label><input type="checkbox" name="item" value="80000">가방 8만원</label>
+        <input type="button" name="btn" value="금액 계산">
+        <p></p>
+    </form>
+
+    <script>
+        const items = document.shopping.item;
+        const btn = document.shopping.btn;
+        const p = document.querySelector('p');
+        let result = 0;
+
+        btn.addEventListener("click", function(){
+            items.forEach(element => {
+                if(element.checked){
+                    result += Number(element.value);
+                }
+            });
+            p.innerText = `물품의 총액은 ${result}원입니다.`;
+            result = 0;
+        });
+    </script>
+</body>
+</html>

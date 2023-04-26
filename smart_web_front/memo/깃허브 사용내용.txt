@@ -1,0 +1,7 @@
+깃허브 -> 프로젝트
+
+repository 생성 후 파일 업로드
+
+settings -> aoges -> breanch를 main으로 바꾼 후 save
+
+주소는 About에 업로드

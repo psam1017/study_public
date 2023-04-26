@@ -1,0 +1,18 @@
+
+JOIN : SELECT를 하는 테이블이 가지지 않은 데이터를 다른 테이블에서 가져올 때 사용한다. 단, FROM 테이블과 JOIN 테이블은 서로 연결지을 수 있는 열을 한 개 이상 가지고 있어야 한다.
+
+-(JOIN의 종류 : PNG 파일 함께 참고)
+LEFT JOIN : SELECT하는 테이블 기준
+RIGHT JOIN : JOIN하는 테이블 기준
+INNER JOIN : SELECT / JOIN 테이블의 교집합 기준
+
+*OUTER JOIN : SELECT / JOIN 테이블의 합집합이지만, 사용하지 않는 개념.
+
+
+
+ON 1=1 : 항상 여, FROM 테이블의 한 레코드에 대하여 JOIN의 모든 레코드를 JOIN하여 가져온다. 결과 값은 레코드 수 * 레코드 수
+
+*JOIN을 여러 번 수행할 때, ON '조건'에서 비교는 FROM의 테이블과 다른 테이블로 하는 것이 가시적으로 더 좋다.
+FROM A
+LEFT JOIN B ON A = B
+LEFT JOIN C ON A = C

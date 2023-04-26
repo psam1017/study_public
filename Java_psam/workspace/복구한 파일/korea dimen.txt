@@ -1,0 +1,78 @@
+package day08;
+
+public class DimensionalArray {
+
+	public static void main(String[] args) {
+		
+		// 다차원 배열
+		
+		// 선언과 생성.
+		// 자료형[][] 변수명 = new int[i][j];
+		
+		// 배열에 값을 바로 대입
+		// 자료형[][] 변수명 = {
+		// 				{값[0][0], 값[0][1], ...},
+		// 				{값[1][0], 값[1][1], ...},
+		// 				{값[2][0], 값[2][1], ...},
+		// 				...
+		// };
+		
+		int[][] arr = new int[2][3];
+		
+		System.out.println("행 : " + arr.length);
+		System.out.println("열 : " + arr[0].length);
+
+		for(int i = 0; i < arr.length; i++) {
+			for(int j = 0; j < arr[i].length; j++) { // 열의 길이 구하는 방법.
+				System.out.print(arr[i][j] + " ");
+			}
+			System.out.println();
+		}
+		
+		
+		
+		// 다차원 배열로 점수를 계산하기
+		int[][] scores = {
+				{100, 100, 100},
+				{20, 20, 20},
+				{30, 30, 30},
+				{40, 40, 40},
+				{50, 50, 50}
+		};
+		int koreanTotal = 0;
+		int englishTotal = 0;
+		int mathTotal = 0;
+		
+		System.out.println("번호\t국어\t영어\t수학\t총점\t평균");
+		System.out.println("=================================================");
+		
+		for(int i = 0; i < scores.length; i++) {
+			int sum = 0;
+			koreanTotal += scores[i][0];
+			englishTotal += scores[i][1];
+			mathTotal += scores[i][2];
+			
+			System.out.print(" " + (i + 1) + "\t");
+			
+			for(int j = 0; j < scores[i].length; j++) {
+				sum += scores[i][j];
+				System.out.print(scores[i][j] + "\t");
+			}
+			System.out.println(sum + "\t" + sum / (double)scores[i].length);
+		}
+		
+		System.out.println("=================================================");
+		System.out.println("총점 :\t" + koreanTotal + "\t" + englishTotal + "\t" + mathTotal);
+	}
+
+}
+
+
+
+
+
+
+
+
+
+

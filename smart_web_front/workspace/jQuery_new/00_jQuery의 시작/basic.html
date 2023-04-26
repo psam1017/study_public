@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQeury의 시작</title>
+    <script src="./jquery-3.6.1.min.js"></script>
+    <script src="./common.js"></script>
+</head>
+<body>
+    <button>클릭</button>
+</body>
+<script>
+    // document가 로드를 마치면 실행.
+    // $(document).ready(function(){
+    //     $("button").on("click", function(){
+    //         alert("Hello World!");
+    //     });
+    // });
+    
+    // 위 구문을 아래와 같이 간략하게 쓸 수 있다.
+    // $(function(){
+    //     $("button").on("click", function(){
+    //         alert("Hello World!");
+    //     });
+    // });
+</script>
+<script>
+    // Hello World 출력하기
+    // 방법1. vanilla JS
+    // const btn = document.querySelector("button");
+    // btn.addEventListener("click", function(){
+    //     alert("Hello World!");
+    // });
+
+    // 방법2. jQuery - "jQuery" 사용하기
+    // jQuery("button").on("click", function () {
+    //     alert("Hello World!");
+    // });
+
+    // 방법3. jQuery - '$' 사용하기
+    // $("button").on("click", function () {
+    //     alert("Hello World!");
+    // });
+</script>
+</html>

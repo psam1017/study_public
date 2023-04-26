@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>슬라이드 구현</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        section {
+            height: 100vh;
+            transition: 1s;
+        }
+        #s1 {
+            background-color: white;
+        }
+        #s2 {
+            background-color: skyblue;
+        }
+        #s3 {
+            background-color: hotpink;
+        }
+        #s4 {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section id="s1"></section>
+        <section id="s2"></section>
+        <section id="s3"></section>
+        <section id="s4"></section>
+        <span></span>
+    </main>
+</body>
+<script>
+    // // 스크롤 이벤트를 한 번씩만 발생시키기
+    // let scrollNow = 0;
+    //
+    // window.addEventListener("scroll", function () {
+    //     scrollNow = scrollY;
+    //
+    //     if (scrollNow <= 300) {
+    //         scrollNow = 300;
+    //         scrollTo(0, 301);
+    //     } else if (scrollNow > 300 && scrollNow < scrollY) {
+    //         scrollNow = 600;
+    //         scrollTo(0, 601);
+    //     }
+    // });
+    //
+    // const div = document.querySelector("div");
+    // let opacity = 0;
+    //
+    // addEventListener("wheel", function(e){
+    //     if(e.wheelDelta < 0){
+    //         if(opacity > 1){
+    //             opacity = 1;
+    //         }
+    //         else{
+    //             opacity += 0.1;
+    //         }
+    //     }
+    //     else if(e.wheelDelta > 0){
+    //         if(opacity < 0){
+    //             opacity = 0;
+    //         }
+    //         else{
+    //             opacity -= 0.1;
+    //         }
+    //     }
+    //     div.style.opacity = opacity;
+    // });
+    //
+    // // 모든 축적은 좌상단을 기준으로 오른쪽으로, 아래로
+    // // screenX/Y : 모니터 화면 기준
+    // // pageX/Y : 페이지 문서 기준
+    // // clientX/Y : 브라우저 크기 기준
+    // // offsetX/Y : 적용 대상인 요소 기준
+    // // x/y : clientX/Y와 같다. 소문자임에 주의할 것
+    // div.addEventListener("mousemove", function(e){
+    //     p[0].innerText = `screenX: ${e.screenX}, screenY: ${e.screenY}`;
+    //     p[1].innerText = `pageX: ${e.pageX}, pageY: ${e.pageY}`;
+    //     p[2].innerText = `clientX: ${e.clientX}, clientY: ${e.clientY}`;
+    //     p[3].innerText = `offsetX: ${e.offsetX}, offsetY: ${e.offsetY}`;
+    //     p[4].innerText = `X: ${e.x}, Y: ${e.y}`;
+    // });
+    //      100vh = screen.height
+    // document.write(`${screen.width}, ${screen.height}<br>`);
+    // document.write(`${screen.availWidth}, ${screen.availHeight}<br>`);
+    // document.write(`${window.innerHeight}, ${window.innerWidth}<br>`);
+    // document.write(`${window.outerHeight}, ${window.outerWidth}<br>`);
+
+    // resize되면 page의 Y 값도 변경
+    // section의 height 값을 주면?
+    // wheel 이벤트 발생 시 아래로 가면 페이지마다 각 섹션으로 이동. 위로 가면 페이지마다 각 센션으로 이동
+
+    // const section = document.querySelectorAll("section");
+    // let y = section[0].clientHeight;
+    // console.log(y);
+
+    // addEventListener("click", function(e){
+    //     console.log(e.pageY);
+    // })
+
+    // section[0].addEventListener("wheel", function(e){
+    //     e.preventDefault();
+
+    //     if(e.wheelDelta < 0){
+    //         console.log(y);
+    //         console.log(e.wheelDelta);
+    //         scrollTo(0, y); // wheel의 이동값을 적용하지 않으려면?
+    //     }
+    // });
+
+    // 필요한 개념.
+    // 스크롤 함수, wheel 이벤트, vh와 px 변환,
+    // BOM - 스크린 크기 개념, resize 이벤트,
+    // setTimeout 함수
+
+    // addEventListener("click", function(e){
+    //     console.log(e.pageY);
+    // })
+
+    // const section = document.querySelectorAll("section");
+    // let positionY = new Array();
+
+    // setWindowHeight();
+    // setScrollEvent();
+
+    // console.log(section, positionY);
+
+    // function setWindowHeight(){
+    //     positionY[0] = 0;
+    //     for(let i = 1; i < section.length; i++){
+    //         positionY[i] = section[i].clientHeight + positionY[i - 1];
+    //     }
+
+    //     addEventListener("resize", function(){
+    //         positionY[0] = 0;
+    //         for(let i = 1; i < section.length; i++){
+    //             positionY[i] = section[i].clientHeight + positionY[i - 1];
+    //         }
+    //         console.log(positionY);
+    //         console.log(screen.height, screen.availHeight, window.innerHeight, window.outerHeight);
+    //         console.log(section[1].scrollHeight);
+    //         console.log(positionY[1] / screen.height);
+    //         console.log(positionY[1] / screen.availHeight);
+    //         console.log(positionY[1] / window.innerHeight);
+    //         console.log(positionY[1] / window.outerHeight);
+    //     });
+    // }
+
+    // function setScrollEvent(){
+    //     section.forEach(function(element, index){
+    //         element.addEventListener("wheel", function(e){
+    //             e.preventDefault();
+
+    //             if(e.wheelDelta < 0 && index < section.length - 1){
+    //                 scrollTo(0, positionY[index + 1]);
+    //             }
+    //             else if(e.wheelDelta > 0){
+    //                 scrollTo(0, positionY[index - 1]);
+    //             }
+    //         });
+    //     });
+    // }
+
+    const section = document.querySelectorAll("section");
+    let anim;
+    let currentScroll = 0;
+
+    for (let i = 0; i < section.length; i++) {
+        section[i].addEventListener("wheel", wheelHandler, false);
+        section[i].addEventListener("scroll", wheelHandler, true);
+    }
+
+    function wheelHandler(e) {
+        e.preventDefault();
+
+        let delta = 0;
+        if (event.wheelDelta) {
+            delta = event.wheelDelta / 120;
+        } else if (event.detail) {
+            delta = -event.detail / 3;
+        }
+
+        let p = e.target.parentElement;
+        let index = Array.prototype.indexOf.call(p.children, e.target);
+        let arr = e.target.parentElement.children;
+        currentScroll =
+            document.documentElement.scrollTop || document.body.scrollTop;
+        let NextTarget = currentScroll;
+
+        if (delta > 0) {
+            if (index > 0) {
+                let no = index - 1;
+                NextTarget = arr[no].offsetTop;
+            } else {
+                let no = 0;
+                NextTarget = arr[no].offsetTop;
+            }
+        } else if (delta < 0) {
+            if (index < arr.length - 1) {
+                var no = index + 1;
+                NextTarget = arr[no].offsetTop;
+            } else {
+                let no = index;
+                NextTarget = arr[no].offsetTop;
+            }
+        }
+
+        clearInterval(anim);
+
+        anim = setInterval(moveAni, 1);
+
+        function moveAni() {
+            var speed = 8;
+            if (currentScroll == NextTarget) {
+                clearInterval(moveAni);
+            } else {
+                if (currentScroll - speed > NextTarget) {
+                    currentScroll -= speed;
+                } else if (currentScroll + speed < NextTarget) {
+                    currentScroll += speed;
+                } else {
+                    currentScroll = NextTarget;
+                }
+                window.scrollTo(0, currentScroll);
+            }
+        }
+    }
+</script>
+</html>

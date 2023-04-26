@@ -1,0 +1,11 @@
+/*css 주석달기 방법*/
+p{
+    padding: 0;
+    margin: 10px;
+    border: 1px solid #000;
+    background-color: darkgrey;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+}

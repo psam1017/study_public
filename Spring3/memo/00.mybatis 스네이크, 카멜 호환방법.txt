@@ -1,0 +1,6 @@
+spring framework underscore to camelcase
+
+https://velog.io/@skyepodium/mybatis-camelCase-%EC%A0%81%EC%9A%A9
+-> mybatis 적용
+
+https://chois9105.github.io/spring/2017/12/31/configuring-mybatis-underscore-to-camel-case.html

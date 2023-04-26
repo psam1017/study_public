@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박스 속성 연습</title>
+    <style>
+        body{
+            margin: 0px;
+        }
+        #parent{
+            /* padding: 200px 0px 0px 200px; */
+            width: 400px;
+            height: 400px;
+            background-color: aquamarine;
+            box-sizing: border-box;
+        }
+        #child{
+            position: absolute;
+            margin: 200px 0px 0px 200px;
+            width: 200px;
+            height: 200px;
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div id="child"></div>
+    </div>
+</body>
+</html>

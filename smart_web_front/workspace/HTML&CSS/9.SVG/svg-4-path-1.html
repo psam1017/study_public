@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG_path 사각형</title>
+    <style>
+        svg{
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+        }
+        path{
+            fill: none;
+            stroke: black;
+            stroke: 2px;
+            stroke-dasharray: 1200;
+            stroke-dashoffset: 1200;
+            transition: 2s;
+        }
+        svg:hover path{
+            stroke-dashoffset: 0;
+        }
+    </style>
+</head>
+<body>
+    <svg id="pathL">
+        <!-- path로 사각형 그리기 : L을 쓰면 절대좌표, l을 쓰면 상대좌표이다.-->
+        <!-- Mx1 y1 Lx2 y2, Mx3 y3, Lx4 y4, ... -->
+        <!-- Mx1 y1 lx2 y2, Mx3 y3, lx4 y4, ... -->
+
+        <!-- 선 4개로 그리기 -> 애니메이션 적용 시 개별 적용된다. -->
+        <path d="M100 100 L400 100, M400 100 L400 400, M400 400 L100 400, M100 400, L100 100"></path>
+
+        <!-- 선 1개로 그리기 -> 애니메이션 적용 시 한 줄로 적용된다. -->
+        <!-- <path d="M100 100 L400 100 400 400 100 400 Z"></path> -->
+    </svg>
+    <svg id="pathl">
+        <path d="M100 100 l300 0 0 300 -300 0 0 -300 z"></path>
+    </svg>
+</body>
+</html>

@@ -1,0 +1,10 @@
+//org.eclipse.ui.commands/state/org.eclipse.ui.navigator.resources.nested.changeProjectPresentation/org.eclipse.ui.commands.radioState=false
+ColorsAndFontsPreferencePage.expandedCategories=Torg.jkiss.dbeaver.ui.presentation.results\tTorg.jkiss.dbeaver.ui.presentation.results.datatypes
+ColorsAndFontsPreferencePage.selectedElement=Forg.jkiss.dbeaver.sql.resultset.font
+eclipse.preferences.version=1
+org.eclipse.compare.contentmergeviewer.TextMergeViewer=1|Consolas|12.0|0|WINDOWS|1|-20|0|0|0|400|0|0|0|0|3|2|1|49|Consolas;
+org.eclipse.debug.ui.DetailPaneFont=1|Consolas|12.0|0|WINDOWS|1|-20|0|0|0|400|0|0|0|0|3|2|1|49|Consolas;
+org.eclipse.debug.ui.MemoryViewTableFont=1|Consolas|12.0|0|WINDOWS|1|-20|0|0|0|400|0|0|0|0|3|2|1|49|Consolas;
+org.eclipse.debug.ui.consoleFont=1|Consolas|12.0|0|WINDOWS|1|-20|0|0|0|400|0|0|0|0|3|2|1|49|Consolas;
+org.eclipse.jface.textfont=1|Consolas|12.0|0|WINDOWS|1|-20|0|0|0|400|0|0|0|0|3|2|1|49|Consolas;
+org.jkiss.dbeaver.sql.resultset.font=1|\uB9D1\uC740 \uACE0\uB515|12.0|0|WINDOWS|1|-20|0|0|0|400|0|0|0|-127|3|2|1|50|\uB9D1\uC740 \uACE0\uB515;

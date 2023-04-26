@@ -1,0 +1,26 @@
+package day32;
+
+import java.util.Random;
+
+public class RandomClass {
+
+	public static void main(String[] args) {
+		
+		// Random 클래스의 생성자
+		// -> Random() : 현재 시간을 seed값으로 인스턴스를 생성. 실행할 때마다 바뀜.
+		// -> Random(int seed) : 입력한 seed값으로 인스턴스를 생성. 실행해도 동일한 난수가 출력됨.
+		Random variableRand = new Random();
+		Random fixedRand = new Random(1);
+		
+		for(int i = 0; i < 10; i++) {
+			System.out.println("기본생성자 난수 : " + variableRand.nextInt(100));
+		}
+		
+		for(int i = 0; i < 10; i++) {
+			System.out.println("매개변수 1의 난수 : " + fixedRand.nextInt(100));
+		}
+		
+		
+	}
+
+}

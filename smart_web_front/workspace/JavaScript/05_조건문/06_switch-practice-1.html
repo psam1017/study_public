@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>지역번호 출력</title>
+</head>
+<body></body>
+<script>
+    let areaName = prompt("어느 지역번호가 궁금하신가요?");
+    let areaNum;
+    let isFind = true;
+
+    switch (areaName) {
+        case "서울":
+            areaNum = '02';
+            break;
+        case "부산":
+            areaNum = '051';
+            break;
+        case "대구":
+            areaNum = '053';
+            break;
+        case "광주":
+            areaNum = '062';
+            break;
+        case "제주":
+            areaNum = '064';
+            break;
+        default:
+            alert("입력하신 지역의 지역번호를 찾지 못 했습니다.");
+            isFind = false;
+    }
+    if(isFind){
+        document.write(`${areaName}의 지역번호는 ${areaNum}입니다.`);
+    }
+</script>
+</html>

@@ -1,0 +1,40 @@
+package encryption;
+
+public class EncryptionDTO {
+
+	private String password = "";
+	private String salt = "";
+	
+	/**
+	 * password와 salt를 속성으로 가지는 DTO입니다.
+	 * 
+	 * EncryptionDTO
+	 * 
+	 * password : String
+	 * salt : String
+	 * 
+	 * + getPassword() : String
+	 * + getSalt() : String
+	 * ~ setPassword() : void
+	 * ~ setSalt() : void
+	 */
+	public EncryptionDTO() { ; }
+	
+	// public getter
+	public String getPassword() {
+		return password;
+	}
+	
+	public String getSalt() {
+		return salt;
+	}
+	
+	// default setter
+	void setPassword(String password) {
+		this.password = password;
+	}
+	
+	void setSalt(String salt) {
+		this.salt = salt;
+	}
+}

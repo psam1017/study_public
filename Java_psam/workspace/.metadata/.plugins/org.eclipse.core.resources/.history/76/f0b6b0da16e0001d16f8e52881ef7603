@@ -1,0 +1,13 @@
+package encryption;
+
+public class Test01 {
+
+	public static void main(String[] args) {
+		
+		String password = "password";
+		
+		Enctyptor encryptor = new Enctyptor();
+		
+		EncrptionDTO dto = encryptor.encrypt(password);
+	}
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition 연습</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #wrap{
+            display: flex;
+        }
+        #wrap > div{
+            width: 33.333%;
+            height: 80vh;
+            background-position: center;
+            transition-property: width;
+            transition: 1s;
+            
+            /* transition: 1s flex;
+            flex: 1; */
+        }
+        #wrap > div:hover{
+            width: 200%;
+
+            /* flex: 10; */
+        }
+        #first{ background-image: url(./flower.jpg); }
+        #second{ background-image: url(./night_street.png); }
+        #third{ background-image: url(./port.jpg); }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="first"></div>
+        <div id="second"></div>
+        <div id="third"></div>
+    </div>
+</body>
+</html>

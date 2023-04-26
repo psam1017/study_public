@@ -1,0 +1,1392 @@
+!SESSION 2022-12-08 20:12:06.675 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.16
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Users\HP\Desktop\Coding\Spring3_psam\workspace\script
+
+!ENTRY org.jkiss.dbeaver.model 2 0 2022-12-08 20:12:10.992
+!MESSAGE Project 'General' not found in registry
+
+!ENTRY org.jkiss.dbeaver.model 2 0 2022-12-08 20:15:17.480
+!MESSAGE Error reading Windows registry
+!SUBENTRY 1 org.jkiss.dbeaver.model 2 0 2022-12-08 20:15:17.480
+!MESSAGE 
+!STACK 0
+java.lang.NullPointerException
+	at org.jkiss.dbeaver.utils.WinRegistry.readStringSubKeys(WinRegistry.java:337)
+	at org.jkiss.dbeaver.utils.WinRegistry.readStringSubKeys(WinRegistry.java:162)
+	at org.jkiss.dbeaver.ext.oracle.oci.OCIUtils.readWinRegistry(OCIUtils.java:198)
+	at org.jkiss.dbeaver.ext.oracle.oci.OracleHomeDescriptor.<init>(OracleHomeDescriptor.java:43)
+	at org.jkiss.dbeaver.ext.oracle.oci.OCIUtils.addOraHome(OCIUtils.java:125)
+	at org.jkiss.dbeaver.ext.oracle.oci.OCIUtils.findOraHomes(OCIUtils.java:146)
+	at org.jkiss.dbeaver.ext.oracle.oci.OCIUtils.checkOraHomes(OCIUtils.java:68)
+	at org.jkiss.dbeaver.ext.oracle.oci.OCIUtils.getOraHomes(OCIUtils.java:62)
+	at org.jkiss.dbeaver.ext.oracle.OracleDataSourceProvider.getDefaultLocalClientLocation(OracleDataSourceProvider.java:149)
+	at org.jkiss.dbeaver.registry.driver.DriverDescriptor.getDefaultClientLocation(DriverDescriptor.java:1271)
+	at org.jkiss.dbeaver.ui.dialogs.connection.ConnectionWizard.getActiveDataSource(ConnectionWizard.java:114)
+	at org.jkiss.dbeaver.ui.dialogs.connection.ConnectionPageSettings.getActiveDataSource(ConnectionPageSettings.java:292)
+	at org.jkiss.dbeaver.ui.dialogs.connection.ConnectionPageSettings.getActiveDataSource(ConnectionPageSettings.java:1)
+	at org.jkiss.dbeaver.ui.dialogs.connection.ConnectionPageAbstract.createSavePasswordButton(ConnectionPageAbstract.java:226)
+	at org.jkiss.dbeaver.ext.oracle.views.OracleConnectionPage.createSecurityGroup(OracleConnectionPage.java:310)
+	at org.jkiss.dbeaver.ext.oracle.views.OracleConnectionPage.createControl(OracleConnectionPage.java:115)
+	at org.jkiss.dbeaver.ui.dialogs.connection.ConnectionPageSettings.createProviderPage(ConnectionPageSettings.java:211)
+	at org.jkiss.dbeaver.ui.dialogs.connection.ConnectionPageSettings.activatePage(ConnectionPageSettings.java:108)
+	at org.jkiss.dbeaver.ui.dialogs.ActiveWizardPage.setVisible(ActiveWizardPage.java:57)
+	at org.eclipse.jface.wizard.WizardDialog.updateForPage(WizardDialog.java:1196)
+	at org.eclipse.jface.wizard.WizardDialog.lambda$3(WizardDialog.java:1166)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:72)
+	at org.eclipse.jface.wizard.WizardDialog.showPage(WizardDialog.java:1166)
+	at org.jkiss.dbeaver.ui.dialogs.ActiveWizardDialog.showPage(ActiveWizardDialog.java:82)
+	at org.eclipse.jface.wizard.WizardDialog.nextPressed(WizardDialog.java:861)
+	at org.eclipse.jface.wizard.WizardDialog.buttonPressed(WizardDialog.java:410)
+	at org.jkiss.dbeaver.ui.dialogs.connection.CreateConnectionDialog.buttonPressed(CreateConnectionDialog.java:58)
+	at org.eclipse.jface.dialogs.Dialog.lambda$0(Dialog.java:622)
+	at org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:84)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4145)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1055)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3958)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3561)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:821)
+	at org.eclipse.jface.window.Window.open(Window.java:797)
+	at org.jkiss.dbeaver.ui.dialogs.connection.CreateConnectionDialog.open(CreateConnectionDialog.java:83)
+	at org.jkiss.dbeaver.registry.DataSourceDescriptorManager$1.run(DataSourceDescriptorManager.java:110)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3933)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3564)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.block(ModalContext.java:168)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:372)
+	at org.eclipse.ui.internal.WorkbenchWindow.lambda$3(WorkbenchWindow.java:2254)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:72)
+	at org.eclipse.ui.internal.WorkbenchWindow.run(WorkbenchWindow.java:2252)
+	at org.jkiss.dbeaver.runtime.RunnableContextDelegate.run(RunnableContextDelegate.java:39)
+	at org.jkiss.dbeaver.ui.UIUtils.runInProgressService(UIUtils.java:1512)
+	at org.jkiss.dbeaver.ui.navigator.actions.NavigatorHandlerObjectCreateBase.createDatabaseObject(NavigatorHandlerObjectCreateBase.java:122)
+	at org.jkiss.dbeaver.ui.navigator.actions.NavigatorHandlerObjectCreateBase.createNewObject(NavigatorHandlerObjectCreateBase.java:101)
+	at org.jkiss.dbeaver.ui.navigator.actions.NavigatorHandlerObjectCreateNew.execute(NavigatorHandlerObjectCreateNew.java:46)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:294)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:96)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:320)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:254)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:164)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:156)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:497)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:490)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:207)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.executeItem(HandledContributionItem.java:436)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem.handleWidgetSelection(AbstractContributionItem.java:449)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem.lambda$2(AbstractContributionItem.java:475)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4145)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1055)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3958)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3561)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:628)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
+	at org.jkiss.dbeaver.core.application.DBeaverApplication.start(DBeaverApplication.java:161)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:199)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:391)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:246)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
+
+!ENTRY org.jkiss.dbeaver.model 2 0 2022-12-08 20:15:17.723
+!MESSAGE Error reading Windows registry
+!SUBENTRY 1 org.jkiss.dbeaver.model 2 0 2022-12-08 20:15:17.723
+!MESSAGE 
+!STACK 0
+java.lang.NullPointerException
+	at org.jkiss.dbeaver.utils.WinRegistry.readStringSubKeys(WinRegistry.java:337)
+	at org.jkiss.dbeaver.utils.WinRegistry.readStringSubKeys(WinRegistry.java:162)
+	at org.jkiss.dbeaver.ext.oracle.oci.OCIUtils.findOraHomes(OCIUtils.java:170)
+	at org.jkiss.dbeaver.ext.oracle.oci.OCIUtils.checkOraHomes(OCIUtils.java:68)
+	at org.jkiss.dbeaver.ext.oracle.oci.OCIUtils.getOraHomes(OCIUtils.java:62)
+	at org.jkiss.dbeaver.ext.oracle.OracleDataSourceProvider.getDefaultLocalClientLocation(OracleDataSourceProvider.java:149)
+	at org.jkiss.dbeaver.registry.driver.DriverDescriptor.getDefaultClientLocation(DriverDescriptor.java:1271)
+	at org.jkiss.dbeaver.ui.dialogs.connection.ConnectionWizard.getActiveDataSource(ConnectionWizard.java:114)
+	at org.jkiss.dbeaver.ui.dialogs.connection.ConnectionPageSettings.getActiveDataSource(ConnectionPageSettings.java:292)
+	at org.jkiss.dbeaver.ui.dialogs.connection.ConnectionPageSettings.getActiveDataSource(ConnectionPageSettings.java:1)
+	at org.jkiss.dbeaver.ui.dialogs.connection.ConnectionPageAbstract.createSavePasswordButton(ConnectionPageAbstract.java:226)
+	at org.jkiss.dbeaver.ext.oracle.views.OracleConnectionPage.createSecurityGroup(OracleConnectionPage.java:310)
+	at org.jkiss.dbeaver.ext.oracle.views.OracleConnectionPage.createControl(OracleConnectionPage.java:115)
+	at org.jkiss.dbeaver.ui.dialogs.connection.ConnectionPageSettings.createProviderPage(ConnectionPageSettings.java:211)
+	at org.jkiss.dbeaver.ui.dialogs.connection.ConnectionPageSettings.activatePage(ConnectionPageSettings.java:108)
+	at org.jkiss.dbeaver.ui.dialogs.ActiveWizardPage.setVisible(ActiveWizardPage.java:57)
+	at org.eclipse.jface.wizard.WizardDialog.updateForPage(WizardDialog.java:1196)
+	at org.eclipse.jface.wizard.WizardDialog.lambda$3(WizardDialog.java:1166)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:72)
+	at org.eclipse.jface.wizard.WizardDialog.showPage(WizardDialog.java:1166)
+	at org.jkiss.dbeaver.ui.dialogs.ActiveWizardDialog.showPage(ActiveWizardDialog.java:82)
+	at org.eclipse.jface.wizard.WizardDialog.nextPressed(WizardDialog.java:861)
+	at org.eclipse.jface.wizard.WizardDialog.buttonPressed(WizardDialog.java:410)
+	at org.jkiss.dbeaver.ui.dialogs.connection.CreateConnectionDialog.buttonPressed(CreateConnectionDialog.java:58)
+	at org.eclipse.jface.dialogs.Dialog.lambda$0(Dialog.java:622)
+	at org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:84)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4145)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1055)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3958)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3561)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:821)
+	at org.eclipse.jface.window.Window.open(Window.java:797)
+	at org.jkiss.dbeaver.ui.dialogs.connection.CreateConnectionDialog.open(CreateConnectionDialog.java:83)
+	at org.jkiss.dbeaver.registry.DataSourceDescriptorManager$1.run(DataSourceDescriptorManager.java:110)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3933)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3564)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.block(ModalContext.java:168)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:372)
+	at org.eclipse.ui.internal.WorkbenchWindow.lambda$3(WorkbenchWindow.java:2254)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:72)
+	at org.eclipse.ui.internal.WorkbenchWindow.run(WorkbenchWindow.java:2252)
+	at org.jkiss.dbeaver.runtime.RunnableContextDelegate.run(RunnableContextDelegate.java:39)
+	at org.jkiss.dbeaver.ui.UIUtils.runInProgressService(UIUtils.java:1512)
+	at org.jkiss.dbeaver.ui.navigator.actions.NavigatorHandlerObjectCreateBase.createDatabaseObject(NavigatorHandlerObjectCreateBase.java:122)
+	at org.jkiss.dbeaver.ui.navigator.actions.NavigatorHandlerObjectCreateBase.createNewObject(NavigatorHandlerObjectCreateBase.java:101)
+	at org.jkiss.dbeaver.ui.navigator.actions.NavigatorHandlerObjectCreateNew.execute(NavigatorHandlerObjectCreateNew.java:46)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:294)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:96)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:320)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:254)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:164)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:156)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:497)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:490)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:207)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.executeItem(HandledContributionItem.java:436)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem.handleWidgetSelection(AbstractContributionItem.java:449)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem.lambda$2(AbstractContributionItem.java:475)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4145)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1055)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3958)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3561)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:628)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
+	at org.jkiss.dbeaver.core.application.DBeaverApplication.start(DBeaverApplication.java:161)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:199)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:391)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:246)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
+!SESSION 2022-12-08 20:23:50.857 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.16
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Users\HP\Desktop\Coding\Spring3_psam\workspace\script
+
+!ENTRY org.jkiss.dbeaver.model 2 0 2022-12-08 20:24:36.108
+!MESSAGE Error reading Windows registry
+!SUBENTRY 1 org.jkiss.dbeaver.model 2 0 2022-12-08 20:24:36.108
+!MESSAGE 
+!STACK 0
+java.lang.NullPointerException
+	at org.jkiss.dbeaver.utils.WinRegistry.readStringSubKeys(WinRegistry.java:337)
+	at org.jkiss.dbeaver.utils.WinRegistry.readStringSubKeys(WinRegistry.java:162)
+	at org.jkiss.dbeaver.ext.oracle.oci.OCIUtils.readWinRegistry(OCIUtils.java:198)
+	at org.jkiss.dbeaver.ext.oracle.oci.OracleHomeDescriptor.<init>(OracleHomeDescriptor.java:43)
+	at org.jkiss.dbeaver.ext.oracle.oci.OCIUtils.addOraHome(OCIUtils.java:125)
+	at org.jkiss.dbeaver.ext.oracle.oci.OCIUtils.findOraHomes(OCIUtils.java:146)
+	at org.jkiss.dbeaver.ext.oracle.oci.OCIUtils.checkOraHomes(OCIUtils.java:68)
+	at org.jkiss.dbeaver.ext.oracle.oci.OCIUtils.getOraHomes(OCIUtils.java:62)
+	at org.jkiss.dbeaver.ext.oracle.OracleDataSourceProvider.findLocalClientLocations(OracleDataSourceProvider.java:140)
+	at org.jkiss.dbeaver.ui.dialogs.connection.ClientHomesSelector.populateHomes(ClientHomesSelector.java:115)
+	at org.jkiss.dbeaver.ext.oracle.views.OracleConnectionPage.loadSettings(OracleConnectionPage.java:370)
+	at org.jkiss.dbeaver.ui.dialogs.connection.ConnectionPageSettings.activatePage(ConnectionPageSettings.java:116)
+	at org.jkiss.dbeaver.ui.dialogs.ActiveWizardPage.setVisible(ActiveWizardPage.java:57)
+	at org.jkiss.dbeaver.ui.dialogs.MultiPageWizardDialog.changePage(MultiPageWizardDialog.java:248)
+	at org.jkiss.dbeaver.ui.dialogs.MultiPageWizardDialog.createDialogArea(MultiPageWizardDialog.java:147)
+	at org.eclipse.jface.dialogs.TitleAreaDialog.createContents(TitleAreaDialog.java:161)
+	at org.jkiss.dbeaver.ui.dialogs.MultiPageWizardDialog.createContents(MultiPageWizardDialog.java:102)
+	at org.jkiss.dbeaver.ui.dialogs.connection.EditConnectionDialog.createContents(EditConnectionDialog.java:62)
+	at org.eclipse.jface.window.Window.create(Window.java:429)
+	at org.eclipse.jface.dialogs.Dialog.create(Dialog.java:1099)
+	at org.eclipse.jface.window.Window.open(Window.java:786)
+	at org.jkiss.dbeaver.ui.actions.datasource.UIServiceConnectionsImpl.openConnectionEditor(UIServiceConnectionsImpl.java:43)
+	at org.jkiss.dbeaver.ui.navigator.actions.NavigatorHandlerObjectOpen.openConnectionEditor(NavigatorHandlerObjectOpen.java:279)
+	at org.jkiss.dbeaver.ui.navigator.actions.NavigatorHandlerObjectOpen.openEntityEditor(NavigatorHandlerObjectOpen.java:133)
+	at org.jkiss.dbeaver.ui.navigator.actions.NavigatorHandlerObjectOpen.openEntityEditor(NavigatorHandlerObjectOpen.java:120)
+	at org.jkiss.dbeaver.ui.navigator.NavigatorUtils.openNavigatorNode(NavigatorUtils.java:617)
+	at org.jkiss.dbeaver.ui.navigator.actions.NavigatorHandlerObjectOpen.execute(NavigatorHandlerObjectOpen.java:98)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:294)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:96)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:320)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:254)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:164)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:156)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:497)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:490)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:207)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.executeItem(HandledContributionItem.java:436)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem.handleWidgetSelection(AbstractContributionItem.java:449)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem.lambda$2(AbstractContributionItem.java:475)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4145)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1055)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3958)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3561)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:628)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
+	at org.jkiss.dbeaver.core.application.DBeaverApplication.start(DBeaverApplication.java:161)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:199)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:391)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:246)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
+
+!ENTRY org.jkiss.dbeaver.model 2 0 2022-12-08 20:24:36.278
+!MESSAGE Error reading Windows registry
+!SUBENTRY 1 org.jkiss.dbeaver.model 2 0 2022-12-08 20:24:36.278
+!MESSAGE 
+!STACK 0
+java.lang.NullPointerException
+	at org.jkiss.dbeaver.utils.WinRegistry.readStringSubKeys(WinRegistry.java:337)
+	at org.jkiss.dbeaver.utils.WinRegistry.readStringSubKeys(WinRegistry.java:162)
+	at org.jkiss.dbeaver.ext.oracle.oci.OCIUtils.findOraHomes(OCIUtils.java:170)
+	at org.jkiss.dbeaver.ext.oracle.oci.OCIUtils.checkOraHomes(OCIUtils.java:68)
+	at org.jkiss.dbeaver.ext.oracle.oci.OCIUtils.getOraHomes(OCIUtils.java:62)
+	at org.jkiss.dbeaver.ext.oracle.OracleDataSourceProvider.findLocalClientLocations(OracleDataSourceProvider.java:140)
+	at org.jkiss.dbeaver.ui.dialogs.connection.ClientHomesSelector.populateHomes(ClientHomesSelector.java:115)
+	at org.jkiss.dbeaver.ext.oracle.views.OracleConnectionPage.loadSettings(OracleConnectionPage.java:370)
+	at org.jkiss.dbeaver.ui.dialogs.connection.ConnectionPageSettings.activatePage(ConnectionPageSettings.java:116)
+	at org.jkiss.dbeaver.ui.dialogs.ActiveWizardPage.setVisible(ActiveWizardPage.java:57)
+	at org.jkiss.dbeaver.ui.dialogs.MultiPageWizardDialog.changePage(MultiPageWizardDialog.java:248)
+	at org.jkiss.dbeaver.ui.dialogs.MultiPageWizardDialog.createDialogArea(MultiPageWizardDialog.java:147)
+	at org.eclipse.jface.dialogs.TitleAreaDialog.createContents(TitleAreaDialog.java:161)
+	at org.jkiss.dbeaver.ui.dialogs.MultiPageWizardDialog.createContents(MultiPageWizardDialog.java:102)
+	at org.jkiss.dbeaver.ui.dialogs.connection.EditConnectionDialog.createContents(EditConnectionDialog.java:62)
+	at org.eclipse.jface.window.Window.create(Window.java:429)
+	at org.eclipse.jface.dialogs.Dialog.create(Dialog.java:1099)
+	at org.eclipse.jface.window.Window.open(Window.java:786)
+	at org.jkiss.dbeaver.ui.actions.datasource.UIServiceConnectionsImpl.openConnectionEditor(UIServiceConnectionsImpl.java:43)
+	at org.jkiss.dbeaver.ui.navigator.actions.NavigatorHandlerObjectOpen.openConnectionEditor(NavigatorHandlerObjectOpen.java:279)
+	at org.jkiss.dbeaver.ui.navigator.actions.NavigatorHandlerObjectOpen.openEntityEditor(NavigatorHandlerObjectOpen.java:133)
+	at org.jkiss.dbeaver.ui.navigator.actions.NavigatorHandlerObjectOpen.openEntityEditor(NavigatorHandlerObjectOpen.java:120)
+	at org.jkiss.dbeaver.ui.navigator.NavigatorUtils.openNavigatorNode(NavigatorUtils.java:617)
+	at org.jkiss.dbeaver.ui.navigator.actions.NavigatorHandlerObjectOpen.execute(NavigatorHandlerObjectOpen.java:98)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:294)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:96)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:320)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:254)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:164)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:156)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:497)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:490)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:207)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.executeItem(HandledContributionItem.java:436)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem.handleWidgetSelection(AbstractContributionItem.java:449)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem.lambda$2(AbstractContributionItem.java:475)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4145)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1055)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3958)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3561)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:628)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
+	at org.jkiss.dbeaver.core.application.DBeaverApplication.start(DBeaverApplication.java:161)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:199)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:391)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:246)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
+!SESSION 2022-12-09 21:04:14.075 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.16
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Users\HP\Desktop\Coding\Spring3_psam\workspace\script
+
+!ENTRY org.jkiss.dbeaver.model 2 0 2022-12-09 21:06:25.985
+!MESSAGE Datasource user 'org.jkiss.dbeaver.ui.editors.sql.SQLEditor@68838767' already registered in datasource 'Oracle - XE'
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2022-12-09 21:12:03.316
+!MESSAGE TABLE 'TBL_TEST' not found in schema 'HR'
+!STACK 0
+org.jkiss.dbeaver.DBException: TABLE 'TBL_TEST' not found in schema 'HR'
+	at org.jkiss.dbeaver.ext.oracle.model.OracleStructureAssistant$2.resolveObject(OracleStructureAssistant.java:283)
+	at org.jkiss.dbeaver.ui.editors.sql.syntax.SQLSearchUtils.findObjectByPath(SQLSearchUtils.java:103)
+	at org.jkiss.dbeaver.ui.editors.sql.syntax.SQLSearchUtils.findObjectByFQN(SQLSearchUtils.java:54)
+	at org.jkiss.dbeaver.ui.editors.sql.syntax.SQLCompletionAnalyzer.getTableFromAlias(SQLCompletionAnalyzer.java:498)
+	at org.jkiss.dbeaver.ui.editors.sql.syntax.SQLCompletionAnalyzer.runAnalyzer(SQLCompletionAnalyzer.java:154)
+	at org.jkiss.dbeaver.ui.editors.sql.syntax.SQLCompletionAnalyzer.run(SQLCompletionAnalyzer.java:85)
+	at org.jkiss.dbeaver.ui.editors.sql.syntax.SQLCompletionAnalyzer.run(SQLCompletionAnalyzer.java:1)
+	at org.jkiss.dbeaver.model.DBUtils.tryExecuteRecover(DBUtils.java:1635)
+	at org.jkiss.dbeaver.ui.editors.sql.syntax.SQLCompletionProcessor$ProposalSearchJob.run(SQLCompletionProcessor.java:367)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:101)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2022-12-09 21:12:03.353
+!MESSAGE TABLE 'TBL_TEST' not found in schema 'HR'
+!STACK 0
+org.jkiss.dbeaver.DBException: TABLE 'TBL_TEST' not found in schema 'HR'
+	at org.jkiss.dbeaver.ext.oracle.model.OracleStructureAssistant$2.resolveObject(OracleStructureAssistant.java:283)
+	at org.jkiss.dbeaver.ui.editors.sql.syntax.SQLSearchUtils.findObjectByPath(SQLSearchUtils.java:103)
+	at org.jkiss.dbeaver.ui.editors.sql.syntax.SQLSearchUtils.findObjectByFQN(SQLSearchUtils.java:71)
+	at org.jkiss.dbeaver.ui.editors.sql.syntax.SQLCompletionAnalyzer.getTableFromAlias(SQLCompletionAnalyzer.java:498)
+	at org.jkiss.dbeaver.ui.editors.sql.syntax.SQLCompletionAnalyzer.runAnalyzer(SQLCompletionAnalyzer.java:154)
+	at org.jkiss.dbeaver.ui.editors.sql.syntax.SQLCompletionAnalyzer.run(SQLCompletionAnalyzer.java:85)
+	at org.jkiss.dbeaver.ui.editors.sql.syntax.SQLCompletionAnalyzer.run(SQLCompletionAnalyzer.java:1)
+	at org.jkiss.dbeaver.model.DBUtils.tryExecuteRecover(DBUtils.java:1635)
+	at org.jkiss.dbeaver.ui.editors.sql.syntax.SQLCompletionProcessor$ProposalSearchJob.run(SQLCompletionProcessor.java:367)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:101)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2022-12-09 21:19:30.991
+!MESSAGE SQL Error [933] [42000]: ORA-00933: SQL command not properly ended
+
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2022-12-09 21:19:30.991
+!MESSAGE ORA-00933: SQL command not properly ended
+
+!STACK 0
+java.sql.SQLSyntaxErrorException: ORA-00933: SQL command not properly ended
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:440)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:396)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:837)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:445)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:191)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:523)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:193)
+	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:999)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1315)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1890)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1855)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:304)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:344)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:137)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:458)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$0(SQLQueryJob.java:402)
+	at org.jkiss.dbeaver.model.DBUtils.tryExecuteRecover(DBUtils.java:1635)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:400)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:839)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:2691)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:102)
+	at org.jkiss.dbeaver.model.DBUtils.tryExecuteRecover(DBUtils.java:1635)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:100)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:101)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2022-12-09 21:19:39.961
+!MESSAGE SQL Error [933] [42000]: ORA-00933: SQL command not properly ended
+
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2022-12-09 21:19:39.961
+!MESSAGE ORA-00933: SQL command not properly ended
+
+!STACK 0
+java.sql.SQLSyntaxErrorException: ORA-00933: SQL command not properly ended
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:440)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:396)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:837)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:445)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:191)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:523)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:193)
+	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:999)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1315)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1890)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1855)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:304)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:344)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:137)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:458)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$0(SQLQueryJob.java:402)
+	at org.jkiss.dbeaver.model.DBUtils.tryExecuteRecover(DBUtils.java:1635)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:400)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:839)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:2691)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:102)
+	at org.jkiss.dbeaver.model.DBUtils.tryExecuteRecover(DBUtils.java:1635)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:100)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:101)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 2 0 2022-12-09 21:38:59.013
+!MESSAGE Some data source listeners are still registered: [org.jkiss.dbeaver.ui.editors.sql.SQLEditor@68838767]
+!SESSION 2022-12-15 20:55:37.200 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.16
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Users\HP\Desktop\Coding\Spring3_psam\workspace\script
+
+!ENTRY org.jkiss.dbeaver.model 2 0 2022-12-15 20:57:22.803
+!MESSAGE Error reading Windows registry
+!SUBENTRY 1 org.jkiss.dbeaver.model 2 0 2022-12-15 20:57:22.803
+!MESSAGE 
+!STACK 0
+java.lang.NullPointerException
+	at org.jkiss.dbeaver.utils.WinRegistry.readStringSubKeys(WinRegistry.java:337)
+	at org.jkiss.dbeaver.utils.WinRegistry.readStringSubKeys(WinRegistry.java:162)
+	at org.jkiss.dbeaver.ext.oracle.oci.OCIUtils.readWinRegistry(OCIUtils.java:198)
+	at org.jkiss.dbeaver.ext.oracle.oci.OracleHomeDescriptor.<init>(OracleHomeDescriptor.java:43)
+	at org.jkiss.dbeaver.ext.oracle.oci.OCIUtils.addOraHome(OCIUtils.java:125)
+	at org.jkiss.dbeaver.ext.oracle.oci.OCIUtils.findOraHomes(OCIUtils.java:146)
+	at org.jkiss.dbeaver.ext.oracle.oci.OCIUtils.checkOraHomes(OCIUtils.java:68)
+	at org.jkiss.dbeaver.ext.oracle.oci.OCIUtils.getOraHomes(OCIUtils.java:62)
+	at org.jkiss.dbeaver.ext.oracle.OracleDataSourceProvider.getDefaultLocalClientLocation(OracleDataSourceProvider.java:149)
+	at org.jkiss.dbeaver.registry.driver.DriverDescriptor.getDefaultClientLocation(DriverDescriptor.java:1271)
+	at org.jkiss.dbeaver.ui.dialogs.connection.ConnectionWizard.getActiveDataSource(ConnectionWizard.java:114)
+	at org.jkiss.dbeaver.ui.dialogs.connection.ConnectionPageSettings.getActiveDataSource(ConnectionPageSettings.java:292)
+	at org.jkiss.dbeaver.ui.dialogs.connection.ConnectionPageSettings.getActiveDataSource(ConnectionPageSettings.java:1)
+	at org.jkiss.dbeaver.ui.dialogs.connection.ConnectionPageAbstract.createSavePasswordButton(ConnectionPageAbstract.java:226)
+	at org.jkiss.dbeaver.ext.oracle.views.OracleConnectionPage.createSecurityGroup(OracleConnectionPage.java:310)
+	at org.jkiss.dbeaver.ext.oracle.views.OracleConnectionPage.createControl(OracleConnectionPage.java:115)
+	at org.jkiss.dbeaver.ui.dialogs.connection.ConnectionPageSettings.createProviderPage(ConnectionPageSettings.java:211)
+	at org.jkiss.dbeaver.ui.dialogs.connection.ConnectionPageSettings.activatePage(ConnectionPageSettings.java:108)
+	at org.jkiss.dbeaver.ui.dialogs.ActiveWizardPage.setVisible(ActiveWizardPage.java:57)
+	at org.eclipse.jface.wizard.WizardDialog.updateForPage(WizardDialog.java:1196)
+	at org.eclipse.jface.wizard.WizardDialog.lambda$3(WizardDialog.java:1166)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:72)
+	at org.eclipse.jface.wizard.WizardDialog.showPage(WizardDialog.java:1166)
+	at org.jkiss.dbeaver.ui.dialogs.ActiveWizardDialog.showPage(ActiveWizardDialog.java:82)
+	at org.jkiss.dbeaver.ui.dialogs.connection.ConnectionPageDriver.doubleClick(ConnectionPageDriver.java:159)
+	at org.jkiss.dbeaver.ui.dialogs.driver.DriverSelectViewer.lambda$4(DriverSelectViewer.java:273)
+	at org.eclipse.jface.viewers.StructuredViewer$1.run(StructuredViewer.java:833)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.JFaceUtil.lambda$0(JFaceUtil.java:47)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:176)
+	at org.eclipse.jface.viewers.StructuredViewer.fireDoubleClick(StructuredViewer.java:830)
+	at org.eclipse.jface.viewers.StructuredViewer$1.run(StructuredViewer.java:833)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.JFaceUtil.lambda$0(JFaceUtil.java:47)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:176)
+	at org.eclipse.jface.viewers.StructuredViewer.fireDoubleClick(StructuredViewer.java:830)
+	at org.jkiss.dbeaver.ui.controls.finder.viewer.AdvancedListViewer.access$1(AdvancedListViewer.java:1)
+	at org.jkiss.dbeaver.ui.controls.finder.viewer.AdvancedListViewer$1.widgetDefaultSelected(AdvancedListViewer.java:53)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:123)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4145)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1055)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1064)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:778)
+	at org.jkiss.dbeaver.ui.controls.finder.AdvancedList.notifyDefaultSelection(AdvancedList.java:251)
+	at org.jkiss.dbeaver.ui.controls.finder.AdvancedListItem$2.mouseDoubleClick(AdvancedListItem.java:78)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:200)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4145)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1055)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3958)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3561)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:821)
+	at org.eclipse.jface.window.Window.open(Window.java:797)
+	at org.jkiss.dbeaver.ui.dialogs.connection.CreateConnectionDialog.open(CreateConnectionDialog.java:83)
+	at org.jkiss.dbeaver.registry.DataSourceDescriptorManager$1.run(DataSourceDescriptorManager.java:110)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3933)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3564)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.block(ModalContext.java:168)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:372)
+	at org.eclipse.ui.internal.WorkbenchWindow.lambda$3(WorkbenchWindow.java:2254)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:72)
+	at org.eclipse.ui.internal.WorkbenchWindow.run(WorkbenchWindow.java:2252)
+	at org.jkiss.dbeaver.runtime.RunnableContextDelegate.run(RunnableContextDelegate.java:39)
+	at org.jkiss.dbeaver.ui.UIUtils.runInProgressService(UIUtils.java:1512)
+	at org.jkiss.dbeaver.ui.navigator.actions.NavigatorHandlerObjectCreateBase.createDatabaseObject(NavigatorHandlerObjectCreateBase.java:122)
+	at org.jkiss.dbeaver.ui.navigator.actions.NavigatorHandlerObjectCreateBase.createNewObject(NavigatorHandlerObjectCreateBase.java:101)
+	at org.jkiss.dbeaver.ui.navigator.actions.NavigatorHandlerObjectCreateNew.execute(NavigatorHandlerObjectCreateNew.java:46)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:294)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:96)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:320)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:254)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:164)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:156)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:497)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:490)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:207)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.executeItem(HandledContributionItem.java:436)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem.handleWidgetSelection(AbstractContributionItem.java:449)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem.lambda$2(AbstractContributionItem.java:475)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4145)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1055)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3958)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3561)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:628)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
+	at org.jkiss.dbeaver.core.application.DBeaverApplication.start(DBeaverApplication.java:161)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:199)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:391)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:246)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
+
+!ENTRY org.jkiss.dbeaver.model 2 0 2022-12-15 20:57:23.060
+!MESSAGE Error reading Windows registry
+!SUBENTRY 1 org.jkiss.dbeaver.model 2 0 2022-12-15 20:57:23.060
+!MESSAGE 
+!STACK 0
+java.lang.NullPointerException
+	at org.jkiss.dbeaver.utils.WinRegistry.readStringSubKeys(WinRegistry.java:337)
+	at org.jkiss.dbeaver.utils.WinRegistry.readStringSubKeys(WinRegistry.java:162)
+	at org.jkiss.dbeaver.ext.oracle.oci.OCIUtils.findOraHomes(OCIUtils.java:170)
+	at org.jkiss.dbeaver.ext.oracle.oci.OCIUtils.checkOraHomes(OCIUtils.java:68)
+	at org.jkiss.dbeaver.ext.oracle.oci.OCIUtils.getOraHomes(OCIUtils.java:62)
+	at org.jkiss.dbeaver.ext.oracle.OracleDataSourceProvider.getDefaultLocalClientLocation(OracleDataSourceProvider.java:149)
+	at org.jkiss.dbeaver.registry.driver.DriverDescriptor.getDefaultClientLocation(DriverDescriptor.java:1271)
+	at org.jkiss.dbeaver.ui.dialogs.connection.ConnectionWizard.getActiveDataSource(ConnectionWizard.java:114)
+	at org.jkiss.dbeaver.ui.dialogs.connection.ConnectionPageSettings.getActiveDataSource(ConnectionPageSettings.java:292)
+	at org.jkiss.dbeaver.ui.dialogs.connection.ConnectionPageSettings.getActiveDataSource(ConnectionPageSettings.java:1)
+	at org.jkiss.dbeaver.ui.dialogs.connection.ConnectionPageAbstract.createSavePasswordButton(ConnectionPageAbstract.java:226)
+	at org.jkiss.dbeaver.ext.oracle.views.OracleConnectionPage.createSecurityGroup(OracleConnectionPage.java:310)
+	at org.jkiss.dbeaver.ext.oracle.views.OracleConnectionPage.createControl(OracleConnectionPage.java:115)
+	at org.jkiss.dbeaver.ui.dialogs.connection.ConnectionPageSettings.createProviderPage(ConnectionPageSettings.java:211)
+	at org.jkiss.dbeaver.ui.dialogs.connection.ConnectionPageSettings.activatePage(ConnectionPageSettings.java:108)
+	at org.jkiss.dbeaver.ui.dialogs.ActiveWizardPage.setVisible(ActiveWizardPage.java:57)
+	at org.eclipse.jface.wizard.WizardDialog.updateForPage(WizardDialog.java:1196)
+	at org.eclipse.jface.wizard.WizardDialog.lambda$3(WizardDialog.java:1166)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:72)
+	at org.eclipse.jface.wizard.WizardDialog.showPage(WizardDialog.java:1166)
+	at org.jkiss.dbeaver.ui.dialogs.ActiveWizardDialog.showPage(ActiveWizardDialog.java:82)
+	at org.jkiss.dbeaver.ui.dialogs.connection.ConnectionPageDriver.doubleClick(ConnectionPageDriver.java:159)
+	at org.jkiss.dbeaver.ui.dialogs.driver.DriverSelectViewer.lambda$4(DriverSelectViewer.java:273)
+	at org.eclipse.jface.viewers.StructuredViewer$1.run(StructuredViewer.java:833)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.JFaceUtil.lambda$0(JFaceUtil.java:47)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:176)
+	at org.eclipse.jface.viewers.StructuredViewer.fireDoubleClick(StructuredViewer.java:830)
+	at org.eclipse.jface.viewers.StructuredViewer$1.run(StructuredViewer.java:833)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.JFaceUtil.lambda$0(JFaceUtil.java:47)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:176)
+	at org.eclipse.jface.viewers.StructuredViewer.fireDoubleClick(StructuredViewer.java:830)
+	at org.jkiss.dbeaver.ui.controls.finder.viewer.AdvancedListViewer.access$1(AdvancedListViewer.java:1)
+	at org.jkiss.dbeaver.ui.controls.finder.viewer.AdvancedListViewer$1.widgetDefaultSelected(AdvancedListViewer.java:53)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:123)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4145)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1055)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1064)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:778)
+	at org.jkiss.dbeaver.ui.controls.finder.AdvancedList.notifyDefaultSelection(AdvancedList.java:251)
+	at org.jkiss.dbeaver.ui.controls.finder.AdvancedListItem$2.mouseDoubleClick(AdvancedListItem.java:78)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:200)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4145)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1055)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3958)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3561)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:821)
+	at org.eclipse.jface.window.Window.open(Window.java:797)
+	at org.jkiss.dbeaver.ui.dialogs.connection.CreateConnectionDialog.open(CreateConnectionDialog.java:83)
+	at org.jkiss.dbeaver.registry.DataSourceDescriptorManager$1.run(DataSourceDescriptorManager.java:110)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3933)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3564)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.block(ModalContext.java:168)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:372)
+	at org.eclipse.ui.internal.WorkbenchWindow.lambda$3(WorkbenchWindow.java:2254)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:72)
+	at org.eclipse.ui.internal.WorkbenchWindow.run(WorkbenchWindow.java:2252)
+	at org.jkiss.dbeaver.runtime.RunnableContextDelegate.run(RunnableContextDelegate.java:39)
+	at org.jkiss.dbeaver.ui.UIUtils.runInProgressService(UIUtils.java:1512)
+	at org.jkiss.dbeaver.ui.navigator.actions.NavigatorHandlerObjectCreateBase.createDatabaseObject(NavigatorHandlerObjectCreateBase.java:122)
+	at org.jkiss.dbeaver.ui.navigator.actions.NavigatorHandlerObjectCreateBase.createNewObject(NavigatorHandlerObjectCreateBase.java:101)
+	at org.jkiss.dbeaver.ui.navigator.actions.NavigatorHandlerObjectCreateNew.execute(NavigatorHandlerObjectCreateNew.java:46)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:294)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:96)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:320)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:254)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:164)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:156)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:497)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:490)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:207)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.executeItem(HandledContributionItem.java:436)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem.handleWidgetSelection(AbstractContributionItem.java:449)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem.lambda$2(AbstractContributionItem.java:475)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4145)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1055)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3958)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3561)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:628)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
+	at org.jkiss.dbeaver.core.application.DBeaverApplication.start(DBeaverApplication.java:161)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:199)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:391)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:246)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
+
+!ENTRY org.jkiss.dbeaver.model 2 0 2022-12-15 20:58:43.549
+!MESSAGE Datasource user 'org.jkiss.dbeaver.ui.editors.sql.SQLEditor@6b26839d' already registered in datasource 'Oracle - XE'
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2022-12-15 21:00:52.267
+!MESSAGE SQL Error [955] [42000]: ORA-00955: name is already used by an existing object
+
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2022-12-15 21:00:52.268
+!MESSAGE ORA-00955: name is already used by an existing object
+
+!STACK 0
+java.sql.SQLSyntaxErrorException: ORA-00955: name is already used by an existing object
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:440)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:396)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:837)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:445)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:191)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:523)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:193)
+	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:999)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1315)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1890)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1855)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:304)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:344)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:137)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:458)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$0(SQLQueryJob.java:402)
+	at org.jkiss.dbeaver.model.DBUtils.tryExecuteRecover(DBUtils.java:1635)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:400)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:839)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:2691)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:102)
+	at org.jkiss.dbeaver.model.DBUtils.tryExecuteRecover(DBUtils.java:1635)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:100)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:101)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 2 0 2022-12-15 21:42:44.021
+!MESSAGE Some data source listeners are still registered: [org.jkiss.dbeaver.ui.editors.sql.SQLEditor@6b26839d, org.jkiss.dbeaver.ui.editors.sql.syntax.SQLContextInformer$1@2953e51a]
+
+!ENTRY org.jkiss.dbeaver.model 2 0 2022-12-15 21:42:44.196
+!MESSAGE Some data source listeners are still registered: [org.jkiss.dbeaver.ui.editors.sql.syntax.SQLContextInformer$1@10c5263]
+!SESSION 2022-12-18 15:18:28.590 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.16
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Users\HP\Desktop\Coding\Spring3_psam\workspace\script
+
+!ENTRY org.eclipse.jface 2 0 2022-12-18 17:00:45.858
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-12-18 17:00:45.858
+!MESSAGE A conflict occurred for CTRL+D:
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.delete.line,Delete Line,
+		Delete a line of text,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@14dd4d48,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.jkiss.dbeaver.core.navigator.bookmark.add,Add Bookmark,
+		Add Bookmark,
+		Category(org.jkiss.dbeaver.core.navigator,Database Navigator,Database Navigator Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@244b64d8,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.jkiss.dbeaver.ui.context.navigator,,,system)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2022-12-18 17:29:58.880
+!MESSAGE SQL Error [923] [42000]: ORA-00923: FROM keyword not found where expected
+
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2022-12-18 17:29:58.880
+!MESSAGE ORA-00923: FROM keyword not found where expected
+
+!STACK 0
+java.sql.SQLSyntaxErrorException: ORA-00923: FROM keyword not found where expected
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:440)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:396)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:837)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:445)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:191)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:523)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:193)
+	at oracle.jdbc.driver.T4CStatement.executeForDescribe(T4CStatement.java:848)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:1153)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1275)
+	at oracle.jdbc.driver.OracleStatement.doScrollExecuteCommon(OracleStatement.java:4656)
+	at oracle.jdbc.driver.OracleStatement.doScrollStmtExecuteQuery(OracleStatement.java:4785)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1894)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1855)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:304)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:344)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:137)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:458)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$0(SQLQueryJob.java:402)
+	at org.jkiss.dbeaver.model.DBUtils.tryExecuteRecover(DBUtils.java:1635)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:400)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:839)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:2691)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:102)
+	at org.jkiss.dbeaver.model.DBUtils.tryExecuteRecover(DBUtils.java:1635)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:100)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:101)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2022-12-18 17:30:30.589
+!MESSAGE SQL Error [923] [42000]: ORA-00923: FROM keyword not found where expected
+
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2022-12-18 17:30:30.589
+!MESSAGE ORA-00923: FROM keyword not found where expected
+
+!STACK 0
+java.sql.SQLSyntaxErrorException: ORA-00923: FROM keyword not found where expected
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:440)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:396)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:837)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:445)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:191)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:523)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:193)
+	at oracle.jdbc.driver.T4CStatement.executeForDescribe(T4CStatement.java:848)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:1153)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1275)
+	at oracle.jdbc.driver.OracleStatement.doScrollExecuteCommon(OracleStatement.java:4656)
+	at oracle.jdbc.driver.OracleStatement.doScrollStmtExecuteQuery(OracleStatement.java:4785)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1894)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1855)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:304)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:344)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:137)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:458)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$0(SQLQueryJob.java:402)
+	at org.jkiss.dbeaver.model.DBUtils.tryExecuteRecover(DBUtils.java:1635)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:400)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:839)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:2691)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:102)
+	at org.jkiss.dbeaver.model.DBUtils.tryExecuteRecover(DBUtils.java:1635)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:100)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:101)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2022-12-18 17:30:34.654
+!MESSAGE SQL Error [923] [42000]: ORA-00923: FROM keyword not found where expected
+
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2022-12-18 17:30:34.654
+!MESSAGE ORA-00923: FROM keyword not found where expected
+
+!STACK 0
+java.sql.SQLSyntaxErrorException: ORA-00923: FROM keyword not found where expected
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:440)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:396)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:837)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:445)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:191)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:523)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:193)
+	at oracle.jdbc.driver.T4CStatement.executeForDescribe(T4CStatement.java:848)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:1153)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1275)
+	at oracle.jdbc.driver.OracleStatement.doScrollExecuteCommon(OracleStatement.java:4656)
+	at oracle.jdbc.driver.OracleStatement.doScrollStmtExecuteQuery(OracleStatement.java:4785)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1894)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1855)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:304)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:344)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:137)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:458)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$0(SQLQueryJob.java:402)
+	at org.jkiss.dbeaver.model.DBUtils.tryExecuteRecover(DBUtils.java:1635)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:400)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:839)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:2691)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:102)
+	at org.jkiss.dbeaver.model.DBUtils.tryExecuteRecover(DBUtils.java:1635)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:100)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:101)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 2 0 2022-12-18 17:34:11.830
+!MESSAGE Some data source listeners are still registered: [org.jkiss.dbeaver.ui.editors.sql.syntax.SQLContextInformer$1@68183cd9]
+!SESSION 2022-12-22 18:54:05.346 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.16
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Users\HP\Desktop\Coding\Spring3_psam\workspace\script
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2022-12-22 18:59:15.519
+!MESSAGE SQL Error [2263] [42000]: ORA-02263: need to specify the datatype for this column
+
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2022-12-22 18:59:15.519
+!MESSAGE ORA-02263: need to specify the datatype for this column
+
+!STACK 0
+java.sql.SQLSyntaxErrorException: ORA-02263: need to specify the datatype for this column
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:440)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:396)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:837)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:445)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:191)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:523)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:193)
+	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:999)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1315)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1890)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1855)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:304)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:344)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:137)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:458)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$0(SQLQueryJob.java:402)
+	at org.jkiss.dbeaver.model.DBUtils.tryExecuteRecover(DBUtils.java:1635)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:400)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:839)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:2691)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:102)
+	at org.jkiss.dbeaver.model.DBUtils.tryExecuteRecover(DBUtils.java:1635)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:100)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:101)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2022-12-22 18:59:26.212
+!MESSAGE SQL Error [2264] [42000]: ORA-02264: name already used by an existing constraint
+
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2022-12-22 18:59:26.212
+!MESSAGE ORA-02264: name already used by an existing constraint
+
+!STACK 0
+java.sql.SQLSyntaxErrorException: ORA-02264: name already used by an existing constraint
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:440)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:396)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:837)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:445)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:191)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:523)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:193)
+	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:999)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1315)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1890)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1855)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:304)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:344)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:137)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:458)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$0(SQLQueryJob.java:402)
+	at org.jkiss.dbeaver.model.DBUtils.tryExecuteRecover(DBUtils.java:1635)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:400)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:839)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:2691)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:102)
+	at org.jkiss.dbeaver.model.DBUtils.tryExecuteRecover(DBUtils.java:1635)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:100)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:101)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2022-12-22 18:59:38.133
+!MESSAGE SQL Error [2264] [42000]: ORA-02264: name already used by an existing constraint
+
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2022-12-22 18:59:38.133
+!MESSAGE ORA-02264: name already used by an existing constraint
+
+!STACK 0
+java.sql.SQLSyntaxErrorException: ORA-02264: name already used by an existing constraint
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:440)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:396)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:837)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:445)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:191)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:523)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:193)
+	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:999)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1315)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1890)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1855)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:304)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:344)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:137)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:458)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$0(SQLQueryJob.java:402)
+	at org.jkiss.dbeaver.model.DBUtils.tryExecuteRecover(DBUtils.java:1635)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:400)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:839)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:2691)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:102)
+	at org.jkiss.dbeaver.model.DBUtils.tryExecuteRecover(DBUtils.java:1635)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:100)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:101)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2022-12-22 19:01:40.576
+!MESSAGE SQL Error [955] [42000]: ORA-00955: name is already used by an existing object
+
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2022-12-22 19:01:40.576
+!MESSAGE ORA-00955: name is already used by an existing object
+
+!STACK 0
+java.sql.SQLSyntaxErrorException: ORA-00955: name is already used by an existing object
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:440)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:396)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:837)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:445)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:191)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:523)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:193)
+	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:999)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1315)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1890)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1855)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:304)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:344)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:137)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:458)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$0(SQLQueryJob.java:402)
+	at org.jkiss.dbeaver.model.DBUtils.tryExecuteRecover(DBUtils.java:1635)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:400)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:839)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:2691)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:102)
+	at org.jkiss.dbeaver.model.DBUtils.tryExecuteRecover(DBUtils.java:1635)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:100)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:101)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2022-12-22 19:04:17.074
+!MESSAGE SQL Error [955] [42000]: ORA-00955: name is already used by an existing object
+
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2022-12-22 19:04:17.074
+!MESSAGE ORA-00955: name is already used by an existing object
+
+!STACK 0
+java.sql.SQLSyntaxErrorException: ORA-00955: name is already used by an existing object
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:440)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:396)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:837)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:445)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:191)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:523)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:193)
+	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:999)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1315)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1890)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1855)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:304)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:344)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:137)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:458)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$0(SQLQueryJob.java:402)
+	at org.jkiss.dbeaver.model.DBUtils.tryExecuteRecover(DBUtils.java:1635)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:400)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:839)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:2691)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:102)
+	at org.jkiss.dbeaver.model.DBUtils.tryExecuteRecover(DBUtils.java:1635)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:100)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:101)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2022-12-22 21:08:47.770
+!MESSAGE TABLE 'SPR_REPLY' not found in schema 'HR'
+!STACK 0
+org.jkiss.dbeaver.DBException: TABLE 'SPR_REPLY' not found in schema 'HR'
+	at org.jkiss.dbeaver.ext.oracle.model.OracleStructureAssistant$2.resolveObject(OracleStructureAssistant.java:283)
+	at org.jkiss.dbeaver.ui.editors.sql.syntax.SQLSearchUtils.findObjectByPath(SQLSearchUtils.java:103)
+	at org.jkiss.dbeaver.ui.editors.sql.syntax.SQLSearchUtils.findObjectByFQN(SQLSearchUtils.java:54)
+	at org.jkiss.dbeaver.ui.editors.sql.syntax.SQLCompletionAnalyzer.getTableFromAlias(SQLCompletionAnalyzer.java:498)
+	at org.jkiss.dbeaver.ui.editors.sql.syntax.SQLCompletionAnalyzer.runAnalyzer(SQLCompletionAnalyzer.java:154)
+	at org.jkiss.dbeaver.ui.editors.sql.syntax.SQLCompletionAnalyzer.run(SQLCompletionAnalyzer.java:85)
+	at org.jkiss.dbeaver.ui.editors.sql.syntax.SQLCompletionAnalyzer.run(SQLCompletionAnalyzer.java:1)
+	at org.jkiss.dbeaver.model.DBUtils.tryExecuteRecover(DBUtils.java:1635)
+	at org.jkiss.dbeaver.ui.editors.sql.syntax.SQLCompletionProcessor$ProposalSearchJob.run(SQLCompletionProcessor.java:367)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:101)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2022-12-22 21:08:47.812
+!MESSAGE TABLE 'SPR_REPLY' not found in schema 'HR'
+!STACK 0
+org.jkiss.dbeaver.DBException: TABLE 'SPR_REPLY' not found in schema 'HR'
+	at org.jkiss.dbeaver.ext.oracle.model.OracleStructureAssistant$2.resolveObject(OracleStructureAssistant.java:283)
+	at org.jkiss.dbeaver.ui.editors.sql.syntax.SQLSearchUtils.findObjectByPath(SQLSearchUtils.java:103)
+	at org.jkiss.dbeaver.ui.editors.sql.syntax.SQLSearchUtils.findObjectByFQN(SQLSearchUtils.java:71)
+	at org.jkiss.dbeaver.ui.editors.sql.syntax.SQLCompletionAnalyzer.getTableFromAlias(SQLCompletionAnalyzer.java:498)
+	at org.jkiss.dbeaver.ui.editors.sql.syntax.SQLCompletionAnalyzer.runAnalyzer(SQLCompletionAnalyzer.java:154)
+	at org.jkiss.dbeaver.ui.editors.sql.syntax.SQLCompletionAnalyzer.run(SQLCompletionAnalyzer.java:85)
+	at org.jkiss.dbeaver.ui.editors.sql.syntax.SQLCompletionAnalyzer.run(SQLCompletionAnalyzer.java:1)
+	at org.jkiss.dbeaver.model.DBUtils.tryExecuteRecover(DBUtils.java:1635)
+	at org.jkiss.dbeaver.ui.editors.sql.syntax.SQLCompletionProcessor$ProposalSearchJob.run(SQLCompletionProcessor.java:367)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:101)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 2 0 2022-12-22 21:58:16.614
+!MESSAGE Some data source listeners are still registered: [org.jkiss.dbeaver.ui.editors.sql.syntax.SQLContextInformer$1@64e218d1]
+!SESSION 2022-12-23 17:04:16.234 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.16
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Users\HP\Desktop\Coding\Spring3_psam\workspace\script
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2022-12-23 17:52:05.321
+!MESSAGE SQL Error [911] [22019]: ORA-00911: invalid character
+
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2022-12-23 17:52:05.321
+!MESSAGE ORA-00911: invalid character
+
+!STACK 0
+java.sql.SQLSyntaxErrorException: ORA-00911: invalid character
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:440)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:396)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:837)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:445)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:191)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:523)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:193)
+	at oracle.jdbc.driver.T4CStatement.executeForDescribe(T4CStatement.java:848)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:1153)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1275)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1890)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1855)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:304)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:344)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:137)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:458)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$0(SQLQueryJob.java:402)
+	at org.jkiss.dbeaver.model.DBUtils.tryExecuteRecover(DBUtils.java:1635)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:400)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:839)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:2691)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:102)
+	at org.jkiss.dbeaver.model.DBUtils.tryExecuteRecover(DBUtils.java:1635)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:100)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:101)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2022-12-23 17:53:06.615
+!MESSAGE SQL Error [911] [22019]: ORA-00911: invalid character
+
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2022-12-23 17:53:06.615
+!MESSAGE ORA-00911: invalid character
+
+!STACK 0
+java.sql.SQLSyntaxErrorException: ORA-00911: invalid character
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:440)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:396)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:837)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:445)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:191)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:523)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:193)
+	at oracle.jdbc.driver.T4CStatement.executeForDescribe(T4CStatement.java:848)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:1153)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1275)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1890)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1855)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:304)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:344)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:137)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:458)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$0(SQLQueryJob.java:402)
+	at org.jkiss.dbeaver.model.DBUtils.tryExecuteRecover(DBUtils.java:1635)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:400)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:839)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:2691)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:102)
+	at org.jkiss.dbeaver.model.DBUtils.tryExecuteRecover(DBUtils.java:1635)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:100)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:101)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 2 0 2022-12-23 20:10:25.298
+!MESSAGE Some data source listeners are still registered: [org.jkiss.dbeaver.ui.editors.sql.syntax.SQLContextInformer$1@19f754e4]
+!SESSION 2022-12-27 22:11:01.238 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.16
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Users\HP\Desktop\Coding\Spring3_psam\workspace\script
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2022-12-27 23:33:57.677
+!MESSAGE SQL Error [904] [42000]: ORA-00904: "BNOM": invalid identifier
+
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2022-12-27 23:33:57.677
+!MESSAGE ORA-00904: "BNOM": invalid identifier
+
+!STACK 0
+java.sql.SQLSyntaxErrorException: ORA-00904: "BNOM": invalid identifier
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:440)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:396)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:837)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:445)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:191)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:523)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:193)
+	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:999)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1315)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1890)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1855)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:304)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:344)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:137)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:458)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$0(SQLQueryJob.java:402)
+	at org.jkiss.dbeaver.model.DBUtils.tryExecuteRecover(DBUtils.java:1635)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:400)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:839)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:2691)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:102)
+	at org.jkiss.dbeaver.model.DBUtils.tryExecuteRecover(DBUtils.java:1635)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:100)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:101)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2022-12-27 23:34:04.652
+!MESSAGE SQL Error [1400] [23000]: ORA-01400: cannot insert NULL into ("HR"."SPR_REPLY"."RNO")
+
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2022-12-27 23:34:04.652
+!MESSAGE ORA-01400: cannot insert NULL into ("HR"."SPR_REPLY"."RNO")
+
+!STACK 0
+java.sql.SQLIntegrityConstraintViolationException: ORA-01400: cannot insert NULL into ("HR"."SPR_REPLY"."RNO")
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:440)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:396)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:837)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:445)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:191)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:523)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:193)
+	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:999)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1315)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1890)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1855)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:304)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:344)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:137)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:458)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$0(SQLQueryJob.java:402)
+	at org.jkiss.dbeaver.model.DBUtils.tryExecuteRecover(DBUtils.java:1635)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:400)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:839)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:2691)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:102)
+	at org.jkiss.dbeaver.model.DBUtils.tryExecuteRecover(DBUtils.java:1635)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:100)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:101)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 2 0 2022-12-27 23:58:38.599
+!MESSAGE Some data source listeners are still registered: [org.jkiss.dbeaver.ui.editors.sql.syntax.SQLContextInformer$1@141edb1b]
+!SESSION 2022-12-28 14:05:12.996 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.16
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Users\HP\Desktop\Coding\Spring3_psam\workspace\script
+
+!ENTRY org.jkiss.dbeaver.model 2 0 2022-12-28 14:07:30.127
+!MESSAGE Datasource user 'org.jkiss.dbeaver.ui.editors.sql.SQLEditor@705dc1a6' already registered in datasource 'Oracle - XE'
+
+!ENTRY org.jkiss.dbeaver.model 2 0 2022-12-28 19:04:03.116
+!MESSAGE Some data source listeners are still registered: [org.jkiss.dbeaver.ui.editors.sql.SQLEditor@705dc1a6, org.jkiss.dbeaver.ui.editors.sql.syntax.SQLContextInformer$1@527088b0]
+!SESSION 2022-12-28 20:36:04.640 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.16
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Users\HP\Desktop\Coding\Spring3_psam\workspace\script
+
+!ENTRY org.jkiss.dbeaver.model 2 0 2022-12-28 21:30:00.503
+!MESSAGE Unknown predefined type: OBJECT
+!SESSION 2022-12-28 22:33:09.686 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.16
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Users\HP\Desktop\Coding\Spring3_psam\workspace\script
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2022-12-28 23:20:01.509
+!MESSAGE SQL Error [940] [42000]: ORA-00940: invalid ALTER command
+
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2022-12-28 23:20:01.509
+!MESSAGE ORA-00940: invalid ALTER command
+
+!STACK 0
+java.sql.SQLSyntaxErrorException: ORA-00940: invalid ALTER command
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:440)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:396)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:837)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:445)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:191)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:523)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:193)
+	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:999)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1315)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1890)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1855)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:304)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:344)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:137)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:458)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$0(SQLQueryJob.java:402)
+	at org.jkiss.dbeaver.model.DBUtils.tryExecuteRecover(DBUtils.java:1635)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:400)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:839)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:2691)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:102)
+	at org.jkiss.dbeaver.model.DBUtils.tryExecuteRecover(DBUtils.java:1635)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:100)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:101)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2022-12-28 23:22:12.186
+!MESSAGE SQL Error [2275] [42000]: ORA-02275: such a referential constraint already exists in the table
+
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2022-12-28 23:22:12.186
+!MESSAGE ORA-02275: such a referential constraint already exists in the table
+
+!STACK 0
+java.sql.SQLSyntaxErrorException: ORA-02275: such a referential constraint already exists in the table
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:440)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:396)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:837)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:445)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:191)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:523)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:193)
+	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:999)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1315)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1890)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1855)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:304)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:344)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:137)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:458)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$0(SQLQueryJob.java:402)
+	at org.jkiss.dbeaver.model.DBUtils.tryExecuteRecover(DBUtils.java:1635)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:400)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:839)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:2691)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:102)
+	at org.jkiss.dbeaver.model.DBUtils.tryExecuteRecover(DBUtils.java:1635)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:100)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:101)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 2 0 2022-12-29 00:41:44.000
+!MESSAGE Some data source listeners are still registered: [org.jkiss.dbeaver.ui.editors.sql.syntax.SQLContextInformer$1@51f8a592]

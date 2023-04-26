@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본 선택자 1</title>
+    <script src="./jquery-3.6.1.min.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>제목</h1>
+        <p class="text">문단1</p>
+        <p class="text">문단2</p>
+    </div>
+</body>
+<script>
+    wrap = $("#wrap");
+    h1 = $("#wrap > h1");
+    text = $("#wrap .text");
+
+    wrap.css("border", "1px solid black");
+    
+    // JS와 다르게 여러 요소를 받아온 배열(text)을 반복문으로 하나씩 처리할 필요가 없다.
+    h1.on("click", function(){
+        $(this).css("color", "red");
+        text.css("background-color", "skyblue");
+    });
+
+    $("p:first-of-type").on("click", function(){
+        $(this).next().css("font-size", "24px");
+    });
+
+</script>
+</html>

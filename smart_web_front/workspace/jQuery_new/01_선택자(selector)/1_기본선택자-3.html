@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본 선택자 3</title>
+    <script src="./jquery-3.6.1.min.js"></script>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+        <ul>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+        </ul>
+    </div>
+</body>
+<script>
+    // gt(n) : n번째 index 뒤의 요소들
+    // lt(n) : n번째 index 앞의 요소들
+    $("ul li:gt(6)").css("background", "skyblue")
+                    .css("border", "1px solid black");
+    $("ul li:lt(5)").css("background", "hotpink")
+                    .css("border", "1px solid black");
+
+    // odd, even : 홀짝 요소들. 단, index가 0부터 시작함에 유의
+    $("ul li:odd").css("background", "green");
+    $("ul li:even").css("text-align", "center");
+
+    // not(x) : x가 아닌 요소들
+    $("ul li:not(:eq(6))").css("font-size", "21px");
+</script>
+</html>

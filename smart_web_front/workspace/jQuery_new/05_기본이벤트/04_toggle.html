@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>toggle()</title>
+	<script src="../../../resources/jquery-migrate-1.4.1.min.js"></script>
+	<script src="../00_jQuery의 시작/jquery-3.6.1.min.js"></script>
+</head>
+<body>
+	<button>화면을 변경</button>
+	
+	<p><img src="flower.jpg" alt="꽃" /></p>
+</body>
+
+<!---------- jQuery code Start ---------->
+<script type="text/javascript">
+	// button을 클릭할때마다 바다, 해파리, 건물, 꽃 이미지를 순서대로 로드하시오
+	// toggle은 switch 구문과 유사하게 작동할 수 있다.
+
+	// 단, 이는 1.8 이전의 기능이었으며,
+	// jQuery 1.8 이후로 toggle의 기능이 변하였으므로
+	// 이를 계속해서 사용하려면 migrate를 받아와야 한다.
+
+	$("button").toggle(
+		function(){
+		$("p img").attr({
+			src: "sea.jpg",
+			alt: "바다"
+			});
+		},
+		function(){
+		$("p img").attr({
+			src: "Jellyfish.jpg",
+			alt: "해파리"
+			});
+		},
+		function(){
+		$("p img").attr({
+			src: "building.jpg",
+			alt: "건물"
+			});
+		},
+		function(){
+		$("p img").attr({
+			src: "flower.jpg",
+			alt: "꽃"
+			});
+		}
+	);
+
+	// const button = document.querySelector("button");
+	// const img = document.querySelector("img");
+	// let i = 0;
+
+	// button.addEventListener("click", function(){
+	// 	i++;
+	// 	i %= 4;
+	// 	switch(i){
+	// 		case 0:
+	// 			img.src = "sea.jpg";
+	// 			break;
+	// 		case 1:
+	// 			img.src = "jellyfish.jpg";
+	// 			break;
+	// 		case 2:
+	// 			img.src = "building.jpg";
+	// 			break;
+	// 		case 3:
+	// 			img.src = "flower.jpg";
+	// 			break;
+	// 	}
+	// });
+</script>
+</html>

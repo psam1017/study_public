@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폰트</title>
+    <!-- 구글 폰트 link 방식 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
+    <style>
+        /* 폰트 적용 순서 : Century Gothic을 먼저 적용. Century Gothic이 적용되지 않은 글씨는 굴림 적용. 둘 다 적용되지 않은 경우 기본 고딕체 적용. */
+        /* 기본 폰트 값 : serif(바탕체 계열), sans-serif(고딕체 계열) */
+
+
+
+        /* 구글폰트 import 방식 */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+        h3{
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 100;
+            font-style: italic;
+        }
+        p{
+            font-family: 'Nanum Brush Script', cursive;
+        }
+
+
+
+        /* 기본 폰트 방식 */
+        h1{
+            font-family: Arial, 굴림, sans-serif;
+        }
+        h2{
+            font-family: 'Times New Roman', 바탕, batang, serif;
+        }
+
+
+
+        /* 눈누 @font-face 방식 */
+        /*
+        @font-face {
+            font-family: 'MonoplexKR-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_Monoplex-kr@1.0/MonoplexKR-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        h1 { font-family: 'MonoplexKR-Regular', serif; } */
+    </style>
+</head>
+<body>
+    <h1>When the Buckwheat Flower Blooms 메밀꽃 필 무렵</h1>
+    <h2>When the Buckwheat Flower Blooms 메밀꽃 필 무렵</h2>
+    <h3>When the Buckwheat Flower Blooms 메밀꽃 필 무렵</h3>
+    <p>When the Buckwheat Flower Blooms 메밀꽃 필 무렵</p>
+</body>
+</html>

@@ -1,0 +1,130 @@
+@charset "utf-8";
+/* 초기화 */
+body, h1, h2, h3, h4, h5, h6, p, ul, dl, dd, fieldset, input, button, table, th, td, figure  { margin: 0; padding: 0; }
+ul li { list-style: none; }
+a { text-decoration: none; }
+address { font-style: normal; }
+fieldset, img { border: 0; }
+table { border-collapse: collapse; }
+hr { display: none; }
+.hidden { position: absolute; left: -9999px; }
+* { box-sizing: border-box; }
+/* 웹폰트 - noto sans */
+body { font-family: 'Lato', 'Noto Sans KR', sans-serif; }
+/* 헤더 */
+#headerWrap { overflow: hidden;
+              position: absolute; top: 0; left: 0; z-index: 999;
+              width: 100%; height: 92px;
+              background: rgba(255, 255, 255, 0.9);
+              border-bottom: 1px solid #b9b9b9;
+              transition: 0.5s; }
+#headerWrap:hover { height: 392px; }
+#headerWrap::before { content: ""; position: absolute;
+                      top: 92px; left: 0;
+                      width: 100%; height: 300px;
+                      background: rgba(255, 255, 255, 0.9);
+                      }
+#headerWrap::after { content: ""; position: absolute;
+                    top: 92px; left: 0; transform: translateX(-50%);
+                    width: 50%; height: 300px;
+                    background: #ff3b3b; }
+#header { position: relative; max-width: 1440px; margin: 0 auto;  }
+#header::after { content: ""; position: absolute; top: 92px; left: 0;
+                 width: 250px; height: 300px; background: #ff3b3b; }
+#header .logo { position: absolute; top: 30px; left: 30px; width: 82px; height: 36px; }
+#header .logo a { display: block; height: 36px; text-indent: -9999px;
+                  background: url(../images/lg-logo-new.svg) no-repeat left / 82px 36px; }
+/* gnb */
+#gnb {  }
+#gnbList { display: flex; justify-content: center; padding-top: 40px; }
+#gnbList > li { padding: 0 30px; font-size: 20px; }
+#gnbList > li > a { display: block; height: 52px; color: #000; }
+/* 서브메뉴 snb */
+#gnbList .snb { position: absolute; top: 92px; height: 0px; padding: 20px 0; }
+#gnbList .snb li { position: relative; line-height: 50px; font-size: 16px; }
+#gnbList .snb li a { color: #595959; }
+
+/* 헤더기타메뉴 */
+#sideMenu { position: absolute; top: 45px; right: 30px; display: flex; }
+#sideMenu a { display: block; height: 20px; margin-left: 20px;
+              background: no-repeat left / cover;
+              text-indent: -9999px; }
+#sideMenu .goEng { width: 26px;
+                   background-image: url(../images/icon-lang.svg); }
+#sideMenu .goSearch { width: 20px;
+                      background-image: url(../images/icon-search.svg); }
+#sideMenu .goSiteMap { width: 18px;
+                       background-image: url(../images/icon-menu.svg); }
+/* 검색 */
+#searchWrap { display: none; }
+/* 사이트맵 */
+#siteMap { display: none; }
+/* 메인슬라이더 */
+#mainSlider {   }
+#mainSliderList { position: relative; width: 100%; height: 100vh; }
+#mainSliderList li { position: absolute; top: 0; left: 0; width: 100%; height: 100vh; }
+#mainSliderList li::before { content:""; position: absolute; top: 0; left: 0;
+                            width: 100%; height: 100%;
+                            background: rgba(0, 0, 0, 0.5);
+                          }
+#mainSliderList li.mainSlider1 { background:#0c531e url(../images/slider1.jpg) no-repeat center/ cover; z-index: 2; }
+#mainSliderList li.mainSlider2 { background:#009f8c; }
+#mainSliderList li.mainSlider3 { background:#531b85; }
+#mainSliderList li div { position: relative; max-width: 1440px;
+                          height: 100%; margin: 0 auto; }
+#mainSliderList li dl { position: absolute; bottom: 20%; left: 100px; color: #fff; }
+#mainSliderList li dl dt { font-size: 70px; }
+#mainSliderList li dl dd { font-size: 30px; }
+#mainSliderList li dl dd a { color: #fff; }
+#mainSlider button { position: absolute; top: 45%; z-index: 99;
+                     width: 30px; height: 120px;
+                     border: 0; text-indent: -9999px;
+                     background: no-repeat center / 30px 120px; }
+#mainSlider .mainBtnNext { left: 50px; background-image: url(../images/icon-slide-left-arrow.svg); }
+#mainSlider .mainBtnPrev { right: 50px; background-image: url(../images/icon-slide-right-arrow.svg); }
+/* 재단소개  */
+#productWrap { overflow: hidden; position: relative; padding: 100px 0; background: #bfbfbf; }
+#introduceProduct { position: relative; max-width: 1440px; margin: 0 auto; }
+#introduceProduct h3 { color: #ff3d3d; font-size: 3rem; }
+#introduceProduct p { color: #777777; font-size: 1.125rem; }
+#introduceProduct ul { width: 2880px; margin-top: 50px; display: flex; }
+#introduceProduct ul li { width: 700px; height: 376px;
+                          margin-right: 20px;
+                          background: #77b682;
+                          border: 1px solid #000; }
+#introduceProduct ul li:nth-child(3),
+#introduceProduct ul li:nth-child(4) { opacity: 0.3; }
+/* 소식공지 */
+/* 활동소식 */
+#news { overflow: hidden; padding: 100px 0;  }
+#newsInner { position: relative; max-width: 1440px; margin: 0 auto; }
+#newsInner h3 { color: #ff3d3d; font-size: 3rem; }
+#newsInner ul { width: 4320px; margin-top: 70px; display: flex; }
+#newsInner li { width: 24.5%; height: 300px; margin: 0 0.25%; background: #4c5335; }
+/* 공지사항 */
+#notice { overflow: hidden; padding: 100px 0; background: #c5d1ce }
+#noticeInner { position: relative; max-width: 1440px; margin: 0 auto; }
+#noticeInner h3 { color: #ff3d3d; font-size: 3rem; }
+#noticeInner ul { width: 2880px; margin-top: 70px; display: flex; }
+#noticeInner li { width: 24.5%; height: 300px; margin: 0 0.25%; background: #4c5335; }
+
+/* 재단소식&소식공지 좌우 공통 */
+.btnWrap { position: absolute; top: 50px; right: 50px; }
+.btnWrap button { width: 32px; height: 32px;
+                  margin: 0 10px; border: 0;
+                  text-indent: -5000px; }
+.btnWrap .next { background: url(../images/icon-left-arrow-circle.svg) no-repeat center / 32px; }
+.btnWrap .prev { background: url(../images/icon-right-arrow-circle.svg) no-repeat center / 32px; }
+
+/* 패밀리사이트 */
+#familySite { max-width: 1440px; margin: 0 auto; padding: 50px 0; }
+#familySite ul { display: flex; justify-content: space-between; }
+#familySite ul li { }
+#familySite ul li img { height: 40px; }
+/* footer */
+#footerWrap { background: #2b2d34; color: #fff; }
+#footer { max-width: 1440px; margin: 0 auto;
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: space-between; }
+#footer a { color: #fff; }

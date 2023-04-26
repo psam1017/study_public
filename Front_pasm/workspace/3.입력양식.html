@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입력양식을 표현하는 방법</title>
+    <style>
+        input{
+            margin-top: 10px;
+            display: block;
+        }
+        .inline{
+            display: inline;
+        }
+        div >label{
+            float: left;
+        }
+        textarea{
+            margin-left: 10px;
+        }
+        #memo_field{
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+    <form method="post" name="example_form" action="" autocomplete="on">
+        <fieldset>
+            <legend>예시 그룹</legend>
+            <label for="example">입력창</label>
+            <input class="inline" type="text" id="example" size="15" placeholder="입력란의 힌트 내용" required autofocus>
+            <input type="password" maxlength="20">
+            <input class="inline" type="checkbox" value="v1">
+            <input class="inline" type="checkbox" value="v2" checked>
+            <input class="inline" type="checkbox" value="v3">
+            <br>
+            <input class="inline" type="radio" name="my radio" value="r1" checked>
+            <input class="inline" type="radio" name="my radio" value="r2">
+            <input class="inline" type="radio" name="my radio" value="r3">
+            <input type="datetime-local">
+            <input type="number" min="0" max="100" step="1" value="1">
+            <input type="range" value="50">
+            <input type="file">
+            <input type="hidden" value="log in on website">
+            <input class="inline" type="button" value="버튼">
+            <input class="inline" type="submit">
+            <input class="inline" type="reset">
+            <br><br>
+            <select size="1">
+                <option value="v1">옵션1</option>
+                <option value="v2">옵션2</option>
+                <option value="v3" selected>옵션3</option>
+                <option value="v4">옵션4</option>
+                <option value="v5">옵션5</option>
+            </select>
+            <br><br>
+            <div>
+                <label for="area" id="memo_field">메모 필드</label>
+                <textarea cols="30" rows="3" id="area"></textarea>
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>

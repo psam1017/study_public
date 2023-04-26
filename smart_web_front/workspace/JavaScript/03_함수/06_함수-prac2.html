@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경이미지 바꾸기</title>
+    <style>
+        body{
+            background: no-repeat center 100px / 200px;
+        }
+    </style>
+</head>
+<body>
+    <button>배경이미지 바꾸기</button>
+</body>
+<script>
+    const button = document.querySelector("button");
+
+    function imageChange(){
+        let srcNum = prompt("원하는 이미지 번호를 입력하세요. 1~9까지")
+        let src = `url('../images/images/pic_${srcNum}.jpg')`;
+        console.log(src);
+
+        document.body.style.backgroundImage = src;
+    }
+    button.addEventListener("click", imageChange);
+</script>
+</html>

@@ -1,0 +1,23 @@
+디렉티브 태그
+현재 페이지에 대한 정보를 표시하고, 설정할 수 있다.
+가급적 페이지 최상단에 선언한다.
+<%@page 속성="값"%>
+
+1. language(java) : 현재 JSP페이지가 사용할 프로그래밍 언어
+2. contentType(text/html) : 현재 JSP 페이지가 생성할 문서의 콘텐츠 유형
+3. pageEncoding(ISO-8859-1) : 현재 JSP 페이지의 문자 인코딩 설정.
+4. import : 현재 JSP 페이지에서 사용할 자바 패키지 및 클래스 설정
+5. session(true) : 현재 JSP 페이지에서 세션 사용 여부 설정
+6. info : 현재 JSP 페이지에 대한 설명을 설정
+7. errorPage : 현재 JSP 페이지에 오류가 발생했을 때 보여줄 오류 페이지 설정
+8. isErrorPage(false) : 현재 JSP 페이지가 오류 페이지인지 여부 설정
+
+<%@page
+	language="java"
+	contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"
+  errorPage="myErrorPage.jsp"
+  info="Date 클래스를 이용한 날짜 출력"
+  isErrorPage="false"
+%>
+<%@page import="java.util.Date"%>

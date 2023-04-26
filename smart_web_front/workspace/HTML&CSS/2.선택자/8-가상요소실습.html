@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            background-color: skyblue;
+        }
+        a {
+            display: block;
+            width: 50px;
+            margin: 0 auto;
+            border: 1px solid black;
+        }
+        /* 
+    div에 before와 after를 적용하면 div의 자식요소인 a의 앞뒤로 요소가 추가된다.
+    즉, before와 after는 해당 요소의 자식 요소의 맨 앞과 맨 뒤에 요소를 추가한다.
+    이는, a에 before와 after를 적용하면 더 잘 알 수 있는데,
+    전자의 경우 a의 앞과 뒤에 별도의 요소가 추가되는 반면에
+    후자의 경우 a의 내부에 앞뒤로 추가된다. 따라서 a의 border 영역이 늘어난다.
+        */
+        div::before {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 100px;
+            background-color: aliceblue;
+        }
+        div::after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 100px;
+            background-color: hotpink;
+        }
+
+        a::before {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 100px;
+            background-color: aliceblue;
+        }
+        a::after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 100px;
+            background-color: hotpink;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <a href="#">가나다</a>
+    </div>
+</body>
+</html>

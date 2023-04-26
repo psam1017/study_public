@@ -1,0 +1,11 @@
+package java.wiki.dto;
+
+public class WikiContentDTO {
+	
+	private String subject;
+	private int rvs;
+	private int rvsRow;
+	private int preRvs;
+	private int preRvsRow;
+	private String content;
+}

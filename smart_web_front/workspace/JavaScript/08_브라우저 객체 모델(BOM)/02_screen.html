@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>screen 객체</title>
+</head>
+<body>
+</body>
+<script>
+    document.write(`${screen.width}, ${screen.height}<br>`);
+    document.write(`${screen.availWidth}, ${screen.availHeight}<br>`);
+    document.write(`${window.innerHeight}, ${window.innerWidth}<br>`);
+    document.write(`${window.outerHeight}, ${window.outerWidth}<br>`);
+    document.write(screen.colorDepth);
+
+    // screen.colorDepth : 한 색상을 표시하는 데 사용되는 비트 수를 반환한다.
+    // 현재 작성 중인 노트북에서는 색상 해상도가 24비트이다.
+    if(screen.colorDepth <= 24){
+        document.body.style.backgroundColor = "hotpink";
+    }
+    else{
+        document.body.style.backgroundColor = "skyblue";
+    }
+</script>
+</html>

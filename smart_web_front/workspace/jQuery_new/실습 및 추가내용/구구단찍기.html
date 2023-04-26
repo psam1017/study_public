@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>구구단 1단씩 출력</button>
+    <div></div>
+    <script>
+        const btn = document.querySelector('button');
+        const div = document.querySelector('div');
+        let n = 1;
+        btn.addEventListener('click', ()=> {
+            if ( n == 9 ) return;
+            n++;
+            div.innerHTML += `<br>-----------------${n}단입니다<br>`
+            for ( i=1; i<10; i++) {
+                div.innerHTML += `${n}x${i}=${n*i}<br>`
+            }
+        })
+        // btn?.addEventListener('click', ()=> {
+        //     console.log(btn)
+        //     if ( n == 9 ) return;
+        //     n++;
+        //     let box = document.createElement("div")
+        //     box.className = 'box';
+        //     div.append(box);
+        //     const boxs = document.querySelectorAll('.box')
+        //     for ( i=1; i<10; i++) {
+        //         console.log(boxs[n-2])
+        //         boxs[n-2].innerHTML += `${n}x${i}=${n*i}<br>`
+        //     }
+        //     div.append(`-----------------${n}단입니다`)
+        // })
+
+    </script>
+</body>
+</html>

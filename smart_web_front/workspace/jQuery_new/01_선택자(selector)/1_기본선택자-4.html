@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본 선택자 4</title>
+    <style>
+        p{
+            height: 20px;
+            border: 1px solid black;
+        }
+    </style>
+    <script src="./jquery-3.6.1.min.js"></script>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>apple</li>
+            <li>banana</li>
+            <li>grape</li>
+            <li></li>
+            <li>lion</li>
+            <li>fox</li>
+            <li>tiger</li>
+        </ul>
+    </div>
+
+    <p><span>여기는 내용이 있음. 밑의 단락에는 내용이 없음</span></p>
+    <p></p>
+</body>
+<script>
+    $("ul li:contains(ap)").css("background", "orange");
+
+    $("p:has(span)").css("background", "skyblue");
+    
+    $("ul li:empty").css("background", "linear-gradient(to right, white, black)");
+    
+    // 아래 두 문장은 동일한 기능을 한다.
+    // $("ul li:not(:empty)").css("font-size", "20px");
+
+    $("ul li:parent").css("color", "blue");
+    // parent는 자기 자신을 기준으로 하지 않고 내부요소를 기준으로 한다. -> li를 부모로 한다는 뜻.
+    // 따라서 innerText의 부모 요소인 li에 명령이 적용이 되는 것이다.
+    // li가 부모가 되려면 li 안에 자식 요소가 있어야 하며, 없는 요소는 적용이 되지 않으므로 :not(:empty)와 동일한 기능을 수행한다.
+</script>
+</html>

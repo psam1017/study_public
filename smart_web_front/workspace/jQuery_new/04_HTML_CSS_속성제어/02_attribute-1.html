@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>attr( )</title>
+	<!-- jQuery library -->
+	<script src="jquery-1.7.2.min.js"></script>
+</head>
+<body>
+	<div><a href="#">하이퍼링크</a></div>
+</body>
+
+<!---------- jQuery code Start ---------->
+<script>
+	// $( "selector" ).attr( "properties", "value" );
+	// 체인(.)을 이용해서 계속해서 속성 추가. 블록으로 한번에 지정도 가능
+
+	// 속성 값 가져오기
+	// let href = $('a').attr("href");
+	// console.log(href);
+
+	// 속성 값 설정하기
+	// $('a').attr("href", "https://www.naver.com")
+	// 		.attr("target", "_blank");
+
+	$('a').attr({
+		href: "https://www.naver.com",
+		target: "_blank"
+	});
+</script>
+</html>

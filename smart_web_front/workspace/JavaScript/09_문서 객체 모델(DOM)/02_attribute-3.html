@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class practice</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+        }
+        .active{
+            border: 5px solid black;
+        }
+        .target{
+            border: 1px solid black;
+        }
+        .on1{
+            background-color: hotpink;
+            color: snow;
+        }
+        .on2{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="target" class="active">클래스 바꾸기</div>
+    <button class="btn">클래스 추가</button>
+    <button class="btn">클래스 제거</button>
+    <button class="btn">클래스 변경</button>
+</body>
+<script>
+    const target = document.getElementById("target");
+    const btn = document.querySelectorAll(".btn");
+
+    // 클래스를 여러 개 지정하려면 classList를 사용한다.
+    // add, remove, contains, replace, toggle
+    btn[0].addEventListener("click", function(){
+        target.classList.add("on1", "on2");
+    });
+    btn[1].addEventListener("click", function(){
+        target.classList.remove("on1", "on2");
+    });
+    btn[2].addEventListener("click", function(){
+        // 클래스를 끄고 켜기
+        // target.classList.toggle("active");
+
+        // 클래스를 서로 치환하기
+        if(target.classList.contains("active")){
+            target.classList.replace("active", "target");
+        }
+        else{
+            target.classList.replace("target", "active");
+        }
+    });
+</script>
+</html>

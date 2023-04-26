@@ -1,0 +1,13 @@
+package enc;
+
+import encryptor.SimpleEncryptor;
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		SimpleEncryptor enc = new SimpleEncryptor();
+	}
+
+}

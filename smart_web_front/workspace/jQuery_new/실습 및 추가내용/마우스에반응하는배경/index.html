@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스에 반응하는 배경</title>
+    <script src="./jquery-3.6.1.min.js"></script>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        div{
+            position: absolute;
+            /* js에서 left와 top 값을 변동시키므로, 초기값을 설정해줘야 함. */
+            left: 10vw;
+            top: 10vh;
+            width: 120vw;
+            height: 120vh;
+            background: url(./bg.jpg) no-repeat center / cover;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        $(document).ready(function(){
+            // speed에 반비례함. 10 이상을 권장.
+            let speed = 10;
+
+            $(document).on("mousemove", function(e){
+                $("div").css({
+                    left: ($(window).width()/2 - e.clientX)/speed,
+                    top: ($(window).height()/2 - e.clientY)/speed
+                });
+            });
+        });
+    </script>
+</body>
+</html>

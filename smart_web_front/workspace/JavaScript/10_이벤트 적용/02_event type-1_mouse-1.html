@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 종류</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1">클릭</div>
+    <div id="box2">더블클릭</div>
+    <div id="box3">마우스오버<br>마우스아웃<br>마우스다운<br>마우스업</div>
+    <div id="box4">마우스엔터<br>마우스리브</div>
+</body>
+<script>
+    
+    document.addEventListener("DOMContentLoaded", function(){
+        const boxes = document.querySelectorAll("div");
+
+        boxes[0].addEventListener("click", function(){
+            this.style.background = "skyblue";
+        });
+        boxes[1].addEventListener("dblclick", function(){
+            this.style.backgroundColor = "skyblue";
+        });
+        boxes[2].addEventListener("mouseover", function(){
+            this.style.backgroundColor = "hotpink";
+        });
+        boxes[2].addEventListener("mouseout", function(){
+            this.style.backgroundColor = "white";
+        });
+        boxes[3].addEventListener("mouseenter", function(){
+            this.style.backgroundColor = "hotpink";
+        });
+        boxes[3].addEventListener("mouseleave", function(){
+            this.style.backgroundColor = "white";
+        });
+        boxes[2].addEventListener("mousedown", function(){
+            this.style.backgroundColor = "skyblue";
+        });
+        boxes[2].addEventListener("mouseup", function(){
+            this.style.backgroundColor = "hotpink";
+        });
+    });
+</script>
+</html>

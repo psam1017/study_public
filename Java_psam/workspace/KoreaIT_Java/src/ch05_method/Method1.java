@@ -1,0 +1,56 @@
+package ch05_method;
+
+import java.util.Scanner;
+
+public class Method1 {
+
+	public static void main(String[] args) {
+		
+		// 자바에는 함수가 없고, 메소드가 있다.
+		// 즉, 클래스 안에 정의된 기능을 사용해야 한다.
+		// 메소드를 함수처럼 단독으로 쓸 수 없다.
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int[] height = new int[3];
+		int[] weight = new int[3];
+		int[] age = new int[3];
+		
+		for(int i = 0; i < 3; i++) {
+			System.out.print("[" + (i + 1) + "]");
+			System.out.print("신장 : "); 		height[i] = sc.nextInt();
+			System.out.print("   체중 : "); 	weight[i] = sc.nextInt();
+			System.out.print("   나이 : ");	age[i] = sc.nextInt();
+		}
+		
+		int maxHeight = 0;
+		int maxWeight = 0;
+		int maxAge = 0;
+		
+		// 같은 기능을 반복해서 사용하는 부분을 메소드로 대체한다.
+		//if(height[1] > maxHeight)	maxHeight = height[1];
+		//if(height[2] > maxHeight)	maxHeight = height[2];
+		
+		//if(weight[1] > maxWeight)	maxWeight = weight[1];
+		//if(weight[2] > maxWeight)	maxWeight = weight[2];
+		
+		//if(age[1] > maxAge)	maxAge = age[1];
+		//if(age[2] > maxAge)	maxAge = age[2];
+		
+		System.out.println("신장의 최대값은 " + getMax(maxHeight, height) + "입니다.");
+		System.out.println("체중의 최대값은 " + getMax(maxWeight, weight) + "입니다.");
+		System.out.println("나이의 최대값은 " + getMax(maxAge, age) + "입니다.");
+		
+		sc.close();
+	}
+	
+	static int getMax(int max, int[] info) {
+		
+		max = info[0];
+		if(info[1] > max)	max = info[1];
+		if(info[2] > max)	max = info[2];
+		
+		return max;
+	}
+	
+}

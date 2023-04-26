@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 기본문법 - 창 띄우기</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // alert("string") : 경고 창을 띄운다. 메시지, 확인 버튼이 있다.
+    // confirm("string") : 확인 창을 띄운다. 메시지, 확인, 취소가 있다.
+    // prompt("string", "default") : 질의 창을 띄운다. 메시지, 입력 칸, 확인, 취소가 있다.
+    // prompt의 2번째 파라미터는 입력칸을 만든다. 생략 시 텍스트 없이 빈칸이 된다.
+    // console.log("string") : 콘솔 창에 값을 입력한다.
+
+    alert("경고 창 띄우기");
+
+    console.log("콘솔창 입력하기");
+
+    var answer = "";
+    var conf = false;
+    
+    while(!conf){
+        answer = prompt("값을 입력하시오.", "기본값");
+        conf = confirm("확인 창 띄우기");
+    }
+
+    // 플러스(+) 기호를 사용하여 입력.
+    // document.write("입력하신 값은 " + answer + "입니다.");
+    // 백틱(`) 기호를 사용하여 입력.
+    if(answer != null){
+        document.write(`입력하신 값은 \"${answer}\"입니다.`);
+    }
+    else{
+        document.write("값이 입력되지 않았습니다.");
+    }
+</script>
+</html>

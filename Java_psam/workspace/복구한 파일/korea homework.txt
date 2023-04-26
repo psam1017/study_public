@@ -1,0 +1,54 @@
+package day08;
+
+import java.util.Arrays;
+
+public class ArrayHomework_psm {
+
+	public static void main(String[] args) {
+		
+		// 배열을 6개 만들어 로또 만들기
+		
+		// 1. 6개의 정수 배열 생성
+		// 2. for문, Math.random() 사용
+		// 3. 기존 값과 중복되는 경우 중복되었음을 출력 "n은 중복된 값입니다."
+		// 4. 마지막에 Arrays.toString()으로 출력
+		
+		
+		
+		// 알고리즘
+		// 1. for 6번(lotto.length) 시행
+		// 2. i번째를 넣을 차례에 새로운 n을 생성.
+		// 3. for j는 i-1번 시행.
+		// 4-1. n이 이전까지의 값 i와 같다면(if) i--하고 break하여 1번으로 돌아감.
+		// 4-2. 끝까지 겹치지 않는다면(else if) i번째에 넣기
+
+		int[] lotto = new int[6];
+		
+		lotto[0] = (int)(Math.random() * 45) + 1; // 첫 번째 값은 중복이 없으므로 검사할 필요 없음.
+		
+		for(int i = 1; i < lotto.length; i++) { 			// 1번 구현
+			
+			int n = (int)(Math.random() * 45 + 1); 			// 2번 구현
+
+			for(int j = 0 ; j < i; j++) { 					// 3번 구현
+				
+				if(lotto[j] == n) { 						// 4-1번 구현
+					System.out.println(i + "번째 값 : " + n + " -> " + (j + 1) + "번째 값과 중복");
+					i--;
+					break;
+				}
+				if(lotto[i - 1] != n) { // 4-2번 구현
+					lotto[i] = n;
+				}
+			}
+		}
+		
+		System.out.println(Arrays.toString(lotto));
+		
+		 // 중복값이 있는지 검사용 : lotto.length를 45로 만들고 실험할 것.
+		 Arrays.sort(lotto);
+		 System.out.println(Arrays.toString(lotto));
+		
+	}
+
+}

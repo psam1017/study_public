@@ -1,0 +1,260 @@
+@charset "UTF-8";
+
+/* 초기화 */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+ul,
+li {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+address {
+    font-style: normal;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+small {
+    font-size: 1em;
+}
+hr {
+    display: none;
+}
+.hidden {
+    position: absolute;
+    left: -9999px;
+}
+
+/* header 영역에 gnb를 중앙에 위치시키기 위해 로고와 멤버십을 absolute시킨다. */
+/* header */
+#header {
+    width: 100%;
+    height: 100px;
+    background-color: khaki;
+    border-bottom: 5px solid black;
+    display: flex;
+    justify-content: center;
+}
+#header h1 {
+    position: absolute;
+    top: 30px;
+    left: 50px;
+}
+/* membership */
+#header #membership {
+    position: absolute;
+    top: 35px;
+    right: 50px;
+}
+#membership ul {
+    display: flex;
+}
+#membership ul li {
+    margin-left: 15px;
+}
+#membership ul li a {
+    font-size: 14px;
+}
+
+/* gnb */
+#gnb {
+    margin-top: 35px;
+}
+#gnb ul {
+    display: flex;
+}
+#gnb ul li {
+    margin: 0 20px;
+    /* 제대로 정렬이 되지 않는 이유? */
+    /* align-items: center; */
+}
+.gnbView{
+    display: none;
+}
+/* header 끝 */
+
+/* event */
+#event {
+    width: 100%;
+    height: 500px;
+    background-color: grey;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#event p {
+    margin: 20px 0 100px;
+}
+#event a {
+    /* a 태그에만 color를 따로 정렬해줘야 하는 이유? */
+    color: white;
+    display: block;
+    width: 200px;
+    height: 30px;
+    border: 1px solid black;
+
+    text-align: center;
+    line-height: 30px;
+    transition: 0.1s;
+}
+#event a:hover {
+    background-color: white;
+    color: black;
+}
+/* event 끝 */
+
+/* main */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    /* width: 1200px; */
+    margin: 0 auto;
+}
+main > section {
+    width: 25%;
+    height: 300px;
+    color: white;
+}
+#content1 {
+    background-color: #fed543;
+}
+#content2 {
+    background-color: #08cc33;
+}
+#content3 {
+    background-color: #437dfe;
+}
+#content4 {
+    background-color: #ca50d5;
+}
+
+/* footer */
+#footer {
+    width: 100%;
+    padding: 50px 0;
+    background-color: #414141;
+    color: white;
+}
+
+/* 1200 미만 */
+@media all and (max-width: 1199px) {
+    main {
+        width: 100%;
+    }
+    main > section {
+        width: 25%;
+    }
+    #event h2 {
+        font-size: 10vw;
+    }
+    #event p {
+        font-size: 2vw;
+    }
+}
+/* 800 이하 */
+@media all and (max-width: 800px) {
+    .gnbView{
+        display: block;
+        width: 40px;
+        height: 40px;
+        border: 1px solid black;
+
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+    .gnbView::before{
+        content: "";
+        height: 2px;
+        width: 30px;
+        background-color: black;
+
+        /* position을 absoulte로 지정하면 자기 영역이 생긴다. */
+        position: absolute;
+        top: 12px;
+        left: 5px;
+
+        transition: 0.2s;
+    }
+    .gnbView::after{
+        content: "";
+        height: 2px;
+        width: 30px;
+        background-color: black;
+        
+        /* position을 absoulte로 지정하면 자기 영역이 생긴다. */
+        position: absolute;
+        right: 5px;
+        bottom: 12px;
+
+        transition: 0.2s;
+    }
+    .gnbView:hover::before{
+        transform: rotate(45deg);
+        top: 18px;
+    }
+    .gnbView:hover::after{
+        transform: rotate(-45deg);
+        bottom: 20px;
+    }
+    #gnb{
+        position: fixed;
+        top: 0;
+        left: -200px;
+        width: 200px;
+        height: 100vh;
+        background-color: cornflowerblue;
+        margin: 0;
+
+        transition: 0.5s;
+    }
+    #gnb ul{
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+    #gnb ul li{
+        margin: 50px;
+    }
+    #gnb ul li a{
+        color: white;
+        font-size: 4vw;
+        white-space: nowrap;
+    }
+    main > section {
+        width: 50%;
+    }
+    #header h1{
+        position: static;
+        margin-top: 25px;
+    }
+    #event h2 {
+        font-size: 32px;
+    }
+    #event p {
+        font-size: 16px;
+    }
+}
+/* 600 이하 */
+@media all and (max-width: 600px) {
+    #membership ul{
+        display: block;
+        text-align: right;
+    }
+    main > section {
+        width: 100%;
+    }
+}

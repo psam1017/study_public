@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 웹</title>
+    <style>
+        body{
+            background-color: #fff;
+        }
+        @media screen and (min-width: 480px) and (max-width: 767px) {
+            body{ background-color: #aaa; }
+        }
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            body{ background-color: #777; }
+        }
+        @media screen and (min-width: 1024px) {
+            body{ background-color: #333; }
+        }
+        h1{
+            font-size: 5vw;
+            text-align: center;
+            background-color: antiquewhite;
+        }
+        .box1{
+            background-color: chocolate;
+            grid-area: box1;
+        }
+        .box2{
+            background-color: deepskyblue;
+            grid-area: box2;
+        }
+        .box3{
+            background-color: gold;
+            grid-area: box3;
+        }
+        .box4{
+            background-color: navy;
+            grid-area: box4;
+            color: white;
+        }
+        .my_grid{
+            display: grid;
+            grid-template-columns: repeat(3, minmax(100px, 1fr));
+            grid-template-rows: repeat(3, minmax(100px, 1fr));
+            grid-gap: 10px 10px;
+            grid-template-areas:
+            "box1 box1 box1"
+            "box2 box3 box3"
+            "box2 . box4";
+        }
+        p{
+            text-align: center;
+            border: 1px solid black;
+        }
+        /*how to? 그리드 안에서 텍스트를 세로 중앙 정렬하는 방법*/
+    </style>
+</head>
+<body>
+    <h1>제 목</h1>
+    <br>
+    <div class="my_grid">
+        <div class="box1"><p>내용1</p></div>
+        <div class="box2"><p>내용2</p></div>
+        <div class="box3"><p>내용3</p></div>
+        <div class="box4"><p>내용4</p></div>
+    </div>
+</body>
+</html>

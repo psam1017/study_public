@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>rectangle</title>
+    <style>
+      svg { width: 300px; height: 300px;
+            border: 1px solid #000; }
+      rect { width: 200px; height: 200px;
+            x: 50; y: 50;
+            fill: none;
+            stroke: #f00;
+            stroke-width: 2;
+            stroke-dasharray: 800;
+            stroke-dashoffset: 800;
+            transition: 2s linear;
+      }
+      svg:hover > rect { stroke-dashoffset: 0; }
+
+    </style>
+  </head>
+  <body>
+    <svg>
+      <rect></rect>
+    </svg>
+  </body>
+</html>

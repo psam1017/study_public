@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>select로 주소 이동</title>
+</head>
+<body>
+    <select name="" id="">
+        <option value="">포털 사이트 이동</option>
+        <option value="https://www.naver.com">네이버</option>
+        <option value="https://www.google.com">구글</option>
+        <option value="https://www.daum.net">다음</option>
+    </select>
+
+    <script>
+        const sel = document.querySelector('select');
+        const opt = document.querySelectorAll('option');
+
+        console.log(sel);
+        console.log(opt);
+
+        sel.addEventListener('change', (e)=>{
+            if(e.currentTarget.value.startsWith('h')){
+                window.open(e.currentTarget.value);
+            }
+        });
+    </script>
+</body>
+</html>

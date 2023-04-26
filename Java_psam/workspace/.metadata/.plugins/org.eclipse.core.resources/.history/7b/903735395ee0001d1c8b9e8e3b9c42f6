@@ -1,0 +1,10 @@
+package wiki.test.usage;
+
+public class ReviseTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

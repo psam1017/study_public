@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG_circle</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        svg{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+        }
+        svg:nth-child(2){
+            /* svg는 inline 요소를 가지고 있다. 따라서 inline끼리의 여백을 없애려면 float을 사용해야 한다. */
+            /* float: left; */
+            display: block;
+        }
+        #c1 circle{
+            fill: hotpink;
+        }
+        #c2 circle{
+            fill: none;
+            stroke: black;
+            stroke-width: 2px;
+            /* 원의 길이 : 3.14 * 반지름 * 2 */
+            stroke-dasharray: calc(3.141592 * 2 * 100);
+            stroke-dashoffset: calc(3.141592 * 2 * 100);
+
+            animation: circleAni 3s infinite;
+        }
+        @keyframes circleAni{
+            to{
+                stroke-dashoffset: -628.3184;
+            }
+        }
+    </style>
+</head>
+<body>
+    <svg id="c1">
+        <circle r="150" cx="150" cy="150"></circle>
+    </svg>
+    <!-- 뷰박스 개념 설명 : 간단하게 요약하자면 원은 그대로인데 내가 보는 영역(viewbox)만 원의 중심을 기준으로 좌표만큼 이동하면서 시야도 조절한다.
+        아래의 경우 원의 좌표는 (100, 100)이고, 반지름이 100인데,
+        viewbox가 (0, 0)부터 (200, 200)까지 보여주니 원이 그대로 보인다.
+    https://tecoble.techcourse.co.kr/post/2021-10-24-svg-viewBox/ -->
+    <svg id="c2" viewbox="0 0 200 200">
+        <circle r="100" cx="100" cy="100"></circle>
+    </svg>
+</body>
+</html>

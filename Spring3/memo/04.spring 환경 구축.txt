@@ -1,0 +1,26 @@
+java 설치 -> jdk 11
+STS 설치 -> spring3 버전으로
+
+실행 후
+1. Server and Runtime에서 건드릴 게 있는지 확인 -> 없었음. 있을 수도 있음.
+2. 인코딩과 폰트 변경
+3. Run/Debug에서 Limit console output을 해제
+4. Servers 탭에서 server를 더블 클릭하여 포트번호를 확인
+5. 4번에 이어서 Serve modules without publishing을 체크(선택)
+
+=============================================
+
+(강의 메모)
+jdk 11 사용
+STS 설치
+구글에 sts 검색 -> Tools-Spring 클릭 -> 페이지 하단에 "Looking for Spring Tool Suite 3?" 부분의 wiki 클릭 > Spring Tool Suit 3.9,18 부분 첫 번째 다운로드 링크 클릭
+
+STS 설정
+기본 서버 삭제 -> 톰캣 9.0 서버 등록
+인코딩 UTF-8 설정, 폰트 변경
+Run/Debug에서 Limit console output을 해제
+Servers 탭에서 포트번호 확인 -> Serve modules without publishing을 체크
+
+=============================================
+
+프로젝트 생성(ex00)

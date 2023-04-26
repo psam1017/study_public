@@ -1,0 +1,15 @@
+package encryption;
+
+public class Test01 {
+	public static void main(String[] args) throws Exception {
+		
+		String password = "password";
+		
+		Enctyptor encryptor = new Enctyptor();
+		EncrptionDTO dto = encryptor.encrypt(password);
+		
+		System.out.println("encrypted password : " + dto.getPassword());
+		System.out.println("random salt : " + dto.getSalt());
+		System.out.println("comparision result : " + encryptor.compare(password, dto));
+	}
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>반응형 적용방법</title>
+        <style>
+            body {
+                margin: 0;
+            }
+            div {
+                margin: 0 auto;
+                width: 1000px;
+                height: 50vh;
+                border: 1px solid black;
+            }
+            @media all and (min-width: 1024px) {
+                body {
+                    background-color: aqua;
+                }
+            }
+            @media all and (max-width: 1023px) and (min-width: 768px) {
+                body {
+                    background-color: rgba(128, 255, 0, 0.707);
+                }
+            }
+            @media all and (max-width: 767px) and (min-width: 480px) {
+                body {
+                    background-color: khaki;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div></div>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>addClass()</title>
+	<script src="jquery-1.7.2.min.js"></script>
+	<style>
+		img {
+			padding: 5px;
+			background: #666;
+		}
+
+		img.type1 {
+			padding: 5px;
+			background: orange;
+		}
+		img.type2 {
+			padding: 5px;
+			background: blue;
+		}
+		img.type3 {
+			padding: 5px;
+			background: pink;
+		}
+	</style>
+</head>
+
+<body>
+	<img src="th1.jpg" alt="" />
+	<img src="th2.jpg" alt="" />
+	<img src="th3.jpg" alt="" />
+</body>
+
+<!---------- jQuery code Start ---------->
+<script>
+	// 각 이미지를 클릭시 클래스 네임 type1, type2, type3 을 적용하시오
+	// 클래스가 하나인 경우 인자를 생략해도 괜찮다.
+
+	$("img").on("mousedown", function(){
+		let n = $(this).index() + 1;
+		$(this).addClass(`type${n}`);
+	});
+	$("img").on("mouseup", function(){
+		$(this).removeClass();
+	});
+	$("img").on("mouseleave", function(){
+		$(this).removeClass();
+	});
+
+</script>
+</html>

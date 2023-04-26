@@ -1,0 +1,12 @@
+인코딩 설정
+
+
+소스코드 : Preferences - Content Types, Workspace에서 인코딩을 설정
+콘솔 창 : 
+	프로젝트 우클릭 - Run As - Run Configurations - common에서 인코딩 설정
+	또는
+	Preferences - Content Types - Text를 선택하고,
+		아래 Associated editors - Text Editor를 선택한 후,
+		아래 Default encoding 안에 "MS949"를 직접 입력
+
+// 콘솔 창은 어쨌든 MS949로 인코딩을 해야 한다.

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그라데이션</title>
+    <style>
+        body{
+            height: 100%;
+            background: linear-gradient(135deg, white, yellow 30%, hotpink 75%, hotpink) no-repeat;
+            background-size: 200% 200%;
+            animation: bdmove 5s ease infinite alternate;
+        }
+        @keyframes bdmove{
+            0% {background-position: 0 50%;}
+            
+            100% {background-position: 100% 50%;}
+        }
+        /* body의 animation을 alternate로 지정하는 대신
+        bdmove를 0% 50% 100% 구간으로 나누어 0 -> 100 -> 0으로 이동하게 해도 동일한 효과를 볼 수 있다. */
+        div:first-child{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            background: linear-gradient(45deg, #ff0, #f00, #000);
+        }
+        div:nth-child(2){
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            background: linear-gradient(to bottom, white, blueviolet 30%, hotpink);
+        }
+
+
+        div:nth-child(3){
+            width: 100%;
+            height: 200px;
+            /* background: linear-gradient(45deg, white 25%, hotpink 25%, hotpink 50%, white 50%, white 75%, hotpink 75%); */
+            /* 아래는 위와 동일한 표현이다. 또한, background-siez는 순서상 background보다 아래에 있어야 한다. 그렇지 않으면 덮어씌어진다.*/
+            background: linear-gradient(45deg, white 25%, hotpink 0, hotpink 50%, white 0, white 75%, hotpink 0);
+            background-size: 30px 30px;
+            animation: move 2s linear infinite;
+            border: 1px solid black;
+
+            /* 단순한 줄무늬는 아래와 같이 간단하게 표현할 수 있다. */
+            /* background: linear-gradient(to right, white 50%, hotpink 50%);
+            background-size: 10%; */
+        }
+        @keyframes move{
+            to{ background-position: 30px; }
+        }
+        div:nth-child(4){
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            border-radius: 50%;
+            background: repeating-radial-gradient(red 0, red 10px, yellow 10px, yellow 20px);
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="sprite"></div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+package wiki.test.usage;
+
+public class Test03 {
+	public static void main(String[] args) {
+		
+		// connect test
+		
+		
+	}
+}

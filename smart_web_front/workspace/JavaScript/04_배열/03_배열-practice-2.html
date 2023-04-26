@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 practice 2</title>
+</head>
+<body>
+    <button>과일 선택하기</button>
+    <h1>과일 이름이 여기에 표시됩니다</h1>
+    <br>
+</body>
+<script>
+    const fruits = ["사과", "감귤", "블루베리", "바나나", "메론"];
+    const button = document.querySelector("button");
+    const h1 = document.querySelector("h1");
+
+    function chooseFruit(){
+        let answer = prompt("어떤 과일을 선택할지 1~5까지의 숫자로 입력하세요.");
+        answer--;
+
+        h1.innerHTML = fruits[answer];
+    }
+    document.querySelector("button").addEventListener("click", chooseFruit);
+</script>
+</html>

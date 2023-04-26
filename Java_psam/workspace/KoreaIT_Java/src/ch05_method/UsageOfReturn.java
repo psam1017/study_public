@@ -1,0 +1,20 @@
+package ch05_method;
+
+public class UsageOfReturn {
+
+	// return의 기능 : 1. 값을 반환 and 2. 함수를 종료.
+
+	static int getMax(int a, int b) {
+		
+		System.out.println("함수 시작");
+		
+		if(a > b)
+			return a;
+		else
+			return b;
+		
+		// System.out.println("함수 종료");
+		// 위에서 return이 실행되어서 절대로 "함수 종료"에 도달할 수 없다.
+	}
+	
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자선택자</title>
+    <style>
+        h1::first-letter{
+            color: rgb(0, 139, 56);
+        }
+        h1::first-line{
+            background-color: gainsboro;
+        }
+        h2::selection{
+            background-color: black;
+            color: yellow;
+        }
+        p::before{
+            content: "(미리보기)";
+            position: absolute;
+            top: 0; left: 0;
+            z-index: -1;
+            width: 1000px;
+            height: 200px;
+            background-color: hotpink;
+        }
+        p::after{
+            content: "(끝)";
+        }
+    </style>
+</head>
+<body>
+    <h1>메밀꽃 필 무렵</h1>
+    <h2>메밀꽃 필 무렵</h2>
+    <p>여름 장이란 애시당초에 글러서, 해는 아직 중천에 있건만 장판은 벌써 쓸쓸하고 더운 햇발이 벌여놓은 전 휘장 밑으로 등줄기를 훅훅 볶는다.</p>
+</body>
+</html>

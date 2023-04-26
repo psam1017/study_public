@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표 태그, table - 표 생성</title>
+    <style>
+        table{
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        caption{
+            border: 1px solid black;
+            padding: 3px;
+        }
+        th, td{
+            border: 1px solid black;
+            padding: 3px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>첫 번째 표</caption>
+        <thead>
+            <tr>
+                <th>1분기</th>
+                <th>2분기</th>
+                <th>3분기</th>
+                <th>4분기</th>
+            </tr>
+        </thead>
+        <!--tbody를 생략해도 브라우저가 tbody를 생성한다. 즉, 필수요소-->
+        <tbody>
+            <tr>
+                <td>매출값</td>
+                <td>매출값</td>
+                <td>매출값</td>
+                <td>매출값</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>1분기 합계</td>
+                <td>2분기 합계</td>
+                <td>3분기 합계</td>
+                <td>4분기 합계</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

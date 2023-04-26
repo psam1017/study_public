@@ -1,0 +1,3 @@
+Problems 빠른 해결
+
+Description에서 해당하는 부분을 클릭한 다음 Ctrl + 1을 누르고, 빠른 해결을 한다.

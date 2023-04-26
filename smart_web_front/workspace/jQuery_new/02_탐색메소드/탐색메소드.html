@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>parent</title>
+	<!-- jQuery library -->
+	<script src="jquery-1.7.2.min.js"></script>
+
+	<style>
+		div, p {
+			float: left;
+			margin: 10px;
+		}
+		div#sub {
+			width: 100px;
+			height: 100px;
+			border: 1px solid #000;
+		}
+		p {
+			width: 50px;
+			height: 50px;
+			border: 1px solid #000;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div id="sub">
+			<p>div p</p>
+		</div>
+		<p id="part1">p</p>
+		<p>p</p>
+		<p>p</p>
+	</div>
+
+	<!---------- jQuery code Start ---------->
+	<script>
+		// 요소 탐색
+		// find, children, prev, next, siblings, parent
+
+		// 모든 하위 요소. 자식과 더불어 자손까지 포함
+		$("#container").find("p").css("background", "blue");
+
+		// 선택한 요소의 자식만 선택
+		$("#container > p").css("background", "red");
+		$("#container").children("p").css("background", "red");
+
+		// 선택한 요소의 형제 중 앞, 뒤
+		$("#part1").next().css("color", "white");
+		$("#part1").next().next().css("color", "yellow");
+		$("#part1").prev().css("color", "white");
+
+		// 선택한 요소의 형제들 모두. 단, 자기 자신은 제외한다.
+		// 인자가 없으면 형제들 모두, 인자가 있으면 해당하는 형제만.
+		$("#part1").siblings('p').css("font-size", "32px");
+
+		// 선택한 요소의 부모
+		$("#part1").parent().css("border", "3px solid black");
+
+
+		// 필터링
+		$("#container p").eq(2).css("border", "10px solid black");
+		$("#container p").first().css("border", "2px solid black");
+		$("#container p").last().css("border", "4px solid black");
+		$("#container p").not("#part1").hide(1000).show(1000);
+	</script>
+</body>
+</html>

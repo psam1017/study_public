@@ -1,0 +1,49 @@
+폼 태그
+
+폼 데이터 처리 과정
+1. form의 action에 있는 페이지를 요청하고 내용을 입력.
+2. form 안의 모든 데이터를 Web Server로 보냄.
+3. Web Server는 전송 받은 데이터를 Web Container로 전송.
+4. Web Container가 데이터를 적절하게 가공하여 정적으로 만듦.
+5. 처리 결과에 따라 현재 페이지(Ajax) 또는 새로운 페이지(path와 forward vs redirect) 경로를 Web Server로 보냄.
+6. Web Server가 전송 받은 웹 페이지를 브라우저로 보냄.
+7. 브라우저가 전송 받은 결과를 보여줌.
+
+
+
+폼 태그의 종류
+form : 폼을 정의하는 최상위 태그
+input : 사용자가 입력할 수 있는 태그
+select : 항목을 선택할 수 있는 태그
+textarea : 여러 줄을 입력할 수 있는 태그
+
+
+
+1. form 태그의 기능과 사용법
+form 태그는 사용자가 다양한 정보를 입력하고 서로 전달할 때 사용한다.
+단독으로 쓰이지 않고 사용자가 다양한 정보를 입력하는 양식(input)을 포함하는 최상위 태그이다.
+
+form 태그의 속성 : action, method, name, target, enctype, accept-charset
+method 차이 : GET vs POST
+
+
+
+2-1. input 태그의 기능과 사용법
+type : text, radio, checkbox, password, hidden file, button, reset, submit
+name : document 객체의 필드로 사용되는 속성
+value : name의 초기값
+
+2-2. input의 다른 여러 속성
+readonly, maxlength, max, disabled, checked
+(HTML5에서부터 추가)required, autofocus, pattern
+
+
+
+3-1. select 태그의 속성
+name, size, multiple
+
+3-2. option 태그의 속성
+value, selected, disabled
+
+4. textarea 태그의 속성
+name, cols, rows, wrap(="off || soft || hard")

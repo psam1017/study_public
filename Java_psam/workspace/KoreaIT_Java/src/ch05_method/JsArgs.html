@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js는 오버로딩이 없다</title>
+</head>
+<body>
+    <script>
+    
+    	// js는 오버로딩을 사용하지 않고, 인자의 길이를 인터프리터가 해석하도록 되어있다.
+    
+        function earnings(name, wage=9000, hours=40){
+
+            console.log(`${name} 님의 급여 정보`);
+            console.log(` - 시급 : ${wage}원`);
+            console.log(` - 근무 시간 : ${hours}시간`);
+            console.log(` - 급여 : ${wage * hours}원`);
+            console.log('');
+        }
+
+        earnings("smith");
+        earnings("adam", 10000);
+        earnings("tom", 10000, 52);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+}
+body,
+ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+#wrap li {
+    width: 100%;
+    height: 600px;
+    background: no-repeat center / cover;
+}
+#wrap li.slider1 {
+    background-image: url(../images/bg1.jpg);
+}
+#wrap li.slider2 {
+    background-image: url(../images/bg2.jpg);
+}
+#wrap li.slider3 {
+    background-image: url(../images/bg3.jpg);
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 흐름 방지</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            padding: 50px;
+            border: 1px solid black;
+        }
+        p{
+            width: 100px;
+            height: 100px;
+            margin: 0;
+            border: 1px solid black;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>클릭하세요</p>
+    </div>
+    <span>카운팅</span>
+</body>
+<script>
+    const div = document.querySelector("div");
+    const p = document.querySelector("p");
+    const span = document.querySelector("span");
+    let num = 0;
+
+    // 버블링 : 자식 요소와 부모 요소에 같은 이벤트를 입력하면 이벤트가 2번 발생한다.
+    // 버블링 방지를 위해 아래와 같이 stopPropagation 메소드를 사용해야 한다.
+    // 파라미터와 currentTarget 지정이 필요하다.
+    function count(e){
+        e.currentTarget.style.backgroundColor = "skyblue";
+        span.innerText = num;
+        e.stopPropagation();
+    }
+
+    div.addEventListener("click", count);
+    p.addEventListener("click", count);
+
+</script>
+</html>

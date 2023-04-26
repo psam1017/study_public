@@ -1,0 +1,5 @@
+Window - Preferences 로 들어간 후,왼쪽 트리 메뉴에서 General - Editors - Text Editors 로 들어가서Displayed tab width 값을 수정하여 보여질 간격 설정
+
+검색 폼에 indent를 입력하여Java - Code Style - Formatter    Edit 클릭하여 Tab size 수정JavaScript 파일도 위와 같습니다.
+
+출처: https://jun7222.tistory.com/295 [leverage:티스토리]

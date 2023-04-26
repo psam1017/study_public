@@ -1,0 +1,15 @@
+SELECT 1;
+
+SHOW GRANTS;
+
+ALTER USER `study`@`localhost` IDENTIFIED BY 'test1234';
+
+CREATE SCHEMA `korea`;
+
+SHOW SCHEMAS;
+
+CREATE SCHEMA IF NOT EXISTS `korea`;
+
+SHOW TABLES IN `mysql`;
+
+DESC `mysql`.`user`;

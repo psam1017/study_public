@@ -1,0 +1,5 @@
+package java.wiki.dto;
+
+public class WikiInfoDTO {
+
+}

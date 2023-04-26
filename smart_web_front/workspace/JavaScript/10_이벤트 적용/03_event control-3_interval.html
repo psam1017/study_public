@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숫자 카운팅</title>
+    <style>
+        div{
+            height: 1000px;
+            border-bottom: 5px solid black;
+        }
+        p{
+            width: 200px;
+            padding: 20px;
+            border: 1px solid black;
+            font-size: 50px;
+            font-weight: bold;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div>영역</div>
+    <div>
+        <p>1</p>
+    </div>
+</body>
+<script>
+    const p = document.querySelector("p");
+    let n = 1;
+    let state = 1;
+
+    // setTimeout 사용하기 -> 재귀함수로 사용해야 함.
+    function timeoutCounting(){
+        n++;
+        p.innerText = n;
+
+        if(n >= 100){
+            return;
+        }
+
+        setTimeout(function(){
+            timeoutCounting();
+        }, 10);
+    }
+
+    // setInterval 사용하기
+    // let intervalCounting = setInterval(() => {
+    //     n++;
+    //     p.innerText = n;
+    //     if(n === 100){
+    //         clearInterval(intervalCounting);
+    //     }
+    // }, 10);
+
+    window.addEventListener("scroll", function(){
+        if(scrollY >= 1000 && state === 1){
+            state = 0;
+
+            // setTimeout 사용하기
+            timeoutCounting();
+        }
+    });
+</script>
+</html>

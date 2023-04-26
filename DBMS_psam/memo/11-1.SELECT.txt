@@ -1,0 +1,62 @@
+레코드 조회(Read)★
+
+SELECT {* || `열 이름` {AS `별칭`?}, ...}
+FROM `스키마 이름`.`테이블 이름` {AS `별칭`?}
+{{LEFT||RIGHT||INNER} JOIN `스키마`.`조인 테이블 이름` AS `조인 테이블 별칭` ON `조인 조건` ...?}
+{WHERE 조건?}
+{GROUP BY `열 이름`, ...?}
+{HAVING 조건?}
+{ORDER BY `열 이름`, ... ASC || DESC?}
+{LIMIT x? {OFFSET y?}};
+
+-조회열이 *인 경우 모든 열의 레코드를 가져온다.
+-정렬 순서를 정하지 않은 경우 기본키를 기준으로 정렬한다.
+-JOIN을 여러 번 할 때 콤마(,)를 쓰지 않는다. JOIN은 키워드이기 때문.
+->JOIN 구문은 14.Join 메모장 참고.
+
+-GROUP BY : 통계 대상이 되는 열을 나누는 기준을 명시한다.(열을 반환하는 표현식도 가능)
+-HAVING : 그룹에 대한 기준, 즉 GROUP BY에 대한 조건을 설정한다.
+
+-LIMIT : 레코드를 x개만 반환
+-OFFSET : 레코드를 y개수만큼 제외
+-> (ex) Top 3를 검색 or 3번째로 비싼 음식을 검색
+-> (ex) 웹 페이지에서 4페이지에 있는 게시글을 조회
+
+-서브 쿼리(sub query)
+-> SELECT 하는 열/값 자리에 새로운 SELECT를 하는 것을 의미한다.
+(내부 SELECT, 중첩 SELECT 등...)
+-> 성능에 불리하므로 가능하면 지양하고 불가피할 때에만 사용한다.
+-> 서브쿼리 SELECT의 결과는 반드시 열 하나만이 출력되어야 한다.
+
+-유니온(UNION)
+-> 2개 이상의 SELECT 결과를 하나의 결과로 합친다. 중복 결과는 배제한다.
+-> 단, 합쳐지는 각 SELECT의 열 개수가 같아야 한다.
+-> UNION ALL은 중복 결과를 모두 불러온다.
+
+
+
+
+(1) 모두 조회
+SELECT *
+FROM study.foods;
+
+(2) 별칭으로 특정 열 조회
+SELECT	name AS '음식명',
+	price AS '가격'
+FROM study.foods;
+
+(3) 7,000원 이상인 음식들의 이름과 가격을 조회하고, 이를 내림차 순으로 정렬한 후, 가장 비싼 음식 2개를 제외하고, 그 다음으로 비싼 음식 1개만을 반환(3등만 반환)
+SELECT	name AS '음식명',
+	price AS '가격'
+FROM study.foods
+WHERE price >= 7000
+ORDER BY `price` DESC
+LIMIT 1 OFFSET 2;
+
+(4) 인구를 기준으로(LEFT JOIN) 인구 테이블과 국가 이름 테이블을 합쳐서 코드, 이름, 인구를 조회
+SELECT	`population`.`contury_code` AS `국가 코드`,
+		`contury`.`name_ko` AS `국가 이름`,
+		`population`.`value` AS `인구`
+FROM `study_world`.`populations` AS `population`
+LEFT JOIN `study_world`.`conturies` AS `contury`
+ON `population`.`contury_code` = `contury`.`code`;

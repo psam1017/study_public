@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+    <meta charset="utf-8" />
+    <title>if else</title>
+</head>
+<body></body>
+<script>
+    // 100 초과 점수를 잘못 입력했습니다
+    // 90 - 100 아주 잘했어요
+    // 80점대 잘했어요
+    // 70점대 조금 더 노력하면 잘할 수 있어요
+    // 60점대 좀 더 노력하세요
+    // 60점 미만 많이 노력하세요
+    // 함수명 grade()
+
+    let grade = () => {
+        let point = prompt("점수를 입력하시오");
+        if (point > 100) {
+            document.write("점수를 잘못 입력했습니다");
+        } else if (point >= 90) {
+            document.write("아주 잘했어요.");
+        } else if (point >= 80) {
+            document.write("잘했어요.");
+        } else if (point >= 70) {
+            document.write("조금만 노력하면 잘할 수 있어요.");
+        } else if (point >= 60) {
+            document.write("좀 더 노력하세요.");
+        } else {
+            document.write("많이 노력하세요.");
+        }
+    };
+    grade();
+</script>
+</html>

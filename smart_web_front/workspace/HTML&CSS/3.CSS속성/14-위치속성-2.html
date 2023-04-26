@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>위치 속성2</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        div{
+            /* absolute를 사용하면서 중앙으로 정렬하기 */
+            /* position: absolute;
+            left: 50%;
+            margin-left: -500px; */
+            /* position: absolute;
+            left: calc(50% - 500px); */
+
+            /* ★The best way★ */
+            /* position: absolute;
+            left: 50%;
+            transform: translateX(-50%); */
+            position: relative;
+            margin: 0 auto;
+            width: 1000px;
+            height: 500px;
+            background-color: brown;
+        }
+        section{
+            width: 150px;
+            height: 150px;
+            background-color: yellow;
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <section></section>
+    </div>
+</body>
+</html>

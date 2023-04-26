@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트속성</title>
+    <style>
+        h2{
+            text-transform: lowercase;
+            text-decoration: overline line-through underline;
+        }
+        p:nth-of-type(1){
+            font-variant: small-caps;
+            background-color: aqua;
+            text-align: center;
+        }
+        p:nth-of-type(2){
+            text-transform: capitalize;
+            background-color: blanchedalmond;
+            width: 300px;
+            margin: 0 auto;
+        }
+        p:nth-of-type(3){
+            text-transform: uppercase;
+            width: 300px;
+            border: 1px solid black;
+            text-align: justify;
+        }
+        h3{
+            background-color: darkseagreen;
+            text-indent: -1000px;
+        }
+        h4{
+            width: 200px;
+            height: 50px;
+            background-image: url(./images/menu.png);
+            text-indent: -9999px;
+            /* 텍스트를 앞쪽으로 밀어서 안 보이게 처리함. 뒤로 밀면 스크롤이 생길 수 있으므로 주의 */
+        }
+        h4:hover{
+            background-image: url(./images/menu_over.png);
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML</h1>
+    <h2>My Home</h2>
+    <p>my room</p>
+    <p>my room</p>
+    <p>어머님, 나는 별 하나에 아름다운 말 한마디씩 불러 봅니다. 소학교 때 책상을 같이 했던 아이들의 이름과, 패, 경, 옥, 이런 이국 소녀들의 이름과, 벌써 아기 어머니 된 계집애들의 이름과, 가난한 이웃 사람들의 이름과, 비둘기, 강아지, 토끼, 노새, 노루, '프랑시스 ', '라이너 마리아 릴케' 이런 시인의 이름을 불러 봅니다.</p>
+    <h3>어머님, 나는 별 하나에 아름다운 말 한마디씩 불러 봅니다. 소학교 때 책상을 같이 했던 아이들의 이름과, 패, 경, 옥, 이런 이국 소녀들의 이름과, 벌써 아기 어머니 된 계집애들의 이름과, 가난한 이웃 사람들의 이름과, 비둘기, 강아지, 토끼, 노새, 노루, '프랑시스 ', '라이너 마리아 릴케' 이런 시인의 이름을 불러 봅니다.</h3>
+    <h4>어머님, 나는 별 하나에 아름다운 말 한마디씩 불러 봅니다. 소학교 때 책상을 같이 했던 아이들의 이름과, 패, 경, 옥, 이런 이국 소녀들의 이름과, 벌써 아기 어머니 된 계집애들의 이름과, 가난한 이웃 사람들의 이름과, 비둘기, 강아지, 토끼, 노새, 노루, '프랑시스 ', '라이너 마리아 릴케' 이런 시인의 이름을 불러 봅니다.</h4>
+</body>
+</html>

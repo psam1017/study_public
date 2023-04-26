@@ -1,0 +1,7 @@
+oracleXE를 사용 중.
+
+관련 포트번호 : 1521, 8080
+DB명 : XE
+서비스명 : OracleServiceXE
+계정 : hr
+비밀번호 : hr

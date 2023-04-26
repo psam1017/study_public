@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+*{
+    box-sizing: border-box;
+}
+body, h2, ul{
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* 슬라이더 전체 영역 */
+#sliderWrap{
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    height: 80vh;
+}
+
+/* 슬라이더 화면 영역 */
+#sliderList li{
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    min-height: 600px;
+    background: no-repeat center top / cover;
+}
+#sliderList li:not(.active){
+    z-index: -9;
+}
+#sliderList li div{
+    /* width: 1400px; */
+    margin: 0 auto;
+    font-size: 100px;
+    font-weight: bold;
+    color: white;
+}
+
+/* 좌우 버튼 */
+#btnPos a{
+    text-indent: -9999px;
+    display: block;
+    width: 78px;
+    height: 78px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+}
+#btnPos a.prevBtn{
+    background: url("../images/arrows.jpg") left -16px top 138px / 200px;
+    left: 5%;
+}
+#btnPos a.nextBtn{
+    background: url("../images/arrows.jpg") right -16px top 138px / 200px;
+    right: 5%;
+}
+
+/* 번호 버튼 */
+#btnNum{
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#btnNum a{
+    position: relative;
+    display: block;
+    width: 300px;
+    height: 10px;
+    margin: 0 10px;
+    background-color: white;
+    color: black;
+    font-size: 24px;
+    text-align: center;
+    text-indent: -9999px;
+}
+#btnNum a.on{
+    background-color: red;
+    color: white;
+}

@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>animate()</title>
+    <style>
+        div {
+            overflow: hidden;
+            width: 400px;
+            border: 1px solid black;
+        }
+        p {
+            width: 800px;
+            height: 267px;
+            margin: 0;
+        }
+        @keyframes move{
+            from{
+                transform: translateX(0);
+            }
+            to{
+                transform: translateX(-50%);
+            }
+        }
+        @keyframes moveR{
+            from{
+                transform: translateX(-50%);
+            }
+            to{
+                transform: translateX(0);
+            }
+        }
+    </style>
+    <!-- jQuery library -->
+    <script src="jquery-1.7.2.min.js"></script>
+</head>
+<body>
+    <div>
+        <p>
+            <img src="flower.jpg" alt="flower" id="flower" /><img
+                src="building.jpg"
+                alt="building"
+                id="building"
+            />
+        </p>
+    </div>
+</body>
+<!---------- jQuery code Start ---------->
+<script>
+    // 스크립트를 적용하기 전 먼저 CSS를 이용하여 이미지 하나만 보이도록 한다
+    // 버튼 클릭시 이미지가 각각 좌우로 슬라이딩 되는 애니메이션을 만들어보자
+    // margin 속성을 이용
+
+    // animate 함수는 transform을 지원하지 않는다.
+    // css에서 animation을 사용하려면 reverse가 먹히지 않는다;;
+    // 즉, 애니메이션을 하나 더 만들어야 한다.
+    $("#flower").click(function () {
+        $('p').css({ "animation": "move 1s forwards" });
+    });
+    $("#building").click(function () {
+        $('p').css({ "animation": "moveR 1s forwards" });
+    });
+
+
+
+    // $("#flower").click(function () {
+    //     $('p').animate({ "margin-left": "-400px" });
+    // });
+    
+    // $("#building").click(function () {
+    //     $('p').animate({ "margin-left": "0" });
+    // });
+</script>
+</html>

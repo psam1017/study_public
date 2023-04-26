@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wheel</title>
+    <style>
+        /* 커서가 안 보이게 하려면 cursor를 none으로 지정해야 한다. */
+        /* 또한, 커서를 대체하는 이미지는 pointer-events를 none으로 지정해야 한다. */
+        *{
+            cursor: none;
+        }
+        div{
+            pointer-events: none;
+
+            width: 50px;
+            height: 50px;
+            background-color: skyblue;
+            border-radius: 50%;
+            opacity: 0.7;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <a href="#" target="_blank">이동 태그</a>
+</body>
+<script>
+    const div = document.querySelector("div");
+
+    // div.addEventListener("mousemove", function(e){
+    //         p[0].innerText = `screenX: ${e.screenX}, screenY: ${e.screenY}`;
+    //         p[1].innerText = `pageX: ${e.pageX}, pageY: ${e.pageY}`;
+    //         p[2].innerText = `clientX: ${e.clientX}, clientY: ${e.clientY}`;
+    //         p[3].innerText = `offsetX: ${e.offsetX}, offsetY: ${e.offsetY}`;
+    //         p[4].innerText = `X: ${e.x}, Y: ${e.y}`;
+    //     });
+
+    window.addEventListener("mousemove", function(e){
+        div.style.left = `${e.clientX - 25}px`;
+        div.style.top = `${e.clientY - 25}px`;
+    })
+</script>
+</html>

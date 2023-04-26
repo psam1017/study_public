@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      body { height: 100vh; display: flex;
+            flex-direction: column;
+            justify-content: flex-start; align-items: center; }
+    </style>
+  </head>
+  <body>
+    <img src="010.webp" alt="">
+    <div>
+      <button>오른쪽으로 돌기</button>
+      <button>왼쪽으로 돌기</button>
+    </div>
+    <script>
+      const img = document.querySelector('img')
+      const btn = document.querySelectorAll('button');
+      let num = 10;
+      let state = 1;
+      let carMoving = (s)=> {
+        if ( num < 10  ) path = `00${num}`;
+        else path = `0${num}`;
+        img.src = `${path}.webp`;
+        console.log(num, path)
+        console.log(img.src)
+      }
+      btn.forEach((b, index)=> {
+        b.addEventListener('click', ()=> {
+          if (index == state) {
+            num--;
+            if ( num == 0) num = 15;
+            carMoving(state)
+          }
+          else  {
+            num++;
+            if ( num == 15) num = 1;
+            carMoving();
+          }
+        })
+      })
+
+
+    </script>
+  </body>
+</html>

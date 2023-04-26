@@ -1,0 +1,152 @@
+@charset "UTF-8";
+
+/* 초기화 */
+*{
+    box-sizing: border-box;
+}
+body, h1, h2, h3, p, ul{
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.hidden{
+    position: absolute;
+    left: -9999px;
+}
+
+/* 헤더 */
+#header{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    top: 0;
+}
+#header h1{
+    position: absolute;
+    top: 20px;
+    left: 50px;
+}
+#header a.menuView{
+    position: absolute;
+    top: 30px;
+    right: 50px;
+}
+
+/* gnb */
+#gnb{
+    top: 0;
+}
+#gnbList{
+    overflow: hidden;
+}
+#gnbList .item > a{
+    display: block;
+}
+
+/* snb */
+.snb{
+    text-align: center;
+}
+.snb li{
+    line-height: 50px;
+}
+/* contents */
+section.content{
+    height: 100vh;
+}
+#content1{
+    margin-top: 70px;
+    background-color: skyblue;
+}
+#content2{
+    background-color: hotpink;
+}
+#content3{
+    background-color: lightgreen;
+}
+
+/* banner */
+#banner{
+    background-color: black;
+    color: white;
+}
+
+/* 1000px 이상 */
+@media screen and (min-width: 1000px) {
+    #header a.menuView{
+        display: none;
+    }
+    #gnb{
+        position: absolute;
+        left: 0;
+        width: 100%;
+        padding-top: 30px;
+        background-color: white;
+    }
+    #gnbList{
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid black;
+        transition: .6s;
+    }
+    #gnbList.on{
+        height: 200px;
+    }
+    #gnbList .item > a{
+        padding: 0 20px;
+        line-height: 40px;
+    }
+    /* nav close */
+    #gnb .menuClose{
+        display: none;
+    }    
+    #banner{
+        position: absolute;
+        width: 100px;
+        height: 300px;
+        top: 200px;
+        right: 10px;
+    }
+}
+
+/* 999px 이하*/
+@media screen and (max-width: 999px) {
+    #header a.menuView{
+        display: block;
+        background-color: white;
+    }
+    #gnb{
+        position: fixed;
+        width: 100px;
+        height: 100vh;
+        padding-top: 0;
+        right: -200px;
+        background-color: white;
+        transition: .5s right;
+    }
+    #gnb.on{
+        right: 0;
+    }
+    #gnbList{
+        height: auto;
+        display: block;
+        justify-content: center;
+        border-bottom: 1px solid black;
+        padding-top: 70px;
+    }
+    #gnbList .item > a{
+        padding: 0 20px;
+        line-height: 40px;
+    }
+    #banner{
+        position: static;
+        width: 100%;
+    }
+}

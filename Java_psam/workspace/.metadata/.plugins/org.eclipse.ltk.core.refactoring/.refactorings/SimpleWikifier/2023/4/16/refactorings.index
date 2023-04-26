@@ -1,0 +1,34 @@
+1682079483210	Delete element
+1682079496561	Delete element
+1682079498500	Delete element
+1682079499810	Delete element
+1682079631056	Rename package 'java.wiki.dto'
+1682079641173	Rename package 'java.wiki'
+1682081939369	Rename package 'java.wiki'
+1682081954775	Rename package 'java.wiki'
+1682081969117	Rename package 'java.wiki.dto'
+1682081973757	Rename package 'java.wiki.service'
+1682082840639	Move compilation unit
+1682082843438	Delete element
+1682082850500	Rename package 'test.wiki'
+1682082864484	Rename package 'main.wiki.dto'
+1682082886692	Rename package 'main.wiki.service'
+1682083266277	Copy compilation unit
+1682084264753	Rename type 'WikiVer2'
+1682084269778	Copy compilation unit
+1682086635755	Copy compilation unit
+1682089833474	Move compilation units
+1682093075286	Rename type 'WriteTest'
+1682093080990	Rename type 'ReviseTest'
+1682093084924	Rename type 'ReadTest'
+1682093921652	Delete element
+1682096329611	Delete element
+1682146968948	Copy compilation unit
+1682147040228	Rename type 'TestCase'
+1682147046878	Rename type 'Test01'
+1682147050373	Rename type 'Test02'
+1682147053888	Rename type 'Test03'
+1682147131490	Rename type 'TestOracle'
+1682147147787	Rename package 'wiki.test.usage'
+1682148369025	Delete element
+1682151723291	Delete element

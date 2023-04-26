@@ -1,0 +1,4 @@
+11강 빌드패스 추가사항
+
+기존의 빌드패스
++ Deployment Assembly에서 Add - Java Build Path Entries - 빌드패스에서 추가한 jar 파일 등을 추가하고 적용

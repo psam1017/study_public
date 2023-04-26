@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가시 속성</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        h1{
+            display: none;
+        }
+        h2{
+            margin-top: 200px;
+            visibility: hidden; /* display: none과 달리 영역이 남는다. 거의 사용되지 않는다. */
+        }
+        h3:hover{
+            opacity: 0.5;
+            transition: 1s;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>가시속성1</h1>
+        <h2>가시속성2</h2>
+        <h3>가시속성3</h3>
+    </div>
+
+    <table>
+        <tbody>
+            <tr>
+                <td>값1</td>
+                <td>값2</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>리스트1</li>
+        <li>리스트2</li>
+    </ul>
+</body>
+</html>

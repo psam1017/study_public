@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="../jquery-3.6.1.min.js"></script>
+        <title>반응형 기본</title>
+        <style>
+            div {
+                width: 100px;
+                height: 200px;
+                background-color: skyblue;
+                transition: 1s;
+            }
+            div.on1 {
+                width: 500px;
+            }
+            div.on2 {
+                width: 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <button>크기 변경</button>
+        <div></div>
+        <script>
+            $("button").on("click", function () {});
+            $(function () {
+                $("button").on("click", function () {
+                    if (window.innerWidth > 500) {
+                        $("div").removeClass("on2").addClass("on1");
+                    } else {
+                        $("div").removeClass("on1").addClass("on2");
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

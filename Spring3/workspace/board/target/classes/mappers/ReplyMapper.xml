@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.board.mappers.ReplyMapper">
+
+	<insert id="insert">
+		INSERT INTO SPR_REPLY(RNO, BNO, REPLY, REPLIER)
+		VALUES(SEQ_REPLY.NEXTVAL, #{bno}, #{reply}, #{replier})
+	</insert>
+	
+	<select id="select" resultType="replyVO">
+		SELECT RNO, BNO, REPLY, REPLIER, REPLYDATE, UPDATEDATE FROM SPR_REPLY
+		WHERE RNO = #{rno}
+	</select>
+	
+	<delete id="delete">
+		DELETE FROM SPR_REPLY WHERE RNO = #{rno}
+	</delete>
+	
+	<delete id="deleteAll">
+		DELETE FROM SPR_REPLY WHERE BNO = #{bno}
+	</delete>
+	
+	<update id="update">
+		UPDATE SPR_REPLY
+		SET REPLY = #{reply}, UPDATEDATE = SYSDATE
+		WHERE RNO = #{rno}
+	</update>
+	
+	<!-- 행을 하나씩 접근하므로 list가 아니라 행 하나에 대한 타입인 replyVO를 써줘야 한다. -->
+	<select id="selectAll" resultType="replyVO">
+	SELECT RNO, BNO, REPLY, REPLIER, REPLYDATE, UPDATEDATE
+	FROM
+	(
+		SELECT /*+INDEX_DESC(SPR_REPLY, PK_SPR_REPLY)*/ ROWNUM RN, RNO, BNO, REPLY, REPLIER, REPLYDATE, UPDATEDATE
+		FROM SPR_REPLY
+		WHERE BNO = #{bno} AND
+		<![CDATA[
+			ROWNUM <= #{criteria.pageNum} * #{criteria.amount}
+		]]>
+	)
+	<![CDATA[
+		WHERE RN > (#{criteria.pageNum} - 1) * #{criteria.amount}
+	]]>
+	</select>
+	
+	<select id="getTotal" resultType="int">
+		SELECT COUNT(RNO)
+		FROM SPR_REPLY
+		WHERE BNO = #{bno}
+	</select>
+	
+</mapper>

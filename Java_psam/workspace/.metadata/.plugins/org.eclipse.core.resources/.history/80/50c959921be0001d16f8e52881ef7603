@@ -1,0 +1,30 @@
+package encryption;
+
+public class EncryptionDTO {
+
+	private String password = "";
+	private String salt = "";
+	
+	/**
+	 * DTO를 사용하는 암호화입니다. 암호화된 password와 salt가 dto 타입으로 반환됩니다.
+	 */
+	public EncryptionDTO() { ; }
+	
+	// public getter
+	public String getPassword() {
+		return password;
+	}
+	
+	public String getSalt() {
+		return salt;
+	}
+	
+	// default setter
+	void setPassword(String password) {
+		this.password = password;
+	}
+	
+	void setSalt(String salt) {
+		this.salt = salt;
+	}
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>fadeInOut 갤러리</title>
+	<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+	<style>
+		body {
+			margin: 20px auto;
+			padding: 0;
+			width: 620px;
+			background: #192839;
+		}
+		.fadeShow {
+			background: #666;
+			width: 600px;
+			height: 350px;
+			border: 2px solid #fdf6dd;
+			position: relative;
+		}
+		.fadeShow img {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		.fadeShow .active {
+			z-index: 1;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="fadeShow">
+		<img class="active" src="slide1.jpg" alt="image1" />
+		<img src="slide2.jpg" alt="image2" />
+		<img src="slide3.jpg" alt="image3" />
+	</div>
+</body>
+
+<!---------- jQuery code Start ---------->
+<script>
+	/* 할 일 목록
+	Tip1. position이 absolute일 때는 구조상 맨 아래에 위치한 이미지부터 보여진다.
+	Tip2. 초기값으로 첫 번째 이미지에 클래스를 active로 지정하여 처음에는 첫번째 그림이 보이고 있음
+	1. 두번째 이미지가 전환되어 보이도록 하기 위해 클래스 active 추가
+	2. animate()를 이용해 이펙트 적용
+	3. 이펙트 적용시 첫번째 그림은 클래스 fadeShow내 마지막으로 이동하고,
+		동시에 클래스 네임 삭제
+	*/
+
+	// function fading(){
+	// 	$(".fadeShow img:eq(1)")
+	// 		.addClass("active")
+	// 		.css({ opacity: 0 })
+	// 		.animate({ opacity:1 }, 1000, function(){
+	// 			$(".fadeShow").append($(".fadeShow img:eq(0)"));
+	// 			$(".fadeShow img:last").removeClass("active");
+	// 		});
+	// }
+	// setInterval(fading, 3000);
+	
+	// 역순 : 123 - 312 - 231
+	// function fadeingReverse(){
+	// 	$(".fadeShow img:last")
+	// 	.addClass("active")
+	// 	.css({ opacity: 0 })
+	// 	.animate({ opacity:1 }, 1000, function(){
+	// 		$(".fadeShow").prepend($(".fadeShow img:last"));
+	// 		$(".fadeShow img:eq(1)").removeClass("active");
+	// 	});
+	// }
+
+	// setInterval(fadeingReverse, 10000);
+</script>
+</html>

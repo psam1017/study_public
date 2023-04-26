@@ -1,0 +1,56 @@
+1664684628899	Move '~day06' to 'WEB-INF'
+1664684638697	Move '~day06' to 'WebContent'
+1664684645847	Move 2 resources to '~day06'
+1664684716789	Move 2 resources to 'day07_directive_tag_script_tag'
+1664690172083	Delete element
+1664690234323	Copy file
+1664690738011	Copy file
+1664690954035	Copy file
+1664691019059	Copy file
+1664693974860	Copy file
+1664693986432	Delete element
+1664693998966	Rename resource 'include_test.jsp'
+1664694023450	Rename resource 'myErrorPage.jsp'
+1664694083190	Rename resource '0_page_test.jsp'
+1664694088961	Rename resource '0_myErrorPage.jsp'
+1664694097493	Rename resource 'script_test1.jsp'
+1664694102888	Rename resource 'script_test2.jsp'
+1664694108527	Rename resource 'script_test3.jsp'
+1664694114508	Rename resource 'script_test4.jsp'
+1664694122165	Rename resource 'script_test5.jsp'
+1664694127997	Rename resource 'script_task.jsp'
+1664694132688	Rename resource '0_include_test.jsp'
+1664694155022	Rename resource 'header.jsp'
+1664694430619	Rename resource '~day09_tags'
+1664711817519	Rename resource 'forward_test.jsp'
+1664713047465	Rename resource 'forward_naver.jsp'
+1664713055830	Copy file
+1664713067680	Copy file
+1664719996756	Move 'calc.jsp' to 'WebContent'
+1664720022782	Move 'calc.jsp' to '~day06'
+1664726299061	Copy file
+1664727163226	Copy file
+1664727174210	Rename resource 'javaBeans_test.jsp'
+1664728416436	Copy file
+1664771585037	Rename resource 'object_ok.jsp'
+1664771591518	Rename resource '01_object_ok.jsp'
+1664771596255	Rename resource 'object.jsp'
+1664774384254	Rename resource '05_parameter_test.jsp'
+1664778488418	Rename resource '~day20'
+1664778581802	Rename resource '~day17'
+1664778627658	Rename resource '~day17_Implicit Objects, method'
+1664779135278	Rename resource 'ajax_text.jsp'
+1664781901013	Rename resource '01_ajax_text.jsp'
+1664781923281	Rename resource '02_request_ajax.jsp'
+1664781942952	Rename resource '01_ajax_get_text.jsp'
+1664781952812	Copy file
+1664800948020	Rename resource '03_getCookie3.jsp'
+1664802712819	Rename resource '~day29_signUp'
+1664883164727	Rename resource '~day22_Cookie'
+1664895587658	Rename resource 'member_valid_test.js'
+1664979255789	Rename resource '~day29_signUp'
+1665016668575	Rename resource '~day31_signUp_and_signIn'
+1665235827680	Rename resource 'summary'
+1665239532717	Rename resource '01.JSP.txt'
+1665240304072	Delete element
+1665241526172	Delete element

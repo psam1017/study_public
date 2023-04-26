@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resize로 이미지 변경</title>
+    <script src="./jquery-3.6.1.min.js"></script>
+    <style>
+        body{
+            background-color: black;
+
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            background: no-repeat center / contain;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <img src="./nabi/nabi_1.png" alt="나비">
+    <script>
+        let changeNum = 0;
+        // 높이도 같은 방식으로 설정 가능
+        $(window).on("resize", function(){
+            let currNum = changeNum;
+            changeNum = changeNum == 0 ? 1 : Math.ceil(($(window).width()/10) % 6);
+            if(currNum != changeNum){
+                $("img").attr({ "src": `./nabi/nabi_${changeNum}.png` });
+            }
+        });
+    </script>
+</body>
+</html>

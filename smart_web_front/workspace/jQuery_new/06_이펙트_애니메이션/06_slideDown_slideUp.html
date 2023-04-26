@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>slideDown() slideUp()</title>
+	<!-- jQuery library -->
+	<script src="jquery-1.7.2.min.js"></script>
+	<style>
+		div{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<button id="up">slide감추기</button>
+	<button id="down">slide보이기</button>
+
+	<div>
+		<img src="sample1.jpg" alt=" " width="200" />
+	</div>
+</body>
+
+<!---------- jQuery code Start ---------->
+<script>
+	// slideDown() : 요소가 위에서부터 보이는 애니메이션.
+	// 이미지는 기본적으로 찌그러지게 보이므로, 가림막을 걷는 것처럼 보이려면 부모 요소에 적용해야 한다.
+
+	
+	$("#down").click(function () {
+		$("div:not(:animated)").slideDown(1000);
+	});
+
+	$("#up").click(function () {
+		$("div:not(:animated)").slideUp(1000);
+	});
+</script>
+</html>

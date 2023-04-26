@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>여름방학 특강 신청</title>
+</head>
+<body>
+    <h1>여름방학 특강 신청</h1>
+    <form>
+        <fieldset>
+            <legend>수강과목</legend>
+            <label for="subject">영어회화(초급)</label>
+            <input type="text" id="subject" value="오전 9:00 ~ 11:00" readonly>
+        </fieldset>
+        <fieldset>
+            <legend>신청자</legend>
+            
+            <label for="name">이름</label>
+            <input type="text" id="name" placeholder="이름을 적으시오" autofocus required><br>
+
+            <label>
+                학번<input type="text" id="id" minlength="7" maxlength="7" placeholder="7자로 작성하시오" required><br>
+            </label>
+            
+            <label for="class">학과</label>
+            <select id="class">
+                <option value="build">건축공학과</option>
+                <option value="machine">기계공학과</option>
+                <option value="industry">산업공학과</option>
+                <option value="electric">전기전자공학과</option>
+                <option value="computer" selected>컴퓨터공학과</option>
+                <option value="chemistry">화학공학과</option>
+            </select><br>
+
+            <label>
+                연락처<input type="tel" id="tel" placeholder="'-' 없이 11자리를 입력하시오">
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>교재 주문</legend>
+            <label>
+                교재<input type="range" id="book" value="1" min="1" max="5"><br>
+            </label>
+            <label>
+                워크시트<input type="number" id="sheet" min="0" value="1"><br>
+            </label>
+            <label>
+                단체주문<input type="number" id="group" value="0" min="10" max="50" step="10"><br>
+            </label>
+            <label for="fav">관심분야</label>
+             - 문법, 어휘, 회화, 리스닝<input type="text" id="fav" list="interest">
+            <datalist id="interest">
+                <option value="grammar">문법</option>
+                <option value="voca">어휘</option>
+                <option value="speaking">회화</option>
+                <option value="listening">리스닝</option>
+            </datalist>
+        </fieldset>
+        <fieldset>
+            <legend>신청과 재입력</legend>
+            <input type="submit" value="submit">
+            <input type="reset" value="reset">
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 메소드와 이벤트 리스너</title>
+</head>
+<body>
+    <button>적용</button>
+    <h1>텍스트 바꾸기</h1>
+</body>
+<script>
+    const button = document.querySelector("button");
+    const h1 = document.querySelector("h1");
+
+    function test1(){
+        alert("test1");
+    }
+    function test2(){
+        alert("test2");
+    }
+
+    // 이벤트 메소드는 대입 연산자를 사용하므로 마지막에 대입한 함수만 적용된다.
+    button.onclick = test1;
+    button.onclick = test2;
+
+    // 이벤트 리스너는 태그 요소에 이벤트를 추가하는 방식으로 작동한다.
+    // button.addEventListener("click", test1);
+    // button.addEventListener("click", test2);
+
+    let fontSize = 32;
+    function test3(){
+        fontSize += 5;
+        h1.style.fontSize = `${fontSize}px`;
+    }
+    
+    h1.addEventListener("click", test3);
+    h1.addEventListener("mouseover", test3);
+
+    // 여러 이벤트를 한 번에 지정하기
+    // ["mouseover", "click"].forEach(element => {
+    //     button.addEventListener(e, test3);
+    // });
+</script>
+</html>

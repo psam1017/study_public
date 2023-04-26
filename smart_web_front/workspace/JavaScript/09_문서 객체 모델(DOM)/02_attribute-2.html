@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hasAttribute, removeAttribute</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            text-align: center;
+        }
+        div.active{
+            background-color: hotpink;
+        }
+    </style>
+</head>
+<body>
+    <div id="target" class="active">속성제거</div>
+    <div id="prac" class="active"><button>속성제거</button></div>
+</body>
+<script>
+    const target = document.getElementById("target");
+
+    // removeAttribute에 인자를 입력하지 않으면, 모든 속성이 삭제된다.
+    // hasAttribute는 입력된 인자가 속성으로 있다면 true를 반환한다.
+    target.addEventListener("click", function(){
+        this.removeAttribute("class");
+        if(this.hasAttribute("id")){
+            this.innerHTML += "<br>현재 div는 id를 가지고 있습니다.";
+        }
+    });
+
+
+    
+    const prac = document.getElementById("prac");
+
+    prac.addEventListener("click", function(){
+        if(this.hasAttribute("class")){
+            this.innerHTML = "<button>속성추가</button>";
+            this.removeAttribute("class");
+        }
+        else{
+            this.innerHTML = "<button>속성제거</button>";
+            this.setAttribute("class", "active");
+        }
+    });
+</script>
+</html>

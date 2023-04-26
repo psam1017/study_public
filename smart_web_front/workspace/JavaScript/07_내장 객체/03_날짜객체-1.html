@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>날짜 객체 1</title>
+</head>
+<body>
+</body>
+<script>
+    let days = new Date();
+    console.log(days);
+
+    let year = days.getFullYear();
+    let month = days.getMonth() + 1; // 달. 1월 = 0
+    let date = days.getDate();
+    let day = days.getDay(); // 요일. 일요일 = 0
+    console.log(year + "년");
+    console.log(month + "월");
+    console.log(date + "일");
+    console.log(day + "요일값");
+
+    let time = days.getTime();
+    let hour = days.getHours();
+    let minute = days.getMinutes();
+    let second = days.getSeconds();
+    let millisecond = days.getMilliseconds();
+    console.log(time + "long type"); // 
+    console.log(hour + "시");
+    console.log(minute + "분");
+    console.log(second + "초");
+    console.log(millisecond + "소수초");
+</script>
+</html>

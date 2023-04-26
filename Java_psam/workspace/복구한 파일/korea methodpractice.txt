@@ -1,0 +1,18 @@
+package day09;
+
+public class MethodPractice {
+
+	public static void main(String[] args) {
+		
+		int x = 30, y = 10;
+		
+		System.out.println("밑변이 " + x + ", 높이가 " + y + "인 사각형의 넓이는" + calculator(x, y) + "입니다.");
+		
+	}
+	
+	public static int calculator(int x, int y) {
+		System.out.println("계산을 시작합니다.");
+		return x * y;
+	}
+
+}

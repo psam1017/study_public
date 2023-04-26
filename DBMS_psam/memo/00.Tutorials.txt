@@ -1,0 +1,45 @@
+https://220803d.yhpark.dev
+
+
+코리아IT아카데미
+DBMS 22.08.03~22.08.16.
+
+박용현 강사
+email : inst.yhp@gmail.com
+ph : 010-6795-9120
+
+
+
+DBMS 목적
+1. 서버가 재부팅되는 등의 이유(메모리의 휘발성)로도 소실하지 않고 보유해야 하는 데이터를 담기 위해(게시글, 댓글, 회원 정보 등) -> SSD 등에 저장
+2. 많은 양의 데이터를 쉽게 추가(Create), 조회(Read), 수정(Update), 삭제(Delete)하기 위해 -> CRUD "백엔드 이상 개발의 최소 요건"
+
+-C : 게시글 쓰기, 가입
+-R : 게시글 읽기, 로그인
+-U : 게시글 수정, 정보 수정
+-D : 게시글 삭제, 탈퇴
+
+
+
+DBMS 종류
+1. NoSQL
+	-> Redis, MongoDB
+
+	-> 장점 : 관리가 쉬움
+	-> 중복된 데이터가 많아지고, 무결성 보증이 어렵다.
+
+2. RDBMS(Relational-, 관계형 데이터베이스 관리 시스템)
+	-> MySQL, MariaDB, Oracle, MS-SQL, ...
+	-> MySQL, MariaDB : 데이터가 적을수록 상대적으로 속도가 빠름
+	-> Oracle, MS-SQL : 데이터가 많을수록 상대적으로 속도가 빠름
+
+	-> 장점 : 수직적 관계를 구축 -> 키(Key)를 활용한 무결성(Integrity) 보증된다.
+	-> 단점 : 어려움(성능 고도화)
+
+
+
+MariaDB 설치
+1. 버전은 Alpha나 RC 등 영어가 없는 버전으로
+2. MSI 패키지로 다운로드
+
+C:\202208031400dbms\ -> MariaDB Instance 설치 경로

@@ -1,0 +1,9 @@
+127.0.0.1 - - [25/Jan/2023:13:26:14 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [25/Jan/2023:13:26:35 +0900] "GET /MavenTest/api/test HTTP/1.1" 404 833
+0:0:0:0:0:0:0:1 - - [25/Jan/2023:13:26:35 +0900] "GET /favicon.ico HTTP/1.1" 404 818
+0:0:0:0:0:0:0:1 - - [25/Jan/2023:13:26:47 +0900] "GET /MavenTest/api/example HTTP/1.1" 404 836
+0:0:0:0:0:0:0:1 - - [25/Jan/2023:13:26:58 +0900] "GET /MavenTest/api/example HTTP/1.1" 404 836
+0:0:0:0:0:0:0:1 - - [25/Jan/2023:13:29:16 +0900] "GET /api/example HTTP/1.1" 404 822
+127.0.0.1 - - [25/Jan/2023:13:29:57 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [25/Jan/2023:13:29:57 +0900] "GET /MavenTest/WEB-INF/classes/restAPI/Example.java HTTP/1.1" 404 721
+0:0:0:0:0:0:0:1 - - [25/Jan/2023:13:30:09 +0900] "GET /MavenTest/api/example HTTP/1.1" 200 9

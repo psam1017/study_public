@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>과목 등록</title>
+  </head>
+  <body>
+    <form name="study">
+      <fieldset>
+        <legend>과목선택</legend>
+        <label><input type="checkbox" name="allChk">전체선택</label>
+        <br>
+        <label><input type="checkbox" name="subject">과목1</label>
+        <br>
+        <label><input type="checkbox" name="subject">과목2</label>
+        <br>
+        <label><input type="checkbox" name="subject">과목3</label>
+      </fieldset>
+    </form>
+    <script>
+      const study = document.study
+      const allChk = study.allChk;
+      const subject = study.subject;
+      const submit = study.submit;
+      const reset = study.reset;
+
+      allChk.addEventListener("click", function(){
+        subject.forEach(element => {
+          if(allChk.checked){
+            element.checked = true;
+          }
+          else{
+            element.checked = false;
+          }
+        });
+      })
+
+      subject.forEach(element => {
+        element.addEventListener("click", function(){
+          if(subject[0].checked && subject[1].checked && subject[2].checked){
+            allChk.checked = true;
+          }
+          if(!element.checked){
+            allChk.checked = false;
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

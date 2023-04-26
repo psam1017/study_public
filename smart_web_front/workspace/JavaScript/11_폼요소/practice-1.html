@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice 1</title>
+</head>
+<body>
+    <form name="f1">
+        <input type="text" name="f2" autofocus>
+        <br>
+        <select name="s1">
+            <option value="네이버">네이버</option>
+            <option value="다음">다음</option>
+            <option value="구글">구글</option>
+        </select>
+        <p id="data"></p>
+    </form>
+    <script>
+        const f2 = document.f1.f2;
+        const s1 = document.f1.s1;
+        const data = document.getElementById('data');
+
+        f2.addEventListener("focus", function(){
+            data.innerText = "포커스 상태입니다."
+        });
+
+        f2.addEventListener("blur", function(){
+            data.innerText = "블러 상태입니다."
+        });
+
+        s1.addEventListener("change", function(){
+            data.innerText = s1.value;
+        });
+    </script>
+</body>
+</html>

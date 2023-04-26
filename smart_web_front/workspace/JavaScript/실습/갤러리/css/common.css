@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+/* 초기화 */
+body, h1, ul{
+    margin: 0;
+    padding: 0;
+}
+
+ul, li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* gallery */
+#gallery{
+    width: 600px;
+    margin: 50px auto 0;
+    padding: 20px;
+    border: 1px solid black;
+    position: relative;
+}
+#gallery h1{
+    margin-bottom: 30px;
+    text-align: center;
+}
+#photo{
+    width: 600px;
+
+}
+
+/* photoList */
+#photoList{
+    width: 360px;
+    margin: 0 auto;
+
+    overflow: hidden;
+}
+#photoList ul {
+    width: 960px;
+    
+    display: flex;
+
+    transition: 0.2s;
+}
+#photoList ul li {
+    width: 100px;
+    padding: 10px;
+}
+#photoList ul li img{
+    width: 100px;
+}
+
+/* button */
+#btnWrap{
+    font-size: 100px;
+    font-weight: bold;
+}
+#btnWrap a{
+    position: absolute;
+    bottom: 20px;
+}
+#btnWrap .prev{
+    left: 50px;
+}
+#btnWrap .next{
+    right: 50px;
+}

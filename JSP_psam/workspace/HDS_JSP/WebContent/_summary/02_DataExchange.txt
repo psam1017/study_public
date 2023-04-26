@@ -1,0 +1,52 @@
+사전 작업
+1. Dynamic Web Project가 필요하다. 생성 시 web.xml도 만들어야 한다.
+2. 프로젝트의 Properties에서 Build Path로 들어가서 라이브러리 설정을 해줘야 한다.
+Modulepath에는 jar 파일과 JDK를 추가해야 하고, Classpath에는 Apache Tomcat을 추가해줘야 한다.
+이후 확실히 하기 위해 라이브러리와 Order and Export에서 각각 apply해줘야 한다.
+3. WebContent - WEB-INF - lib에도 직접 jar 파일을 추가해야 한다.
+4. 데이터를 주고 받기 위해 WebContent 경로에 JSP 파일이 필요하고, Java Resources - src에 패키지와 Servlet 파일이 필요하다.
+
+
+
+JSP와 서블릿끼리 데이터 주고 받기 - JSP
+1. form 태그에 action와 method 속성을 지정한다. action은 이동을 원하는 Servlet의 별칭을 적을 수 있다. method는 get과 post가 있다.
+2. input 태그에서 type="submit" 또는 button 태그를 사용하여 request를 한다.
+
+JSP와 서블릿끼리 데이터 주고 받기 - 서블릿
+방법이 다양하다. (1) 서블릿 파일 안 클래스 명 위에서 별칭(어노테이션)을 선언해도 가능하다. (2) xml을 통해 경로를 설정해준다. (3) response 또는 dispatcher 등 객체의 메소드를 사용한다.
+
+2. doGet 메소드와 doPost 메소드를 구현한다. 두 메소드는 a 태그의 href 속성을 지정할 때 차이가 생긴다.
+
+3. 내장 객체인 response의 ContentType을 설정한다.
+	response.setContentType("text/html; charset=UTF-8");
+
+4. PrintWriter 객체를 생성하고, response를 참조한다. 이후에 반드시 close로 연결을 해제해야 한다.
+	PrintWriter out = response.getWriter();
+
+5. out.print 함수를 사용해서 만들고자 하는 HTML 문서를 만든다.
+	이동하고자 하는 JSP 페이지를 적을 때 doGet에서는 파일명을 적는다. get은 경로와 파일명이 그대로 노출되지만 이동이 빠르다.
+	doPost에서는 별칭을 적는다. 비교적 이동이 느리지만 보안 면에서 우수하다.
+
+6. PrintWriter 객체의 사용을 끝냈으면 반드시 연결을 해제한다.
+	out.close();
+
+7. doPost에서 별칭을 설정했다면 WEB-INF에 있는 web.xml에서 별칭과 경로를 지정한다. 이때 <web-app> 태그 안에서 <servlet>과 <servlet-mapping> 태그를 사용한다.
+경로는 WebContent부터 시작한다.
+  <servlet>
+    <servlet-name>별칭</servlet-name>
+    <jsp-file>/경로</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>별칭</servlet-name>
+    <url-pattern>/별칭</url-pattern>
+  </servlet-mapping>
+  
+예를 들어, 아래와 같이 쓸 수 있다.
+  <servlet>
+    <servlet-name>alias</servlet-name>
+    <jsp-file>/example/index.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>alias</servlet-name>
+    <url-pattern>/alias</url-pattern>
+  </servlet-mapping>

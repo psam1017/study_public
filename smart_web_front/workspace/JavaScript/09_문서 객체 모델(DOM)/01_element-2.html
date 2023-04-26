@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소 접근하기 querySelector</title>
+</head>
+<body>
+    <h1 id="title">제목</h1>
+    <p>문단1</p>
+    <p>문단2</p> <!-- "getElementsByTagName으로 p태그에 접근하기" -->
+    <ul>
+        <li class="list">리스트1</li>
+        <li class="list">리스트2</li>
+        <li class="list">리스트3</li>
+    </ul>
+</body>
+<script>
+    // querySelector()는 기본적으로 인자의 요소들 중 첫 번째 요소만 가져온다.
+    // querySelector...는 css의 모든 선택자를 사용할 수 있다. 가상요소, 연결 선택자 등 모두 가능.
+    // querySelectorAll()은 모든 요소들을 배열 형태(NodeList)로 가져온다. -> forEach 가능.
+
+    // querySelector()로 아이디, 클래스를 가져올 때는 '#', '.'을 붙인다.
+    // getElementById()에는 #을 붙이지 않는다.
+
+    const title = document.querySelector("#title");
+    const p = document.querySelectorAll("p");
+    const list = document.querySelectorAll(".list");
+
+    console.log(title);
+    console.log(p);
+    console.log(list);
+
+    title.style.color = "blue";
+    p[0].style.color = "skyblue";
+    list[2].style.color = "hotpink";
+
+
+
+    // querySelector 종류들은 forEach를 사용할 수 있다.
+    p.forEach(element => {
+        element.style.fontSize = "12px";
+    });
+</script>
+</html>

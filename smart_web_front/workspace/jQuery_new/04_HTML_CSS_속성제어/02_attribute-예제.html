@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>attr( )</title>
+	<!-- jQuery library -->
+	<script src="jquery-1.7.2.min.js"></script>
+</head>
+<body>
+	<div>
+		<a>제이쿼리닷컴</a>
+	</div>
+</body>
+
+<!---------- jQuery code Start ---------->
+<script>
+	// http://jquery.com으로 연결하는 링크를 추가하고
+
+	// 제이쿼리닷컴을 http://jquery.com으로 변경
+
+	const a = $('a');
+	
+	a.text("http://jquery.com");
+	a.attr({
+		href: "http://jquery.com",
+		target: "_blank"
+	});
+</script>
+</html>

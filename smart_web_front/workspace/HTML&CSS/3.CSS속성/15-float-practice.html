@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float 연습</title>
+    <!-- float 해제하기
+    1. float를 적용한 요소의 부모가 없는 경우
+        : float을 마지막으로 적용한 요소의 다음 요소에 clear 적용
+    2. float를 적용한 요소의 부모가 있는 경우(div 등으로 wrap한 경우)
+        : float을 고려하여 원하는 margin-bottom의 값에
+            margin-top + padding-top + content + padding-bottom을 더함.
+        : 부모 요소에 overflow(auto or hidden)을 적용.
+        : (권장)부모에게 after로 가상요소를 추가한 다음 clear 적용
+            #contentWrap::after{ content: ""; display: block; clear: both; }
+    -->
+    <style>
+        /* 헤더 */
+        #headerWrap{
+            width: 100%;
+            background-color: rgb(171, 255, 152);
+            height: 20vh;
+            position: relative;
+        }
+        #header{
+            font-size: 3vh;
+            width: 40%;
+            height: 10vh;
+            background-color: rgb(255, 175, 78);
+            position: absolute;
+            bottom: 0px;
+            left: 30%;
+        }
+
+        /* 콘텐츠 */
+        #contentSuperWrap{
+            background-image: url(./images/background.png);
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            background-size: cover;
+            padding: 3vh 0;
+        }
+        #contentWrap{
+            width: 90%;
+            margin: 0 auto;
+
+            /* 콘텐츠들이 float 속성을 가지고 있기 때문에 영역의 높이가 없어진 상태다. */
+            /* 방법2 : overflow의 원래 용도를 벗어나므로 권장되진 않음. 하지만 사용은 용이함. */
+            /* margin: 5vh auto;
+            overflow: auto; */
+        }
+        /* 방법3 : 가상요소를 사용하여 float을 해제하는 것이 권장된다. */
+        #contentWrap::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        #content1{
+            float: left;
+            width: 30%;
+            height: 40vh;
+            background-color: darkorange;
+            margin-right: 5%;
+        }
+        #content2{
+            float: left;
+            width: 30%;
+            height: 30vh;
+            background-color: bisque;
+            margin-right: 5%;
+        }
+        #banner{
+            float: right;
+            width: 30%;
+            height: 30vh;
+            background-color: lightblue;
+        }
+        
+        /* 푸터 */
+        #footer{
+            width: 100%;
+            height: 15vh;
+            background-color: grey;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="headerWrap">
+        <header id="header">헤더</header>
+    </div>
+    <div id="contentSuperWrap">
+        <div id="contentWrap">
+            <section id="content1">섹션1</section>
+            <section id="content2">섹션1</section>
+            <aside id="banner">배너</aside>
+        </div>
+    </div>
+    <footer id="footer">푸터</footer>
+</body>
+</html>

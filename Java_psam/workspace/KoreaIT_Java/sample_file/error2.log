@@ -1,0 +1,27 @@
+-------------------------------
+Exception Occur Time : Wed Aug 17 02:08:05 KST 2022
+java.lang.ArithmeticException: / by zero
+	at ch09_exceptionHandling.ExceptionLog2.main(ExceptionLog2.java:19)
+Exception Message : / by zero
+-------------------------------
+
+
+
+-------------------------------
+Exception Occur Time : Wed Aug 17 02:08:06 KST 2022
+java.lang.ArithmeticException: / by zero
+	at ch09_exceptionHandling.ExceptionLog2.main(ExceptionLog2.java:19)
+Exception Message : / by zero
+-------------------------------
+
+
+
+-------------------------------
+Exception Occur Time : Thu Dec 01 10:30:37 KST 2022
+java.lang.ArithmeticException: / by zero
+	at ch09_exceptionHandling.ExceptionLog2.main(ExceptionLog2.java:19)
+Exception Message : / by zero
+-------------------------------
+
+
+

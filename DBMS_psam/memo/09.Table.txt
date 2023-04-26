@@ -1,0 +1,106 @@
+
+테이블(TABLE)
+
+1. 테이블은 반드시 스키마에 종속되어야 한다.
+2. 테이블은 실제 데이터(레코드)를 담고 있다.
+3. 테이블의 열(Column)을 정의할 때는 무결성(Integrity)을 신경 쓰고, 데이터가 중복되지 않도록 조치를 취해야 한다.
+
+
+
+테이블 만들기(Create)
+
+CREATE TABLE {IF NOT EXISTS?} `스키마 이름`.`테이블 이름`(
+	`열 이름` {데이터 타입} {NOT NULL?} {DEFAULT x?} {AUTO_INCREMENT?},
+	{제약조건?}, ...
+	);
+
+CREATE TABLE `study`.`foods`(
+	`name` VARCHAR(50),
+	`price` MEDIUMINT UNSIGNED,
+	`sold_out_flag` BOOLEAN
+	);
+
+CREATE TABLE `study_world`.`conturies`(
+	`code` VARCHAR(2) NOT NULL,
+	`name_ko` VARCHAR(50) NOT NULL,
+	`name_en` VARCHAR(50) NOT NULL,
+	CONSTRAINT PRIMARY KEY (`code`),
+	CONSTRAINT UNIQUE (`name_ko`),
+	CONSTRAINT UNIQUE (`name_en`)
+);
+
+-소속이 될 스키마가 없으면 안 된다.
+-명시한 스키마 안에 이미 존재하는 테이블의 이름은 또 사용할 수 없다.
+-테이블에 속할 열 정보를 같이 입력한다.
+-중괄호({, })는 실제로 적는 게 아니다.
+-물음표(?)는 생략이 가능하다. (ex) NOT NULL, DEFAULT, AUTO_INCERMENT
+-테이블의 이름은 복수형으로 짓는다. 단, 완전히 불가산인 경우에는 복수형으로 짓지 않는다.
+-NOT NULL : 해당 열에 NULL 값을 허용하지 않는다. 거의 모든 경우에 필요한 제약조건이다.
+-DEFAULT : 널이 허용되고 널을 명시적으로 입력한 경우 널이 가능. 널이 허용되고 레코드를 생성할 때 값을 입력하지 않으면 x를 입력한다.
+-AUTO_INCREMENT : 해당 열이 정수 타입이고, 기본 키일 때만 사용할 수 있고, INSERT 사용 시 별도로 명시하지 않으면 1부터 시작해서 자동으로 증가하는 열(순번과 비슷함). 단, 레코드의 생성 순서와 완전히 일치하지 않을 수 있다(행의 개수 + 1이 아니다). 즉, INSERT 구문이 실패를 하더라도 순번은 증가할 수 있다.
+
+{제약조건}
+-기본 키 : CONSTRAINT PRIMARY KEY (`열 이름`, ...)
+-고유 키 : CONSTRAINT UNIQUE (`열 이름`, ...)
+-중복x : NOT NULL
+-외래 키 : CONSTRAINT FOREIGN KEY(`열 이름`, ...) REFERENCES `외부 스키마 이름`.`외부 테이블 이름` (`외래 키 열 이름`, ...) {ON DELETE CASCADE?} {ON UPDATE CASCADE?}
+
+-> 외래 키를 설정할 때 특별한 경우가 아니면 CASCADE 제약조건을 걸어준다.
+-> ON DELETE CASCADE : 피참조 레코드(부모 레코드)가 삭제되면 이를 참고하는 자식 레코드가 함께 삭제된다.
+-> ON UPDATE CASCADE : 피참조 레코드(부모 레코드)가 수정되면 이를 참고하는 자식 레코드가 함께 수정된다.
+
+-> 제약 조건 괄호 안에 여러 속성을 넣으면, 그 속성들의 조합에 제약이 걸린다. 따라서 그 조합에 제약을 걸 것인지, 각각에 제약을 걸 건인지를 잘 구분해야 한다.
+
+
+
+테이블 조회하기(Read)
+
+-스키마에 소속된 테이블 조회
+SHOW TABLES IN `스키마 이름`;
+SHOW TABLES IN `mysql`;
+
+-특정 테이블의 열 구조 조회
+DESC `스키마 이름`.`테이블 이름`;
+DESC `mysql`.`user`;
+-DESC는 Describe의 준말.
+
+
+
+테이블 수정하기(Update)★
+
+ALTER TABLE `스키마 이름`.`테이블 이름`
+{수정 사항, ...}
+
+-{수정 사항}
+-> 테이블 이름 변경 : RENAME `새로운 이름`
+-> 열 추가 : ADD COLUMN `열 이름` {열 구조} {순서}
+-> 열 삭제 : DROP COLUMN `열 이름`
+-> 열 수정 : MODIFY COLUMN `열 이름` {열 구조} {순서}
+-> 열 수정 : CHANGE COLUMN `열 이름` `새로운 이름` {열 구조} {순서}
+
+-{순서}
+-> AFTER `열 이름` : 명시한 열 뒤에
+-> FIRST `열 이름` : 가장 앞으로
+-> 순서 생략 시 마지막에 추가함
+
+ALTER TABLE `study`.`foods`
+RENAME `meals`,
+ADD COLUMN `popular_flag` BOOLEAN,
+ADD COLUMN `sale_rate` DOUBLE AFTER `price`,
+ADD COLUMN `category` VARCHAR(50) FIRST,
+DROP COLUMN `sold_out_flag`,
+MODIFY COLUMN `name` VARCHAR(100),
+MODIFY COLUMN `popular_flag` BOOLEAN AFTER `sale_rate`,
+CHANGE COLUMN `name` `new_name` VARCHAR(50) AFTER `category`;
+
+-{열 구조} = {데이터 타입} {NOT NULL?} {AUTO_INCREMENT?}
+
+
+
+테이블 삭제하기(Delete)
+
+DROP TABLE {IF EXISTS?} `스키마 이름`.`테이블 이름`;
+DROP TABLE `korea`.`districts`;
+-삭제된 테이블이 가진 레코드는 복원할 수 없으니 주의.
+
+

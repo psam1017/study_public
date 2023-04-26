@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG_path 곡선1</title>
+    <style>
+        svg{
+            width: 500px;
+            height: 300px;
+            border: 1px solid black;
+        }
+        path{
+            fill: none;
+            stroke: black;
+        }
+    </style>
+</head>
+<body>
+    <svg id="">
+        <!-- 곡선을 쓸 때는 Q를 사용. 곡선의 깊이를 지정한다.
+            좌표는 절대경로도 아니고, 상대경로도 아니고 애매하다. sin, cos와 뭔가 관련이 있어보이는데...
+            일단 trial and error를 좀 해야 한다.
+            연속된 곡선은 T를 사용한다. 다음 예제에서 T를 사용했다. -->
+        <path d="M0 150 Q125 -50 250 150"></path>
+    </svg>
+</body>
+</html>

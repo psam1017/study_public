@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배열로 색상 적용하기</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 100px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div data-color="red">빨강</div>
+    <div data-color="yellow">노랑</div>
+    <div data-color="green">초록</div>
+    <div data-color="blue">파랑</div>
+</body>
+<script>
+    const divs = document.querySelectorAll("div");
+    console.log(divs);
+
+    function changeColor(div){
+        div.style.backgroundColor = div.getAttribute("data-color");
+    }
+    divs.forEach(function(element){
+        console.log(element);
+        element.addEventListener("click", function(){
+            changeColor(element);
+        });
+    });
+
+    // const divs = document.querySelectorAll('div');
+    //   let bgChange = (div)=> {
+    //     div.style.backgroundColor = div.getAttribute('data-color');
+    //   }
+    //   divs.forEach((div)=> {
+    //     div.addEventListener('click', ()=> {
+    //       bgChange(div)
+    //     })
+    //   })
+</script>
+</html>

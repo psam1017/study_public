@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>콜백함수</title>
+</head>
+<body>
+    <button id="btn1">아직 안 눌렀습니다.</button>
+    <button id="colChange">배경색 바꾸기</button>
+</body>
+<script>
+    // 콜백함수 : 함수의 인자 값으로 입력되는 함수.
+    // 기존의 함수 안에서 직접 함수 기능을 실행하기 적합하다.
+    const btn = document.getElementById("btn1");
+    btn.addEventListener("click", () => { // addEventListener 함수의 2번째 파라미터로 화살표 함수를 호출했다.
+        btn.innerHTML = "눌렸습니다.";
+    });
+
+
+
+    const button = document.getElementById("colChange");
+    let colorChange = () => {
+        document.body.style.backgroundColor = prompt("색상을 정하세요. red or #ff00ff");
+    }
+    button.addEventListener("click", colorChange);
+</script>
+</html>

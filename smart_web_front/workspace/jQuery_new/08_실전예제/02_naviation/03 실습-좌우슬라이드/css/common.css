@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+*{
+    box-sizing: border-box;
+}
+body, h2, ul{
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* 슬라이더 전체 영역 */
+#sliderWrap{
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* 슬라이더 화면 영역 */
+#sliderList{
+    display: flex;
+    width: 400%;
+}
+#sliderList li{
+    width: 100%;
+    height: 600px;
+    background: no-repeat center top / cover;
+}
+#sliderList li div{
+    /* width: 1400px; */
+    margin: 0 auto;
+    font-size: 100px;
+    font-weight: bold;
+    color: white;
+}
+
+/* 좌우 버튼 */
+#btnPos{
+    background-color: white;
+    position: relative;
+    top: -340px;
+}
+#btnPos a{
+    display: block;
+    width: 78px;
+    height: 78px;
+    color: rgba(0, 0, 0, 0);
+    border-radius: 50%;
+    position: absolute;
+    /* filter:invert(100%); 추후에 추가로 자습해보자 */
+}
+#btnPos a.prevBtn{
+    background: url("../images/arrows.jpg") left -16px top 138px / 200px;
+    left: 5%;
+}
+#btnPos a.nextBtn{
+    background: url("../images/arrows.jpg") right -16px top 138px / 200px;
+    right: 5%;
+}
+
+/* 번호 버튼 */
+#btnNum{
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#btnNum a{
+    position: relative;
+    display: block;
+    width: 300px;
+    height: 10px;
+    margin: 0 10px;
+    background-color: white;
+    color: black;
+    font-size: 24px;
+    text-align: center;
+    text-indent: -9999px;
+}
+#btnNum a.on{
+    background-color: red;
+    color: white;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mousemove</title>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+        }
+        p{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div>마우스 위치 알아내기</div>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+        const div = document.querySelector("div");
+        const p = document.querySelectorAll("p");
+
+        // 모든 축적은 좌상단을 기준으로 오른쪽으로, 아래로
+        // screenX/Y : 모니터 화면 기준
+        // pageX/Y : 페이지 문서 기준
+        // clientX/Y : 브라우저 크기 기준
+        // offsetX/Y : 적용 대상인 요소 기준
+        // x/y : clientX/Y와 같다. 소문자임에 주의할 것
+        div.addEventListener("mousemove", function(e){
+            p[0].innerText = `screenX: ${e.screenX}, screenY: ${e.screenY}`;
+            p[1].innerText = `pageX: ${e.pageX}, pageY: ${e.pageY}`;
+            p[2].innerText = `clientX: ${e.clientX}, clientY: ${e.clientY}`;
+            p[3].innerText = `offsetX: ${e.offsetX}, offsetY: ${e.offsetY}`;
+            p[4].innerText = `X: ${e.x}, Y: ${e.y}`;
+        });
+
+    });
+</script>
+</html>

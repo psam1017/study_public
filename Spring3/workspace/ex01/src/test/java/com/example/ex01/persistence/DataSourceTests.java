@@ -1,0 +1,45 @@
+package com.example.ex01.persistence;
+
+import static org.junit.Assert.fail;
+
+import java.sql.Connection;
+
+import javax.sql.DataSource;
+
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import lombok.extern.log4j.Log4j;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration("file:src/main/webapp/WEB-INF/spring/root-context.xml")
+@Log4j
+public class DataSourceTests {
+	
+	// root-context.xml에 bean이 있으므로 사용할 수 있음.
+	@Autowired
+	private DataSource dataSource;
+	
+	@Autowired
+	private SqlSessionFactory sqlSessionFactory;
+	
+	@Test
+	public void testConnection() {
+		try(
+			Connection dataSourceConnection = dataSource.getConnection();
+			SqlSession sqlSession = sqlSessionFactory.openSession(true);
+			Connection sqlSessionConnection = sqlSession.getConnection();
+		) {
+			log.info(dataSourceConnection);
+			log.info(sqlSession);
+			log.info(sqlSessionConnection);
+		} catch(Exception e) {
+			fail(e.getMessage());
+		}
+	}
+}

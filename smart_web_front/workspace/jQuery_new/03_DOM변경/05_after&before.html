@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>after( )</title>
+	<!-- jQuery library -->
+	<script src="jquery-1.7.2.min.js"></script>
+</head>
+
+<body>
+	<div id="container">형제를 만들어주세요</div>
+</body>
+
+<!---------- jQuery code Start ---------->
+<script>
+	// append, prepend와 마찬가지로, 없으면 추가, 있으면 이동한다.
+	$("#container").after("<p>형제입니다</p>");
+	$("#container").before($("p"));
+</script>
+</html>

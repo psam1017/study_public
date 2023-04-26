@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.board.mappers.BoardMapper">
+	
+	<!-- 가독성 및 재사용을 위하여 -->
+	<sql id="search">
+		<if test="type != null and keyword != null">
+			<trim prefix="(" prefixOverrides="OR" suffix=") AND">
+				<foreach item="type" collection="types">
+					<trim prefix="OR">
+						<choose>
+							<when test="type == 'T'.toString()">
+								(TITLE LIKE '%' || #{keyword} || '%')
+							</when>
+							<when test="type == 'C'.toString()">
+								(CONTENT LIKE '%' || #{keyword} || '%')
+							</when>
+							<when test="type == 'W'.toString()">
+								(WRITER LIKE '%' || #{keyword} || '%')
+							</when>
+						</choose>
+					</trim>
+				</foreach>
+			</trim>
+		</if>
+	</sql>
+	
+	<select id="getList" resultType="boardVO">
+		SELECT *
+		FROM
+		(
+			SELECT /*+INDEX_DESC(SPR_BOARD, SYS_C007122)*/
+			BNO, TITLE, CONTENT, WRITER, REGDATE, UPDATEDATE, ROWNUM RN
+			FROM SPR_BOARD
+			WHERE
+			<include refid="search"/>
+			<![CDATA[
+			ROWNUM <= #{pageNum} * #{amount}
+		)
+		WHERE RN > (#{pageNum} - 1) * #{amount}
+		]]>
+	</select>
+
+	<!-- 외부에서 전달 받은 vo를 받아서 먼저 SELECT하고 NEXTVAL을 vo에 담았다가 다시 그 vo에서 bno를 받아서 생성 -->
+	<insert id="insert" parameterType="boardVO">
+		<selectKey keyProperty="bno" order="BEFORE" resultType="long">
+			SELECT SEQ_BOARD.NEXTVAL FROM DUAL
+		</selectKey>
+		INSERT INTO SPR_BOARD(BNO, TITLE, CONTENT, WRITER)
+		VALUES(#{bno}, #{title}, #{content}, #{writer})
+	</insert>
+
+	<!--
+		@Mapper에서 파라미터를 정해놓았기 때문에 xml에서는 parameterType을 빼도 된다.
+		위의 insert sql도 물론 parameterType을 생략해도 된다.
+	-->
+	<select id="read" resultType="boardVO">
+		SELECT *
+		FROM SPR_BOARD
+		WHERE BNO = #{bno}
+		ORDER BY bno
+	</select>
+
+	<delete id="delete">
+		DELETE FROM SPR_BOARD WHERE BNO = #{bno}
+	</delete>
+	
+	<update id="update">
+		UPDATE SPR_BOARD
+		SET TITLE = #{title}, CONTENT = #{content}, UPDATEDATE = SYSDATE
+		WHERE BNO = #{bno}
+	</update>
+	
+	<select id="getTotal" resultType="_int">
+		SELECT COUNT(BNO)
+		FROM SPR_BOARD
+		<where>
+			<trim suffixOverrides="AND">
+				<include refid="search"/>
+			</trim>
+		</where>
+	</select>
+	
+	<select id="getFiles" resultType="fileDTO">
+		SELECT *
+		FROM SPR_FILE
+		WHERE BNO = #{bno}
+	</select>
+	
+</mapper>

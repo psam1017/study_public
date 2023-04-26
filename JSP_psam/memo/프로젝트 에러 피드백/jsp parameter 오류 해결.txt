@@ -1,0 +1,26 @@
+왜 오류가 났었나?
+
+동일한 프로젝트가 2개인 것.
+
+1. namespace 중복 선언 문제
+2. xml에서 id에 오타
+3. ★parameter에서 오타 -> parameter 오타인 경우 처음부터 흐름을 따라가며 여기저기 찾아야 한다.
+
+-> parameter가 쓰인 곳
+1. join.html
+2. MemberJoinOk에서 member setter를 사용할 때
+3. member.xml
+
+
+
+
+
+
+
+
+
+게시글 작성 오류 발생org.apache.ibatis.exceptions.PersistenceException: 
+### Error updating database.  Cause: java.lang.IllegalArgumentException: Mapped Statements collection does not contain value for Files.insertFiles
+### Cause: java.lang.IllegalArgumentException: Mapped Statements collection does not contain value for Files.insertFiles
+
+★config.xml에서 files.xml 맵핑을 하지 않아서 발생한 오류

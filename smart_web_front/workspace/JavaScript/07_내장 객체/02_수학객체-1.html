@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>수학 객체, 숫자 객체</title>
+</head>
+<body></body>
+<script>
+    // max와 min 메소드
+    // 숫자형이 아닌, 숫자로 나열된 문자열은 인식하지 못 한다.
+    // 파라미터로 배열을 전달할 수 없다.
+    let maxNum = Math.max(10, 20, 30, 40, 50);
+    document.write(`최댓값은 ${maxNum}입니다.<br>`);
+
+    let minNum = Math.min(10, 20, 30, 40, 50);
+    document.write(`최댓값은 ${minNum}입니다.<br>`);
+
+    // 반올림, 올림, 내림
+    let piNum = Math.PI;
+    document.write(piNum + "<br>");
+    document.write(Math.round(piNum) + "<br>");
+    document.write(Math.ceil(piNum) + "<br>");
+    document.write(Math.floor(piNum) + "<br>");
+
+    // 소수점 표현. 참고로 문자열로 반환된다.
+    document.write(piNum.toFixed(2) + "<br>");
+    document.write(piNum.toPrecision(2) + "<br>"); // 유효숫자 n의 개수만큼 반올림하여 문자형으로 반환.
+
+    // 지수 표현
+    let exponent = 70000;
+    document.write(exponent.toExponential(1) + "<br>");
+
+    // 숫자형으로 파싱
+    let num3 = "50.5px";
+    document.write(parseInt(num3) + "<br>");
+    document.write(parseFloat(num3) + "<br>");
+    document.write(typeof parseInt(num3) + "<br>");
+    document.write(typeof parseFloat(num3) + "<br>");
+
+    // 숫자형으로 형변환
+    let num4 = "50.5";
+    document.write(Number(num4) + "<br>");
+    document.write(typeof Number(num4));
+</script>
+</html>

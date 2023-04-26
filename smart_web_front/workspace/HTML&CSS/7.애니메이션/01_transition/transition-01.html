@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS3 Transition Basic</title>
+    <style>
+        .box {
+            width: 100px; height: 100px; 
+            background-color: orange;
+
+            /* transition-duration: 1s;
+            transition-delay: 0.5s;
+            transition-property: width;
+            transition-timing-function: ease-in-out; */
+            /*  ease 계열 -> 취향껏
+                linear -> 등속 실행
+                cubic-bezier(n, n, n, n) 커스텀(n은 0 ~ 1 사이) */
+            transition: 1s 0.5s cubic-bezier(1, 0.1, 0.1, 1);
+        }
+        .box:hover{
+            width: 800px;
+            background-color: hotpink;
+            opacity: 0.2;
+            margin-left: 100px;
+            border: 10px solid black;
+            box-sizing: border-box; /* border-box를 주지 않으면 border에 의해 박스 크기가 바뀔 수 있다. */
+
+            /* transition을 .box에 적용할 때와 .box:hover에 적용할 때 결과가 다르다. */
+            /* transition: 1s; */
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

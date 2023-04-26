@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>다양한 for</title>
+</head>
+<body></body>
+<script>
+    let arr = [1, 2, 3, 4, 5];
+
+    // for in
+    document.write("for(let i in arr){ arr[i] }<br>");
+    for (let i in arr) {
+        document.write(arr[i]);
+    }
+
+    document.write("<br><br><br>");
+
+    // for of
+    document.write("for(let i of arr){ i }<br>");
+    for (let i of arr) {
+        document.write(i);
+    }
+
+    document.write("<br><br><br>");
+    
+
+
+    
+
+    // forEach 메서드는 단순히 반복문을 대체하기 위한 함수이고,
+    // map 메서드는 요소값을 다른 값으로 mapping한 새로운 배열을 생성하기 위한 고차함수다.
+
+    // forEach(function(){})
+    // forEach(function(element, index, arr){})
+    document.write("for(let i of arr){ i }<br>");
+    arr.forEach(function (item, index, itemAll) {
+        document.write(`${item}, ${index}, `);
+        document.write(itemAll);
+        document.write("<br>");
+    });
+    
+    document.write("<br><br><br>");
+
+    // map
+    arr.map((item) => {
+        document.write(`${item}<br>`);
+    });
+
+</script>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수의 종류</title>
+</head>
+<body>
+</body>
+<script>
+    // string : 문자열
+    // number : 숫자
+    // boolean : true 또는 false
+    // object : 객체. 오브젝트 안에 필드로서 값들을 가질 수 있다.
+    // array : 배열, 문법은 다르지만 object 타입이다.
+    // null : 값이 없는 상태. ★js에서는 null도 오브젝트 타입이다.
+    // undefined : 데이터 값이 정해지지 않은 상태.
+
+    // const : 상수
+    // var : 변수
+    // value : 값. 상수는 제약조건을 의미하기 때문에 이를 구분하기 위해 리터럴이라고도 표현한다.
+
+    // 변수명은 대소문자를 구분하고, 특수기호는 _, $를 사용할 수 있다.
+
+    var string = "문자열";
+    var number = 20;
+    var object = { name: '이름', age: 20 };
+    var arr = ['사과', '배', '귤'];
+    var flag = true;
+
+    console.log(string, typeof(string));
+    console.log(number, typeof(number));
+    console.log(object.name, typeof(object.name));
+    console.log(arr, typeof(arr));
+    console.log(arr[0], typeof(arr[0]));
+    console.log(flag, typeof(flag));
+    
+    
+    
+    var value;
+    var iAmNull = null;
+    
+    console.log(value, typeof(value));
+    console.log(iAmNull, typeof(iAmNull));
+    
+    
+    
+    // new는 객체를 생성하는 키워드이다. 아래는 숫자 타입이 아니라 숫자 객체이다.
+    number = new Number(100);
+    console.log(number, typeof(number));
+
+    // 변수는 아래와 같은 방법으로도 선언할 수 있다.
+    var a, b, c = 10;
+    var d = e = f = 10;
+    
+</script>
+</html>

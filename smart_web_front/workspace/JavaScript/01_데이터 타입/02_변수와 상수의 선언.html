@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수와 상수의 선언</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // var
+    // 오류가 발생하지 않고, undefined로 출력된다.
+    // 컴파일할 때 메소드 실행 이전에 변수가 메모리에 먼저 할당되는데, 이를 호이스팅이라고 한다. JS는 초기화를 제외한 선언만 호이스팅한다. 아래의 예제에서 만약 var 없이 a만 선언한다면 오류가 발생한다.
+    // var로 변수를 선언하면 undefined로 초기화한다.
+    console.log(a);
+
+    var a = 10;
+    console.log(a);
+
+    // 위의 a와 다른 변수인 a이다. 결함이라고 할 수 있으나 작동은 된다.
+    var a = 20;
+    console.log(a);
+
+
+
+    // let
+    // let으로 선언하면 호이스팅할 때 초기화되지 않으므로, let 선언 이전에 변수명을 사용하면 오류가 발생한다. 또한 중복하여 선언할 수도 없다. 이는 const도 동일하다.
+    let b = 100;
+    console.log(b);
+    
+    
+    
+    // const
+    // const로 선언하면 상수가 생성되며, 값을 변경할 수 없다.
+    const c = 1;
+    console.log(c);
+</script>
+</html>

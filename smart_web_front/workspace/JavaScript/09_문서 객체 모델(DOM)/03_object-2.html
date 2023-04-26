@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 추가, 복제, 삭제</title>
+</head>
+<body>
+    <div>
+        <h2>큰 제목이 필요합니다.</h2>
+    </div>
+    <a href="#">링크</a>
+</body>
+<script>
+    const div = document.querySelector("div");
+    const h2 = document.querySelector("h2");
+    const a = document.querySelector('a');
+
+    // 태그 생성
+    const h1 = document.createElement("h1");
+    h1.innerText = "큰 제목이 추가되었습니다.";
+
+    // 태그 삽입 및 이동
+    // prepend : 태그의 처음으로 인자를 추가 또는 이동
+    div.prepend(h1);
+
+    // append : 태그의 끝으로 인자를 추가 또는 이동, 파라미터로 여러 개를 받을 수 있다.
+    div.append(h1);
+
+    // appendChild : 태그의 끝으로 인자를 추가 또는 이동. 하나의 파라미터만 받을 수 있다.
+    div.appendChild(h1);
+
+
+
+    // 형제 요소끼리 위치를 이동한다. insert O before N.
+    document.body.insertBefore(a, div);
+
+
+
+    // 요소 삭제. 아래의 예시가 모두 h2를 삭제한다.
+    h2.remove(); // 요소를 명시하여 삭제
+    div.removeChild(h2); // 특정 요소의 자식을 삭제
+    div.removeChild(div.children[0]);
+
+
+
+    // 요소 복제.
+    // const a2 = a.cloneNode(); // 요소만 복제.
+    const a2 = a.cloneNode(true); // 요소와 그 내용 모두 복제.
+    div.append(a2);
+</script>
+</html>

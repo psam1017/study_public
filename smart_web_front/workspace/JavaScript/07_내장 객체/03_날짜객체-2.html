@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>날짜 객체 2</title>
+</head>
+<body>
+</body>
+<script>
+    // month 자리는 0부터 시작함에 주의할 것.
+    // 귀찮다고 +1 값을 넣어버리면 Date가 초기화를 하면서 연산을 하기 때문에 값이 꼬일 수 있다.
+    let ball = new Date(2002, 4, 31);
+    let bYear = ball.getFullYear();
+    let bMonth = ball.getMonth() + 1;
+    let bDate = ball.getDate();
+
+    document.write(`${bYear}년 월드컵은 ${bMonth}월 ${bDate}일에 개최되었습니다.`);
+
+
+    let today = new Date();
+    let year = today.getFullYear();
+    let lastDay = new Date(year, 11, 31);
+    let leftDay = lastDay - today
+
+    console.log(leftDay);
+    
+    leftDay /= 24*60*60*1000;
+    console.log("올해는 이제 " + Math.ceil(leftDay) + "일 남았습니다.");
+
+</script>
+</html>

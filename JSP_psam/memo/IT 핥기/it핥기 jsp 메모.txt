@@ -1,0 +1,19 @@
+최상위 요청 : request.getContextPath() <- 이것도 가능은 하다.
+
+
+
+req와 resp를 forward로 전달하기
+request.getRequestDispatcher("xxx.jsp").forward(request, response);
+
+// redirect -> resp.sendRedirect ? 였었나 ?
+
+태그의 attribute에 값으로 EL문과 스크립트 태그를 사용할 수 있다!
+ex. <form action="<%= request.getContextPath() %>/forward/view.jsp">
+
+
+
+RequestDispatcher : 브라우저의 요청을 제어하는 객체 -> forward와 redirect를 결정할 수 있다.
+
+
+
+자동완성으로 액션태그들의 목록을 살펴보면 어떤 기능들을 자주 쓰는지 알 수 있다.

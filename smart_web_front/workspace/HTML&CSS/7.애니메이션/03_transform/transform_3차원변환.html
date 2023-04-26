@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8"/>
+    <title>CSS3 transform 3d</title>
+    <style>
+        body {
+            width: 200px;
+            margin: 100px auto;
+        }
+
+        section {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            transform-style: preserve-3d;
+            animation: ani 5s infinite linear alternate-reverse forwards;
+        }
+        div {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0.5;
+
+            font-size: 100px;
+            color: white;
+            text-align: center;
+            line-height: 200px;
+        }
+
+        /* 변환함수 적용하기 */
+        /* 옆면 */
+        div:nth-child(1) {
+            background: red;
+        }
+        div:nth-child(2) {
+            background: green;
+            transform: translateZ(-200px);
+        }
+        div:nth-child(3) {
+            background: blue;
+            transform-origin: left;
+            transform: rotateY(90deg);
+        }
+        div:nth-child(4) {
+            background: yellow;
+            transform-origin: right;
+            transform: rotateY(-90deg);
+        }
+        /* 윗면, 아랫면 */
+        div:nth-child(5) {
+            background: brown;
+            transform-origin: bottom;
+            transform: rotateX(90deg);
+        }
+        div:nth-child(6) {
+            background: pink;
+            transform-origin: top;
+            transform: rotateX(-90deg);
+        }
+
+        @keyframes ani {
+            from{
+                transform:
+                    rotate3d(0, 0, 0)
+                    translate3d(0, 0, 0);
+            }
+            to{
+                transform:
+                    rotateX(270deg) rotateY(250deg) rotateZ(360deg)
+                    translate3d(300px, 200px, -200px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </section>
+</body>
+</html>
